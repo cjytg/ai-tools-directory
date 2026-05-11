@@ -4,6 +4,7 @@ interface Organization {
   name: string;
   url: string;
   description: string;
+  logo: string;
 }
 
 interface Tool {
@@ -39,7 +40,7 @@ interface Article {
   publisher: {
     "@type": string;
     name: string;
-    url: string;
+    logo: string;
   };
 }
 
@@ -47,9 +48,10 @@ export function organizationSchema(): Organization {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "AI Tools Directory",
-    url: "https://site-cjytgs-projects.vercel.app",
-    description: "Find and compare the best AI tools for your needs.",
+    name: "Toolio",
+    url: "https://toolio.dev",
+    description: "Find the best AI tools for your needs.",
+    logo: "https://toolio.dev/logo.png",
   };
 }
 
@@ -93,13 +95,13 @@ export function articleSchema(article: {
     description: article.description,
     author: {
       "@type": "Organization",
-      name: "AI Tools Directory",
+      name: "Toolio",
     },
     datePublished: article.date,
     publisher: {
       "@type": "Organization",
-      name: "AI Tools Directory",
-      url: "https://site-cjytgs-projects.vercel.app",
+      name: "Toolio",
+      logo: "https://toolio.dev/logo.png",
     },
   };
 }

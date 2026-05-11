@@ -1,46 +1,57 @@
 export const metadata = {
-  title: "Contact Us - AI Tools Directory",
-  description: "Get in touch with AI Tools Directory team.",
+  title: "Contact Us - Toolio",
+  description: "Get in touch with the Toolio team.",
 };
 
 export default function ContactPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold mb-8">Contact Us</h1>
+      <h1 className="text-3xl font-bold mb-2">Contact Us</h1>
+      <p className="text-[#71717a] mb-8">Have a question or want to work with us? We&apos;d love to hear from you.</p>
 
-      <div className="space-y-6 text-[#a1a1aa]">
-        <p>
-          Have a question, suggestion, or want to work with us? We&apos;d love to hear from you.
-        </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <a
+          href="mailto:hello@toolio.dev"
+          className="p-6 bg-[#18181b] border border-[#27272a] rounded-xl hover:border-[#3b82f6] transition"
+        >
+          <h2 className="font-bold mb-2">General Inquiries</h2>
+          <p className="text-sm text-[#71717a] mb-3">Questions, feedback, or just want to say hi</p>
+          <span className="text-sm text-[#3b82f6]">hello@toolio.dev</span>
+        </a>
 
-        <h2 className="text-xl font-bold text-white mt-8">Email</h2>
-        <p>
-          General inquiries:{" "}
-          <a href="mailto:contact@example.com" className="text-[#3b82f6] hover:underline">
-            contact@example.com
-          </a>
-        </p>
+        <a
+          href="mailto:submit@toolio.dev"
+          className="p-6 bg-[#18181b] border border-[#27272a] rounded-xl hover:border-[#3b82f6] transition"
+        >
+          <h2 className="font-bold mb-2">Submit a Tool</h2>
+          <p className="text-sm text-[#71717a] mb-3">Know a great AI tool? Let us know</p>
+          <span className="text-sm text-[#3b82f6]">submit@toolio.dev</span>
+        </a>
 
-        <h2 className="text-xl font-bold text-white mt-8">Submit a Tool</h2>
-        <p>
-          Want to suggest an AI tool for our directory? Send us an email with:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>Tool name and website</li>
-          <li>Brief description</li>
-          <li>Key features</li>
-          <li>Pricing information</li>
-        </ul>
+        <a
+          href="mailto:advertise@toolio.dev"
+          className="p-6 bg-[#18181b] border border-[#27272a] rounded-xl hover:border-[#3b82f6] transition"
+        >
+          <h2 className="font-bold mb-2">Advertising</h2>
+          <p className="text-sm text-[#71717a] mb-3">Reach AI enthusiasts and professionals</p>
+          <span className="text-sm text-[#3b82f6]">advertise@toolio.dev</span>
+        </a>
 
-        <h2 className="text-xl font-bold text-white mt-8">Partnerships</h2>
-        <p>
-          Interested in partnering with us? We offer sponsored listings, reviews, and advertising opportunities.
-          Contact us for rates and availability.
-        </p>
+        <a
+          href="mailto:press@toolio.dev"
+          className="p-6 bg-[#18181b] border border-[#27272a] rounded-xl hover:border-[#3b82f6] transition"
+        >
+          <h2 className="font-bold mb-2">Press & Media</h2>
+          <p className="text-sm text-[#71717a] mb-3">Media inquiries and partnerships</p>
+          <span className="text-sm text-[#3b82f6]">press@toolio.dev</span>
+        </a>
+      </div>
 
-        <h2 className="text-xl font-bold text-white mt-8">Response Time</h2>
-        <p>
-          We typically respond within 24-48 hours during business days.
+      <div className="mt-8 p-6 bg-[#18181b] border border-[#27272a] rounded-xl">
+        <h2 className="font-bold mb-2">Response time</h2>
+        <p className="text-[#71717a]">
+          We typically respond within 24-48 hours during business days. 
+          For urgent matters, please indicate so in your subject line.
         </p>
       </div>
     </div>
