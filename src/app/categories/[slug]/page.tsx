@@ -2,6 +2,7 @@ import { getCategories, getToolsByCategory } from "@/lib/tools";
 import { CATEGORIES } from "@/types";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import ToolLogo from "@/components/ToolLogo";
 
 export async function generateStaticParams() {
   const categories = getCategories();
@@ -79,9 +80,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
             <div className="w-8 h-8 bg-[#27272a] rounded-lg flex items-center justify-center text-sm font-bold flex-shrink-0">
               {i + 1}
             </div>
-            <div className="w-12 h-12 bg-[#27272a] rounded-lg flex items-center justify-center text-xl font-bold flex-shrink-0 group-hover:bg-[#3b82f6]/10 transition-colors">
-              {tool.name.charAt(0)}
-            </div>
+            <ToolLogo name={tool.name} slug={tool.slug} size="md" website={tool.website} />
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-3 mb-1">
                 <h2 className="font-semibold text-lg">{tool.name}</h2>

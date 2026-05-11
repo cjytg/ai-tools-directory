@@ -3,6 +3,7 @@ import { getAllPosts } from "@/lib/blog";
 import { CATEGORIES } from "@/types";
 import Link from "next/link";
 import Icon from "@/components/Icon";
+import ToolLogo from "@/components/ToolLogo";
 
 export default function Home() {
   const tools = getAllTools();
@@ -76,9 +77,7 @@ export default function Home() {
                 className="group p-6 bg-[#18181b] border border-[#27272a] rounded-xl hover:border-[#3b82f6] transition-all hover:shadow-lg hover:shadow-blue-500/5"
               >
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="w-10 h-10 bg-[#27272a] rounded-lg flex items-center justify-center text-lg font-bold group-hover:bg-[#3b82f6]/10 transition-colors">
-                    {tool.name.charAt(0)}
-                  </div>
+                  <ToolLogo name={tool.name} slug={tool.slug} size="sm" website={tool.website} />
                   <div className="flex-1 min-w-0">
                     <h3 className="font-semibold truncate">{tool.name}</h3>
                     <span className="text-sm text-[#71717a]">{tool.company}</span>

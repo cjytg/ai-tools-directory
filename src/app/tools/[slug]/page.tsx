@@ -3,6 +3,7 @@ import { toolSchema } from "@/lib/schema";
 import { CATEGORIES } from "@/types";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import ToolLogo from "@/components/ToolLogo";
 
 export async function generateStaticParams() {
   const tools = getAllTools();
@@ -69,9 +70,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
 
         {/* Header */}
         <div className="flex flex-col md:flex-row items-start gap-6 mb-8">
-          <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-2xl font-bold text-white">
-            {tool.name.charAt(0)}
-          </div>
+          <ToolLogo name={tool.name} slug={tool.slug} size="lg" website={tool.website} />
           <div className="flex-1">
             <h1 className="text-3xl font-bold mb-2">{tool.name}</h1>
             <p className="text-[#71717a] mb-4">{tool.description}</p>

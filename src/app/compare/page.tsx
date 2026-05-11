@@ -1,5 +1,6 @@
 import { getAllTools } from "@/lib/tools";
 import Link from "next/link";
+import ToolLogo from "@/components/ToolLogo";
 
 export const metadata = {
   title: "Compare AI Tools - Toolio",
@@ -43,16 +44,12 @@ export default function ComparePage() {
               >
                 <div className="flex items-center gap-3">
                   <div className="flex items-center gap-2">
-                    <span className="w-8 h-8 bg-[#27272a] rounded flex items-center justify-center text-sm font-bold">
-                      {a.name.charAt(0)}
-                    </span>
+                    <ToolLogo name={a.name} slug={a.slug} size="sm" website={a.website} />
                     <span className="font-medium">{a.name}</span>
                   </div>
                   <span className="text-[#71717a]">vs</span>
                   <div className="flex items-center gap-2">
-                    <span className="w-8 h-8 bg-[#27272a] rounded flex items-center justify-center text-sm font-bold">
-                      {b.name.charAt(0)}
-                    </span>
+                    <ToolLogo name={b.name} slug={b.slug} size="sm" website={b.website} />
                     <span className="font-medium">{b.name}</span>
                   </div>
                 </div>

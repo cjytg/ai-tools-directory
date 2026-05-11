@@ -2,29 +2,30 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
+import ToolLogo from "@/components/ToolLogo";
 
 // Inline tools data for client component
 const toolsData = [
-  {slug:"chatgpt",name:"ChatGPT",category:"chatbot",pricing:"freemium",price:"$20/mo",description:"AI chatbot by OpenAI for conversation, writing, coding, and analysis.",rating:4.5,company:"OpenAI",founded:2022},
-  {slug:"claude",name:"Claude",category:"chatbot",pricing:"freemium",price:"$20/mo",description:"AI assistant by Anthropic focused on safety and helpfulness.",rating:4.6,company:"Anthropic",founded:2023},
-  {slug:"midjourney",name:"Midjourney",category:"image",pricing:"paid",price:"$10-60/mo",description:"AI image generation tool known for artistic quality.",rating:4.7,company:"Midjourney",founded:2022},
-  {slug:"cursor",name:"Cursor",category:"coding",pricing:"freemium",price:"$20/mo",description:"AI-native code editor built for pair programming with AI.",rating:4.6,company:"Anysphere",founded:2023},
-  {slug:"github-copilot",name:"GitHub Copilot",category:"coding",pricing:"freemium",price:"$10/mo",description:"AI pair programmer that helps write code faster.",rating:4.5,company:"GitHub/Microsoft",founded:2021},
-  {slug:"gemini",name:"Gemini",category:"chatbot",pricing:"freemium",price:"$20/mo",description:"Google's AI chatbot with strong multimodal capabilities.",rating:4.3,company:"Google",founded:2023},
-  {slug:"perplexity",name:"Perplexity",category:"search",pricing:"freemium",price:"$20/mo",description:"AI-powered search engine that provides answers with sources.",rating:4.4,company:"Perplexity",founded:2022},
-  {slug:"grammarly",name:"Grammarly",category:"writing",pricing:"freemium",price:"$12/mo",description:"AI writing assistant for grammar, clarity, and tone.",rating:4.5,company:"Grammarly",founded:2009},
-  {slug:"notion-ai",name:"Notion AI",category:"productivity",pricing:"freemium",price:"$10/mo",description:"AI writing assistant integrated into Notion workspace.",rating:4.2,company:"Notion",founded:2023},
-  {slug:"figma",name:"Figma",category:"design",pricing:"freemium",price:"$15/mo",description:"Collaborative design tool with AI features for UI/UX.",rating:4.7,company:"Figma",founded:2012},
-  {slug:"runway",name:"Runway",category:"video",pricing:"freemium",price:"$12-76/mo",description:"AI video generation and editing platform.",rating:4.4,company:"Runway",founded:2018},
-  {slug:"elevenlabs",name:"ElevenLabs",category:"audio",pricing:"freemium",price:"$5-99/mo",description:"AI voice generation and cloning platform.",rating:4.5,company:"ElevenLabs",founded:2022},
-  {slug:"suno",name:"Suno",category:"audio",pricing:"freemium",price:"$10/mo",description:"AI music generation tool that creates complete songs from text.",rating:4.3,company:"Suno",founded:2023},
-  {slug:"jasper",name:"Jasper",category:"writing",pricing:"paid",price:"$39-125/mo",description:"AI marketing copywriting platform for businesses.",rating:4.1,company:"Jasper",founded:2021},
-  {slug:"surfer-seo",name:"Surfer SEO",category:"marketing",pricing:"paid",price:"$49-199/mo",description:"AI-powered SEO content optimization tool.",rating:4.4,company:"Surfer",founded:2017},
-  {slug:"deepl",name:"DeepL",category:"translation",pricing:"freemium",price:"$9-40/mo",description:"AI translation tool known for high-quality translations.",rating:4.6,company:"DeepL",founded:2017},
-  {slug:"canva-ai",name:"Canva AI",category:"design",pricing:"freemium",price:"$12.99/mo",description:"AI design tools integrated into Canva platform.",rating:4.3,company:"Canva",founded:2012},
-  {slug:"gamma",name:"Gamma",category:"productivity",pricing:"freemium",price:"$10/mo",description:"AI-powered presentation and document creator.",rating:4.3,company:"Gamma",founded:2020},
-  {slug:"obsidian",name:"Obsidian",category:"productivity",pricing:"free",price:"Free / $50/year sync",description:"Knowledge management app with bidirectional linking.",rating:4.6,company:"Dynalist",founded:2020},
-  {slug:"zapier",name:"Zapier",category:"productivity",pricing:"freemium",price:"$19.99/mo",description:"Automation platform connecting 5000+ apps with AI features.",rating:4.5,company:"Zapier",founded:2011},
+  {slug:"chatgpt",name:"ChatGPT",category:"chatbot",pricing:"freemium",price:"$20/mo",description:"AI chatbot by OpenAI for conversation, writing, coding, and analysis.",rating:4.5,company:"OpenAI",founded:2022,website:"https://chat.openai.com"},
+  {slug:"claude",name:"Claude",category:"chatbot",pricing:"freemium",price:"$20/mo",description:"AI assistant by Anthropic focused on safety and helpfulness.",rating:4.6,company:"Anthropic",founded:2023,website:"https://claude.ai"},
+  {slug:"midjourney",name:"Midjourney",category:"image",pricing:"paid",price:"$10-60/mo",description:"AI image generation tool known for artistic quality.",rating:4.7,company:"Midjourney",founded:2022,website:"https://midjourney.com"},
+  {slug:"cursor",name:"Cursor",category:"coding",pricing:"freemium",price:"$20/mo",description:"AI-native code editor built for pair programming with AI.",rating:4.6,company:"Anysphere",founded:2023,website:"https://cursor.sh"},
+  {slug:"github-copilot",name:"GitHub Copilot",category:"coding",pricing:"freemium",price:"$10/mo",description:"AI pair programmer that helps write code faster.",rating:4.5,company:"GitHub/Microsoft",founded:2021,website:"https://github.com/features/copilot"},
+  {slug:"gemini",name:"Gemini",category:"chatbot",pricing:"freemium",price:"$20/mo",description:"Google's AI chatbot with strong multimodal capabilities.",rating:4.3,company:"Google",founded:2023,website:"https://gemini.google.com"},
+  {slug:"perplexity",name:"Perplexity",category:"search",pricing:"freemium",price:"$20/mo",description:"AI-powered search engine that provides answers with sources.",rating:4.4,company:"Perplexity",founded:2022,website:"https://perplexity.ai"},
+  {slug:"grammarly",name:"Grammarly",category:"writing",pricing:"freemium",price:"$12/mo",description:"AI writing assistant for grammar, clarity, and tone.",rating:4.5,company:"Grammarly",founded:2009,website:"https://grammarly.com"},
+  {slug:"notion-ai",name:"Notion AI",category:"productivity",pricing:"freemium",price:"$10/mo",description:"AI writing assistant integrated into Notion workspace.",rating:4.2,company:"Notion",founded:2023,website:"https://notion.so/product/ai"},
+  {slug:"figma",name:"Figma",category:"design",pricing:"freemium",price:"$15/mo",description:"Collaborative design tool with AI features for UI/UX.",rating:4.7,company:"Figma",founded:2012,website:"https://figma.com"},
+  {slug:"runway",name:"Runway",category:"video",pricing:"freemium",price:"$12-76/mo",description:"AI video generation and editing platform.",rating:4.4,company:"Runway",founded:2018,website:"https://runwayml.com"},
+  {slug:"elevenlabs",name:"ElevenLabs",category:"audio",pricing:"freemium",price:"$5-99/mo",description:"AI voice generation and cloning platform.",rating:4.5,company:"ElevenLabs",founded:2022,website:"https://elevenlabs.io"},
+  {slug:"suno",name:"Suno",category:"audio",pricing:"freemium",price:"$10/mo",description:"AI music generation tool that creates complete songs from text.",rating:4.3,company:"Suno",founded:2023,website:"https://suno.com"},
+  {slug:"jasper",name:"Jasper",category:"writing",pricing:"paid",price:"$39-125/mo",description:"AI marketing copywriting platform for businesses.",rating:4.1,company:"Jasper",founded:2021,website:"https://jasper.ai"},
+  {slug:"surfer-seo",name:"Surfer SEO",category:"marketing",pricing:"paid",price:"$49-199/mo",description:"AI-powered SEO content optimization tool.",rating:4.4,company:"Surfer",founded:2017,website:"https://surferseo.com"},
+  {slug:"deepl",name:"DeepL",category:"translation",pricing:"freemium",price:"$9-40/mo",description:"AI translation tool known for high-quality translations.",rating:4.6,company:"DeepL",founded:2017,website:"https://deepl.com"},
+  {slug:"canva-ai",name:"Canva AI",category:"design",pricing:"freemium",price:"$12.99/mo",description:"AI design tools integrated into Canva platform.",rating:4.3,company:"Canva",founded:2012,website:"https://canva.com"},
+  {slug:"gamma",name:"Gamma",category:"productivity",pricing:"freemium",price:"$10/mo",description:"AI-powered presentation and document creator.",rating:4.3,company:"Gamma",founded:2020,website:"https://gamma.app"},
+  {slug:"obsidian",name:"Obsidian",category:"productivity",pricing:"free",price:"Free / $50/year sync",description:"Knowledge management app with bidirectional linking.",rating:4.6,company:"Dynalist",founded:2020,website:"https://obsidian.md"},
+  {slug:"zapier",name:"Zapier",category:"productivity",pricing:"freemium",price:"$19.99/mo",description:"Automation platform connecting 5000+ apps with AI features.",rating:4.5,company:"Zapier",founded:2011,website:"https://zapier.com"},
 ];
 
 const CATEGORIES: Record<string, string> = {
@@ -157,9 +158,7 @@ export default function ToolsPage() {
             href={`/tools/${tool.slug}`}
             className="group p-6 bg-[#18181b] border border-[#27272a] rounded-xl hover:border-[#3b82f6] transition-all flex items-start gap-4"
           >
-            <div className="w-12 h-12 bg-[#27272a] rounded-lg flex items-center justify-center text-xl font-bold flex-shrink-0 group-hover:bg-[#3b82f6]/10 transition-colors">
-              {tool.name.charAt(0)}
-            </div>
+            <ToolLogo name={tool.name} slug={tool.slug} size="md" website={tool.website} />
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-3 mb-1 flex-wrap">
                 <h2 className="font-semibold text-lg">{tool.name}</h2>
