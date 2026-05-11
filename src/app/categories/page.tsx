@@ -1,6 +1,7 @@
 import { getCategories, getToolsByCategory, getAllTools } from "@/lib/tools";
 import { CATEGORIES } from "@/types";
 import Link from "next/link";
+import Icon from "@/components/Icon";
 
 export const metadata = {
   title: "AI Tool Categories - Toolio",
@@ -25,18 +26,8 @@ export default function CategoriesPage() {
               href={`/categories/${cat}`}
               className="p-6 bg-[#18181b] border border-[#27272a] rounded-xl hover:border-[#3b82f6] transition"
             >
-              <div className="text-3xl mb-4">
-                {cat === "chatbot" && "💬"}
-                {cat === "image" && "🎨"}
-                {cat === "coding" && "💻"}
-                {cat === "writing" && "✍️"}
-                {cat === "video" && "🎬"}
-                {cat === "audio" && "🎵"}
-                {cat === "design" && "🎨"}
-                {cat === "productivity" && "⚡"}
-                {cat === "marketing" && "📈"}
-                {cat === "search" && "🔍"}
-                {cat === "translation" && "🌐"}
+              <div className="mb-4 text-[#a1a1aa]">
+                <Icon name={cat} size="lg" />
               </div>
               <h2 className="text-xl font-bold mb-2">{CATEGORIES[cat] || cat}</h2>
               <p className="text-[#71717a] mb-4">{tools.length} tools</p>

@@ -2,6 +2,7 @@ import { getAllTools, getCategories } from "@/lib/tools";
 import { getAllPosts } from "@/lib/blog";
 import { CATEGORIES } from "@/types";
 import Link from "next/link";
+import Icon from "@/components/Icon";
 
 export default function Home() {
   const tools = getAllTools();
@@ -64,7 +65,7 @@ export default function Home() {
               <p className="text-sm text-[#71717a] mt-1">Our highest-rated AI tools based on real testing</p>
             </div>
             <Link href="/tools" className="text-[#3b82f6] text-sm hover:underline">
-              View all →
+              View all &rarr;
             </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -94,7 +95,7 @@ export default function Home() {
                     {tool.price}
                   </span>
                   <span className="text-sm text-[#3b82f6] font-medium">
-                    ★ {tool.rating}
+                    &starf; {tool.rating}
                   </span>
                 </div>
               </Link>
@@ -119,18 +120,8 @@ export default function Home() {
                   href={`/categories/${cat}`}
                   className="group p-5 bg-[#18181b] border border-[#27272a] rounded-xl hover:border-[#3b82f6] transition-all hover:shadow-lg hover:shadow-blue-500/5"
                 >
-                  <div className="text-2xl mb-3">
-                    {cat === "chatbot" && "💬"}
-                    {cat === "image" && "🎨"}
-                    {cat === "coding" && "💻"}
-                    {cat === "writing" && "✍️"}
-                    {cat === "video" && "🎬"}
-                    {cat === "audio" && "🎵"}
-                    {cat === "design" && "🎯"}
-                    {cat === "productivity" && "⚡"}
-                    {cat === "marketing" && "📈"}
-                    {cat === "search" && "🔍"}
-                    {cat === "translation" && "🌐"}
+                  <div className="mb-3 text-[#a1a1aa]">
+                    <Icon name={cat} size="lg" />
                   </div>
                   <div className="font-semibold mb-1 group-hover:text-[#3b82f6] transition-colors">
                     {CATEGORIES[cat] || cat}
@@ -152,7 +143,7 @@ export default function Home() {
               <p className="text-sm text-[#71717a] mt-1">In-depth analysis to help you choose</p>
             </div>
             <Link href="/blog" className="text-[#3b82f6] text-sm hover:underline">
-              View all →
+              View all &rarr;
             </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -193,7 +184,7 @@ export default function Home() {
             />
             <button
               type="submit"
-              className="px-6 py-3 bg-[#3b82f6] hover:bg-[#2563eb] rounded-lg font-medium transition"
+              className="px-6 py-3 bg-[#3b82f6] hover:bg-[#2563eb] text-white rounded-lg font-medium transition"
             >
               Subscribe
             </button>
