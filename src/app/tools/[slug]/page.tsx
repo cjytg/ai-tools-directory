@@ -13,13 +13,28 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const tool = getToolBySlug(slug);
   if (!tool) return { title: "Tool Not Found" };
+  
+  const altNames = tool.alternatives
+    .map((alt) => {
+      const t = getAllTools().find((t) => t.slug === alt);
+      return t?.name;
+    })
+    .filter(Boolean)
+    .slice(0, 3)
+    .join(", ");
+
   return {
     title: `${tool.name} Review 2026 - Features, Pricing & Alternatives`,
-    description: `${tool.name} review: ${tool.description} Compare features, pricing, and alternatives. Rating: ${tool.rating}/5.`,
+    description: `${tool.name} review: ${tool.description} Rating: ${tool.rating}/5. Price: ${tool.price}. Alternatives: ${altNames}.`,
     openGraph: {
+      title: `${tool.name} Review - Toolio`,
+      description: tool.description,
+      type: "article",
+    },
+    twitter: {
+      card: "summary",
       title: `${tool.name} Review`,
       description: tool.description,
-      type: "website",
     },
   };
 }
@@ -40,7 +55,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
       />
       <div className="max-w-4xl mx-auto px-4 py-12">
         {/* Breadcrumb */}
-        <div className="flex items-center gap-2 text-sm text-[#71717a] mb-8">
+        <nav className="flex items-center gap-2 text-sm text-[#71717a] mb-8">
           <Link href="/" className="hover:text-white transition">Home</Link>
           <span>/</span>
           <Link href="/tools" className="hover:text-white transition">Tools</Link>
@@ -49,12 +64,12 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
             {CATEGORIES[tool.category] || tool.category}
           </Link>
           <span>/</span>
-          <span>{tool.name}</span>
-        </div>
+          <span className="text-white">{tool.name}</span>
+        </nav>
 
         {/* Header */}
         <div className="flex flex-col md:flex-row items-start gap-6 mb-8">
-          <div className="w-16 h-16 bg-[#18181b] border border-[#27272a] rounded-xl flex items-center justify-center text-2xl font-bold">
+          <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-2xl font-bold text-white">
             {tool.name.charAt(0)}
           </div>
           <div className="flex-1">
@@ -64,7 +79,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
               <span className="px-3 py-1 bg-[#18181b] border border-[#27272a] rounded-lg text-sm">
                 {tool.price}
               </span>
-              <span className="px-3 py-1 bg-[#3b82f6]/10 text-[#3b82f6] rounded-lg text-sm">
+              <span className="px-3 py-1 bg-[#3b82f6]/10 text-[#3b82f6] rounded-lg text-sm font-medium">
                 ★ {tool.rating}/5
               </span>
               <span className="px-3 py-1 bg-[#27272a] rounded-lg text-sm capitalize">
@@ -74,29 +89,29 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                 href={tool.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 bg-[#3b82f6] hover:bg-[#2563eb] rounded-lg text-sm transition"
+                className="px-4 py-2 bg-white text-black rounded-lg text-sm font-medium hover:bg-gray-100 transition"
               >
-                Visit Website →
+                Visit {tool.name} →
               </a>
             </div>
           </div>
         </div>
 
-        {/* Ad Placeholder */}
-        <div className="mb-8 p-4 bg-[#18181b] border border-dashed border-[#27272a] rounded-xl text-center text-sm text-[#71717a]">
+        {/* Ad placeholder */}
+        <div className="mb-8 p-4 bg-[#18181b] border border-dashed border-[#27272a] rounded-xl text-center text-sm text-[#52525b]">
           Advertisement
         </div>
 
-        {/* Main Content */}
+        {/* Content */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 space-y-8">
             {/* Features */}
             <section>
               <h2 className="text-xl font-bold mb-4">Key Features</h2>
-              <ul className="space-y-2">
+              <ul className="space-y-3">
                 {tool.features.map((feature, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <span className="text-[#3b82f6] mt-1">✓</span>
+                  <li key={i} className="flex items-start gap-3 p-3 bg-[#18181b] rounded-lg">
+                    <span className="text-[#3b82f6] mt-0.5">✓</span>
                     <span>{feature}</span>
                   </li>
                 ))}
@@ -137,7 +152,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                   <Link
                     key={i}
                     href={`/blog/best-${tool.category}-tools`}
-                    className="px-3 py-1 bg-[#18181b] border border-[#27272a] rounded-full text-sm hover:border-[#3b82f6] transition"
+                    className="px-4 py-2 bg-[#18181b] border border-[#27272a] rounded-full text-sm hover:border-[#3b82f6] transition"
                   >
                     {useCase}
                   </Link>
@@ -150,14 +165,14 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
               <h2 className="text-xl font-bold mb-4">Who Should Use {tool.name}?</h2>
               <div className="flex flex-wrap gap-2">
                 {tool.target_users.map((user, i) => (
-                  <span key={i} className="px-3 py-1 bg-[#3b82f6]/10 text-[#3b82f6] rounded-full text-sm">
+                  <span key={i} className="px-4 py-2 bg-[#3b82f6]/10 text-[#3b82f6] rounded-full text-sm">
                     {user}
                   </span>
                 ))}
               </div>
             </section>
 
-            {/* Review Article Link */}
+            {/* Review link */}
             <section className="p-6 bg-[#18181b] border border-[#27272a] rounded-xl">
               <h2 className="text-lg font-bold mb-2">Full Review</h2>
               <p className="text-sm text-[#71717a] mb-4">
@@ -165,7 +180,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
               </p>
               <Link
                 href={`/blog/${tool.slug}-review`}
-                className="text-[#3b82f6] hover:underline text-sm"
+                className="text-[#3b82f6] hover:underline text-sm font-medium"
               >
                 Read {tool.name} Review →
               </Link>
@@ -204,7 +219,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                 </div>
                 <div className="flex justify-between">
                   <dt className="text-[#71717a]">Rating</dt>
-                  <dd className="text-[#3b82f6]">★ {tool.rating}/5</dd>
+                  <dd className="text-[#3b82f6] font-medium">★ {tool.rating}/5</dd>
                 </div>
               </dl>
             </div>
@@ -228,17 +243,11 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                     </Link>
                   ))}
                 </div>
-                <Link
-                  href={`/blog/${tool.slug}-vs-${alternatives[0]?.slug}`}
-                  className="block mt-4 text-center text-sm text-[#3b82f6] hover:underline"
-                >
-                  Compare {tool.name} vs {alternatives[0]?.name} →
-                </Link>
               </div>
             )}
 
-            {/* Ad Placeholder */}
-            <div className="p-4 bg-[#18181b] border border-dashed border-[#27272a] rounded-xl text-center text-sm text-[#71717a]">
+            {/* Ad placeholder */}
+            <div className="p-4 bg-[#18181b] border border-dashed border-[#27272a] rounded-xl text-center text-sm text-[#52525b]">
               Advertisement
             </div>
           </div>

@@ -1,0 +1,12 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Toolio",
+  "url": "https://toolio.dev",
+  "description": "Find the best AI tools for your needs. Honest reviews, real pricing, no fluff.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://toolio.dev/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
