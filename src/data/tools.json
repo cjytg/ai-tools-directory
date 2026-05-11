@@ -896,5 +896,2072 @@
       "Researchers",
       "International teams"
     ]
+  },
+  {
+    "slug": "gemini",
+    "name": "Gemini",
+    "category": "chatbot",
+    "pricing": "freemium",
+    "price": "$20/mo",
+    "description": "Google's AI chatbot with strong multimodal capabilities.",
+    "features": [
+      "Multimodal input",
+      "Google integration",
+      "Long context",
+      "Real-time info"
+    ],
+    "pros": [
+      "Best real-time info",
+      "Good for research",
+      "Free tier generous"
+    ],
+    "cons": [
+      "Less creative than GPT-4",
+      "Inconsistent quality",
+      "Privacy concerns"
+    ],
+    "alternatives": [
+      "chatgpt",
+      "claude",
+      "copilot"
+    ],
+    "website": "https://gemini.google.com",
+    "company": "Google",
+    "founded": 2023,
+    "rating": 4.3,
+    "use_cases": [
+      "Research",
+      "Writing",
+      "Analysis",
+      "Coding"
+    ],
+    "target_users": [
+      "Researchers",
+      "Students",
+      "Professionals"
+    ]
+  },
+  {
+    "slug": "copilot",
+    "name": "Microsoft Copilot",
+    "category": "chatbot",
+    "pricing": "freemium",
+    "price": "$20/mo",
+    "description": "Microsoft's AI assistant integrated across Windows and Office.",
+    "features": [
+      "Windows integration",
+      "Office integration",
+      "Web search",
+      "Image generation"
+    ],
+    "pros": [
+      "Deep Microsoft integration",
+      "Free tier available",
+      "Good for productivity"
+    ],
+    "cons": [
+      "Can be pushy with Edge",
+      "Less powerful than GPT-4",
+      "Ads in free version"
+    ],
+    "alternatives": [
+      "chatgpt",
+      "claude",
+      "gemini"
+    ],
+    "website": "https://copilot.microsoft.com",
+    "company": "Microsoft",
+    "founded": 2023,
+    "rating": 4.1,
+    "use_cases": [
+      "Office work",
+      "Windows tasks",
+      "Web search",
+      "Quick answers"
+    ],
+    "target_users": [
+      "Windows users",
+      "Office workers",
+      "Students"
+    ]
+  },
+  {
+    "slug": "llama",
+    "name": "Llama",
+    "category": "chatbot",
+    "pricing": "free",
+    "price": "Free (open source)",
+    "description": "Meta's open-source large language model family.",
+    "features": [
+      "Open source",
+      "Multiple sizes",
+      "Commercial use",
+      "Community support"
+    ],
+    "pros": [
+      "Free to use",
+      "Can run locally",
+      "No data sharing",
+      "Highly customizable"
+    ],
+    "cons": [
+      "Requires technical knowledge",
+      "Needs powerful hardware",
+      "Less polished than ChatGPT"
+    ],
+    "alternatives": [
+      "chatgpt",
+      "claude",
+      "mistral"
+    ],
+    "website": "https://llama.meta.com",
+    "company": "Meta",
+    "founded": 2023,
+    "rating": 4.2,
+    "use_cases": [
+      "Research",
+      "Custom AI apps",
+      "Local deployment",
+      "Fine-tuning"
+    ],
+    "target_users": [
+      "Developers",
+      "Researchers",
+      "Enterprises"
+    ]
+  },
+  {
+    "slug": "mistral",
+    "name": "Mistral",
+    "category": "chatbot",
+    "pricing": "freemium",
+    "price": "Free / API pricing",
+    "description": "European AI company with efficient open-source models.",
+    "features": [
+      "Efficient models",
+      "Open source",
+      "API access",
+      "European hosting"
+    ],
+    "pros": [
+      "Good performance per parameter",
+      "European data privacy",
+      "Competitive pricing"
+    ],
+    "cons": [
+      "Smaller community",
+      "Less documentation",
+      "Fewer integrations"
+    ],
+    "alternatives": [
+      "llama",
+      "chatgpt",
+      "claude"
+    ],
+    "website": "https://mistral.ai",
+    "company": "Mistral AI",
+    "founded": 2023,
+    "rating": 4.1,
+    "use_cases": [
+      "API integration",
+      "Research",
+      "European compliance",
+      "Cost-effective AI"
+    ],
+    "target_users": [
+      "Developers",
+      "European businesses",
+      "Researchers"
+    ]
+  },
+  {
+    "slug": "adobe-firefly",
+    "name": "Adobe Firefly",
+    "category": "image",
+    "pricing": "freemium",
+    "price": "$4.99/mo",
+    "description": "Adobe's AI image generator trained on licensed content.",
+    "features": [
+      "Text-to-image",
+      "Generative fill",
+      "Style transfer",
+      "Adobe integration"
+    ],
+    "pros": [
+      "Commercially safe",
+      "Adobe integration",
+      "Good quality"
+    ],
+    "cons": [
+      "Fewer styles than Midjourney",
+      "Requires Adobe subscription",
+      "Slower generation"
+    ],
+    "alternatives": [
+      "midjourney",
+      "dall-e-3",
+      "stable-diffusion"
+    ],
+    "website": "https://firefly.adobe.com",
+    "company": "Adobe",
+    "founded": 2023,
+    "rating": 4.2,
+    "use_cases": [
+      "Commercial design",
+      "Photo editing",
+      "Adobe workflow",
+      "Safe content"
+    ],
+    "target_users": [
+      "Designers",
+      "Adobe users",
+      "Businesses",
+      "Photographers"
+    ]
+  },
+  {
+    "slug": "ideogram",
+    "name": "Ideogram",
+    "category": "image",
+    "pricing": "freemium",
+    "price": "$8/mo",
+    "description": "AI image generator excelling at text rendering in images.",
+    "features": [
+      "Text-to-image",
+      "Text rendering",
+      "Logo design",
+      "Poster creation"
+    ],
+    "pros": [
+      "Best text in images",
+      "Good for logos",
+      "Free tier available"
+    ],
+    "cons": [
+      "Smaller community",
+      "Fewer styles",
+      "Less documentation"
+    ],
+    "alternatives": [
+      "midjourney",
+      "dall-e-3",
+      "canva-ai"
+    ],
+    "website": "https://ideogram.ai",
+    "company": "Ideogram",
+    "founded": 2022,
+    "rating": 4.3,
+    "use_cases": [
+      "Logos",
+      "Posters",
+      "Social media graphics",
+      "Text-heavy designs"
+    ],
+    "target_users": [
+      "Designers",
+      "Marketers",
+      "Small businesses"
+    ]
+  },
+  {
+    "slug": "leonardo-ai",
+    "name": "Leonardo AI",
+    "category": "image",
+    "pricing": "freemium",
+    "price": "$12/mo",
+    "description": "AI image generation platform with fine-tuning capabilities.",
+    "features": [
+      "Text-to-image",
+      "Model training",
+      "Canvas editing",
+      "API access"
+    ],
+    "pros": [
+      "Good free tier",
+      "Custom model training",
+      "Multiple styles"
+    ],
+    "cons": [
+      "Complex interface",
+      "Inconsistent quality",
+      "Slow on free tier"
+    ],
+    "alternatives": [
+      "midjourney",
+      "stable-diffusion",
+      "dall-e-3"
+    ],
+    "website": "https://leonardo.ai",
+    "company": "Leonardo AI",
+    "founded": 2022,
+    "rating": 4.1,
+    "use_cases": [
+      "Game assets",
+      "Concept art",
+      "Custom styles",
+      "Batch generation"
+    ],
+    "target_users": [
+      "Game developers",
+      "Artists",
+      "Content creators"
+    ]
+  },
+  {
+    "slug": "codeium",
+    "name": "Codeium",
+    "category": "coding",
+    "pricing": "free",
+    "price": "Free",
+    "description": "Free AI code completion and chat tool for developers.",
+    "features": [
+      "Code completion",
+      "Chat",
+      "70+ languages",
+      "IDE support"
+    ],
+    "pros": [
+      "Completely free",
+      "Wide IDE support",
+      "Good quality"
+    ],
+    "cons": [
+      "Less powerful than Copilot",
+      "Smaller community",
+      "Newer product"
+    ],
+    "alternatives": [
+      "github-copilot",
+      "cursor",
+      "tabnine"
+    ],
+    "website": "https://codeium.com",
+    "company": "Exafunction",
+    "founded": 2021,
+    "rating": 4.0,
+    "use_cases": [
+      "Code completion",
+      "Learning",
+      "Budget development",
+      "Multi-IDE workflow"
+    ],
+    "target_users": [
+      "Students",
+      "Indie developers",
+      "Budget-conscious devs"
+    ]
+  },
+  {
+    "slug": "tabnine",
+    "name": "Tabnine",
+    "category": "coding",
+    "pricing": "freemium",
+    "price": "$12/mo",
+    "description": "AI code assistant with privacy-focused on-premise options.",
+    "features": [
+      "Code completion",
+      "Chat",
+      "On-premise option",
+      "Team learning"
+    ],
+    "pros": [
+      "Privacy focused",
+      "Learns from your code",
+      "Enterprise ready"
+    ],
+    "cons": [
+      "Less powerful than Copilot",
+      "Expensive for teams",
+      "Smaller ecosystem"
+    ],
+    "alternatives": [
+      "github-copilot",
+      "cursor",
+      "codeium"
+    ],
+    "website": "https://tabnine.com",
+    "company": "Tabnine",
+    "founded": 2018,
+    "rating": 4.0,
+    "use_cases": [
+      "Enterprise development",
+      "Privacy-sensitive code",
+      "Team workflows"
+    ],
+    "target_users": [
+      "Enterprise teams",
+      "Security-conscious devs",
+      "Large organizations"
+    ]
+  },
+  {
+    "slug": "windsurf",
+    "name": "Windsurf",
+    "category": "coding",
+    "pricing": "freemium",
+    "price": "$15/mo",
+    "description": "AI-native code editor by Codeium with deep AI integration.",
+    "features": [
+      "AI chat",
+      "Code completion",
+      "Multi-file editing",
+      "Terminal integration"
+    ],
+    "pros": [
+      "Free tier generous",
+      "Fast performance",
+      "Good AI integration"
+    ],
+    "cons": [
+      "New product",
+      "Smaller community",
+      "VS Code learning curve"
+    ],
+    "alternatives": [
+      "cursor",
+      "github-copilot"
+    ],
+    "website": "https://windsurf.com",
+    "company": "Codeium",
+    "founded": 2024,
+    "rating": 4.2,
+    "use_cases": [
+      "Full-stack development",
+      "AI-assisted coding",
+      "Refactoring"
+    ],
+    "target_users": [
+      "Developers",
+      "AI enthusiasts",
+      "Full-stack engineers"
+    ]
+  },
+  {
+    "slug": "pika",
+    "name": "Pika",
+    "category": "video",
+    "pricing": "freemium",
+    "price": "$10/mo",
+    "description": "AI video generation tool for creating short videos from text.",
+    "features": [
+      "Text-to-video",
+      "Image-to-video",
+      "Video editing",
+      "Sound effects"
+    ],
+    "pros": [
+      "Easy to use",
+      "Good quality",
+      "Fast generation"
+    ],
+    "cons": [
+      "Short clips only",
+      "Limited control",
+      "Watermark on free"
+    ],
+    "alternatives": [
+      "runway",
+      "kling",
+      "sora"
+    ],
+    "website": "https://pika.art",
+    "company": "Pika",
+    "founded": 2023,
+    "rating": 4.2,
+    "use_cases": [
+      "Social media content",
+      "Short videos",
+      "Concepts",
+      "Marketing clips"
+    ],
+    "target_users": [
+      "Content creators",
+      "Marketers",
+      "Social media managers"
+    ]
+  },
+  {
+    "slug": "kling",
+    "name": "Kling",
+    "category": "video",
+    "pricing": "freemium",
+    "price": "Free / Credits",
+    "description": "AI video generator by Kuaishou with impressive quality.",
+    "features": [
+      "Text-to-video",
+      "Image-to-video",
+      "Long clips",
+      "Motion control"
+    ],
+    "pros": [
+      "Generous free tier",
+      "Good quality",
+      "Longer videos"
+    ],
+    "cons": [
+      "Chinese platform",
+      "Less documentation",
+      "Limited styles"
+    ],
+    "alternatives": [
+      "runway",
+      "pika",
+      "sora"
+    ],
+    "website": "https://klingai.com",
+    "company": "Kuaishou",
+    "founded": 2024,
+    "rating": 4.3,
+    "use_cases": [
+      "Video creation",
+      "Social media",
+      "Marketing",
+      "Concepts"
+    ],
+    "target_users": [
+      "Content creators",
+      "Marketers",
+      "Video enthusiasts"
+    ]
+  },
+  {
+    "slug": "murf",
+    "name": "Murf",
+    "category": "audio",
+    "pricing": "freemium",
+    "price": "$26/mo",
+    "description": "AI voiceover platform for creating professional voice content.",
+    "features": [
+      "Text-to-speech",
+      "Voice cloning",
+      "Video sync",
+      "API access"
+    ],
+    "pros": [
+      "Professional voices",
+      "Easy to use",
+      "Good for videos"
+    ],
+    "cons": [
+      "Expensive",
+      "Limited free tier",
+      "Fewer voice options"
+    ],
+    "alternatives": [
+      "elevenlabs",
+      "play-ht",
+      "speechify"
+    ],
+    "website": "https://murf.ai",
+    "company": "Murf",
+    "founded": 2020,
+    "rating": 4.1,
+    "use_cases": [
+      "Voiceovers",
+      "E-learning",
+      "Presentations",
+      "Ads"
+    ],
+    "target_users": [
+      "Content creators",
+      "Educators",
+      "Marketers"
+    ]
+  },
+  {
+    "slug": "play-ht",
+    "name": "Play.ht",
+    "category": "audio",
+    "pricing": "freemium",
+    "price": "$31.20/mo",
+    "description": "AI voice generation platform with ultra-realistic voices.",
+    "features": [
+      "Text-to-speech",
+      "Voice cloning",
+      "Podcast hosting",
+      "API"
+    ],
+    "pros": [
+      "Very realistic voices",
+      "Good for podcasts",
+      "Multiple languages"
+    ],
+    "cons": [
+      "Expensive",
+      "Complex pricing",
+      "Slow generation"
+    ],
+    "alternatives": [
+      "elevenlabs",
+      "murf",
+      "speechify"
+    ],
+    "website": "https://play.ht",
+    "company": "Play.ht",
+    "founded": 2016,
+    "rating": 4.0,
+    "use_cases": [
+      "Podcasts",
+      "Audiobooks",
+      "Voiceovers",
+      "Content"
+    ],
+    "target_users": [
+      "Podcasters",
+      "Content creators",
+      "Authors"
+    ]
+  },
+  {
+    "slug": "speechify",
+    "name": "Speechify",
+    "category": "audio",
+    "pricing": "freemium",
+    "price": "$139/year",
+    "description": "Text-to-speech app for reading articles, documents, and books.",
+    "features": [
+      "Text-to-speech",
+      "Speed control",
+      "Mobile app",
+      "Chrome extension"
+    ],
+    "pros": [
+      "Great for reading",
+      "Mobile app",
+      "Speed control"
+    ],
+    "cons": [
+      "Expensive yearly",
+      "Quality varies",
+      "Limited voices free"
+    ],
+    "alternatives": [
+      "elevenlabs",
+      "murf",
+      "natural-reader"
+    ],
+    "website": "https://speechify.com",
+    "company": "Speechify",
+    "founded": 2017,
+    "rating": 4.0,
+    "use_cases": [
+      "Reading assistance",
+      "Accessibility",
+      "Learning",
+      "Productivity"
+    ],
+    "target_users": [
+      "Students",
+      "Professionals",
+      "People with dyslexia"
+    ]
+  },
+  {
+    "slug": "copy-ai",
+    "name": "Copy.ai",
+    "category": "writing",
+    "pricing": "freemium",
+    "price": "$49/mo",
+    "description": "AI copywriting platform for marketing teams.",
+    "features": [
+      "Marketing templates",
+      "Blog wizard",
+      "Social media",
+      "Email copy"
+    ],
+    "pros": [
+      "Good for marketing",
+      "Many templates",
+      "Easy to use"
+    ],
+    "cons": [
+      "Expensive",
+      "Quality varies",
+      "Limited free tier"
+    ],
+    "alternatives": [
+      "jasper",
+      "chatgpt",
+      "writesonic"
+    ],
+    "website": "https://copy.ai",
+    "company": "Copy.ai",
+    "founded": 2020,
+    "rating": 4.0,
+    "use_cases": [
+      "Marketing copy",
+      "Social media",
+      "Emails",
+      "Ads"
+    ],
+    "target_users": [
+      "Marketers",
+      "Content teams",
+      "Agencies"
+    ]
+  },
+  {
+    "slug": "writesonic",
+    "name": "Writesonic",
+    "category": "writing",
+    "pricing": "freemium",
+    "price": "$16/mo",
+    "description": "AI writing platform with SEO optimization features.",
+    "features": [
+      "Article writer",
+      "SEO tools",
+      "ChatSonic",
+      "Image generation"
+    ],
+    "pros": [
+      "Affordable",
+      "SEO focused",
+      "Multiple tools"
+    ],
+    "cons": [
+      "Quality inconsistent",
+      "Credit system",
+      "Learning curve"
+    ],
+    "alternatives": [
+      "jasper",
+      "copy-ai",
+      "chatgpt"
+    ],
+    "website": "https://writesonic.com",
+    "company": "Writesonic",
+    "founded": 2020,
+    "rating": 4.0,
+    "use_cases": [
+      "Blog posts",
+      "SEO content",
+      "Marketing",
+      "Ads"
+    ],
+    "target_users": [
+      "Bloggers",
+      "Marketers",
+      "Content creators"
+    ]
+  },
+  {
+    "slug": "quillbot",
+    "name": "QuillBot",
+    "category": "writing",
+    "pricing": "freemium",
+    "price": "$9.95/mo",
+    "description": "AI paraphrasing and writing tool for improving text.",
+    "features": [
+      "Paraphraser",
+      "Grammar checker",
+      "Summarizer",
+      "Citation generator"
+    ],
+    "pros": [
+      "Great for paraphrasing",
+      "Free tier useful",
+      "Simple interface"
+    ],
+    "cons": [
+      "Limited free modes",
+      "Can change meaning",
+      "Not for long-form"
+    ],
+    "alternatives": [
+      "grammarly",
+      "chatgpt",
+      "deepl"
+    ],
+    "website": "https://quillbot.com",
+    "company": "QuillBot",
+    "founded": 2017,
+    "rating": 4.1,
+    "use_cases": [
+      "Academic writing",
+      "Paraphrasing",
+      "Summarizing",
+      "Citations"
+    ],
+    "target_users": [
+      "Students",
+      "Researchers",
+      "Non-native speakers"
+    ]
+  },
+  {
+    "slug": "otter-ai",
+    "name": "Otter.ai",
+    "category": "productivity",
+    "pricing": "freemium",
+    "price": "$16.99/mo",
+    "description": "AI meeting transcription and note-taking tool.",
+    "features": [
+      "Meeting transcription",
+      "Auto notes",
+      "Action items",
+      "Integration"
+    ],
+    "pros": [
+      "Great for meetings",
+      "Action items",
+      "Easy to use"
+    ],
+    "cons": [
+      "Accuracy varies",
+      "Limited free tier",
+      "Privacy concerns"
+    ],
+    "alternatives": [
+      "descript",
+      "loom-ai",
+      "notion-ai"
+    ],
+    "website": "https://otter.ai",
+    "company": "Otter.ai",
+    "founded": 2016,
+    "rating": 4.2,
+    "use_cases": [
+      "Meeting notes",
+      "Interviews",
+      "Lectures",
+      "Collaboration"
+    ],
+    "target_users": [
+      "Teams",
+      "Students",
+      "Journalists",
+      "Professionals"
+    ]
+  },
+  {
+    "slug": "todoist-ai",
+    "name": "Todoist AI",
+    "category": "productivity",
+    "pricing": "freemium",
+    "price": "$4/mo",
+    "description": "AI-enhanced task management with smart scheduling.",
+    "features": [
+      "Task management",
+      "AI scheduling",
+      "Natural language",
+      "Projects"
+    ],
+    "pros": [
+      "Clean interface",
+      "Smart scheduling",
+      "Cross-platform"
+    ],
+    "cons": [
+      "AI limited in free",
+      "Basic features free",
+      "No time tracking"
+    ],
+    "alternatives": [
+      "notion-ai",
+      "ticktick",
+      "microsoft-to-do"
+    ],
+    "website": "https://todoist.com",
+    "company": "Doist",
+    "founded": 2007,
+    "rating": 4.3,
+    "use_cases": [
+      "Task management",
+      "Productivity",
+      "Personal organization",
+      "Team tasks"
+    ],
+    "target_users": [
+      "Professionals",
+      "Students",
+      "Teams",
+      "Individuals"
+    ]
+  },
+  {
+    "slug": "reclaim-ai",
+    "name": "Reclaim.ai",
+    "category": "productivity",
+    "pricing": "freemium",
+    "price": "$8/mo",
+    "description": "AI scheduling assistant that automatically manages your calendar.",
+    "features": [
+      "Smart scheduling",
+      "Habit tracking",
+      "Meeting links",
+      "Buffer time"
+    ],
+    "pros": [
+      "Saves time",
+      "Smart scheduling",
+      "Integrations"
+    ],
+    "cons": [
+      "Learning curve",
+      "Limited free tier",
+      "Can be aggressive"
+    ],
+    "alternatives": [
+      "calendly",
+      "google-calendar",
+      "clockwise"
+    ],
+    "website": "https://reclaim.ai",
+    "company": "Reclaim",
+    "founded": 2019,
+    "rating": 4.1,
+    "use_cases": [
+      "Calendar management",
+      "Scheduling",
+      "Productivity",
+      "Habits"
+    ],
+    "target_users": [
+      "Professionals",
+      "Teams",
+      "Busy people"
+    ]
+  },
+  {
+    "slug": "semrush",
+    "name": "SEMrush",
+    "category": "marketing",
+    "pricing": "paid",
+    "price": "$129.95/mo",
+    "description": "Comprehensive SEO and digital marketing platform.",
+    "features": [
+      "Keyword research",
+      "Competitor analysis",
+      "Site audit",
+      "Content marketing"
+    ],
+    "pros": [
+      "Most comprehensive",
+      "Great data",
+      "All-in-one tool"
+    ],
+    "cons": [
+      "Expensive",
+      "Overwhelming",
+      "Steep learning curve"
+    ],
+    "alternatives": [
+      "ahrefs",
+      "surfer-seo",
+      "moz"
+    ],
+    "website": "https://semrush.com",
+    "company": "SEMrush",
+    "founded": 2008,
+    "rating": 4.5,
+    "use_cases": [
+      "SEO",
+      "Content marketing",
+      "PPC",
+      "Competitor analysis"
+    ],
+    "target_users": [
+      "SEO professionals",
+      "Marketers",
+      "Agencies",
+      "Businesses"
+    ]
+  },
+  {
+    "slug": "ahrefs",
+    "name": "Ahrefs",
+    "category": "marketing",
+    "pricing": "paid",
+    "price": "$99/mo",
+    "description": "SEO toolset for link building, keyword research, and competitor analysis.",
+    "features": [
+      "Backlink analysis",
+      "Keyword research",
+      "Content explorer",
+      "Rank tracking"
+    ],
+    "pros": [
+      "Best backlink data",
+      "Great for SEO",
+      "Comprehensive"
+    ],
+    "cons": [
+      "Expensive",
+      "No free trial",
+      "Complex"
+    ],
+    "alternatives": [
+      "semrush",
+      "surfer-seo",
+      "moz"
+    ],
+    "website": "https://ahrefs.com",
+    "company": "Ahrefs",
+    "founded": 2010,
+    "rating": 4.6,
+    "use_cases": [
+      "SEO",
+      "Link building",
+      "Content research",
+      "Competitor analysis"
+    ],
+    "target_users": [
+      "SEO professionals",
+      "Content marketers",
+      "Agencies"
+    ]
+  },
+  {
+    "slug": "mailchimp",
+    "name": "Mailchimp",
+    "category": "marketing",
+    "pricing": "freemium",
+    "price": "$13/mo",
+    "description": "Email marketing platform with AI-powered features.",
+    "features": [
+      "Email campaigns",
+      "Automation",
+      "AI content",
+      "Analytics"
+    ],
+    "pros": [
+      "Easy to use",
+      "Good templates",
+      "Free tier"
+    ],
+    "cons": [
+      "Gets expensive",
+      "Limited automation free",
+      "Deliverability issues"
+    ],
+    "alternatives": [
+      "convertkit",
+      "sendinblue",
+      "activecampaign"
+    ],
+    "website": "https://mailchimp.com",
+    "company": "Mailchimp",
+    "founded": 2001,
+    "rating": 4.2,
+    "use_cases": [
+      "Email marketing",
+      "Newsletters",
+      "Automation",
+      "E-commerce"
+    ],
+    "target_users": [
+      "Small businesses",
+      "Creators",
+      "Marketers"
+    ]
+  },
+  {
+    "slug": "you-com",
+    "name": "You.com",
+    "category": "search",
+    "pricing": "freemium",
+    "price": "$15/mo",
+    "description": "AI-powered search engine with privacy focus and AI chat.",
+    "features": [
+      "AI search",
+      "Privacy mode",
+      "Code generation",
+      "Image search"
+    ],
+    "pros": [
+      "Privacy focused",
+      "AI integration",
+      "Clean interface"
+    ],
+    "cons": [
+      "Less accurate than Google",
+      "Smaller index",
+      "Newer product"
+    ],
+    "alternatives": [
+      "perplexity",
+      "google",
+      "bing"
+    ],
+    "website": "https://you.com",
+    "company": "You.com",
+    "founded": 2020,
+    "rating": 3.9,
+    "use_cases": [
+      "Privacy search",
+      "AI research",
+      "Code help",
+      "Quick answers"
+    ],
+    "target_users": [
+      "Privacy-conscious users",
+      "Developers",
+      "Researchers"
+    ]
+  },
+  {
+    "slug": "brave-search",
+    "name": "Brave Search",
+    "category": "search",
+    "pricing": "free",
+    "price": "Free",
+    "description": "Independent search engine with no tracking and AI answers.",
+    "features": [
+      "No tracking",
+      "Independent index",
+      "AI answers",
+      "Image search"
+    ],
+    "pros": [
+      "Privacy focused",
+      "No ads",
+      "Independent"
+    ],
+    "cons": [
+      "Smaller index",
+      "Less accurate",
+      "Fewer features"
+    ],
+    "alternatives": [
+      "google",
+      "duckduckgo",
+      "you-com"
+    ],
+    "website": "https://search.brave.com",
+    "company": "Brave",
+    "founded": 2021,
+    "rating": 4.0,
+    "use_cases": [
+      "Privacy search",
+      "Ad-free browsing",
+      "Independent results"
+    ],
+    "target_users": [
+      "Privacy advocates",
+      "Brave browser users"
+    ]
+  },
+  {
+    "slug": "figma",
+    "name": "Figma",
+    "category": "design",
+    "pricing": "freemium",
+    "price": "$15/mo",
+    "description": "Collaborative design tool with AI features for UI/UX.",
+    "features": [
+      "UI design",
+      "Prototyping",
+      "Collaboration",
+      "AI plugins"
+    ],
+    "pros": [
+      "Best for UI/UX",
+      "Real-time collaboration",
+      "Plugin ecosystem"
+    ],
+    "cons": [
+      "Learning curve",
+      "Can be slow",
+      "Paid for teams"
+    ],
+    "alternatives": [
+      "sketch",
+      "adobe-xd",
+      "canva-ai"
+    ],
+    "website": "https://figma.com",
+    "company": "Figma",
+    "founded": 2012,
+    "rating": 4.7,
+    "use_cases": [
+      "UI design",
+      "Prototyping",
+      "Design systems",
+      "Collaboration"
+    ],
+    "target_users": [
+      "UI/UX designers",
+      "Product teams",
+      "Developers"
+    ]
+  },
+  {
+    "slug": "looka",
+    "name": "Looka",
+    "category": "design",
+    "pricing": "paid",
+    "price": "$20 one-time",
+    "description": "AI-powered logo and brand identity generator.",
+    "features": [
+      "Logo generation",
+      "Brand kit",
+      "Social media",
+      "Business cards"
+    ],
+    "pros": [
+      "Fast logo creation",
+      "Affordable",
+      "Brand kit included"
+    ],
+    "cons": [
+      "Less unique than custom",
+      "Limited customization",
+      "Stock-like feel"
+    ],
+    "alternatives": [
+      "canva-ai",
+      "99designs",
+      "brandmark"
+    ],
+    "website": "https://looka.com",
+    "company": "Looka",
+    "founded": 2016,
+    "rating": 4.0,
+    "use_cases": [
+      "Logo design",
+      "Brand identity",
+      "Startups",
+      "Quick branding"
+    ],
+    "target_users": [
+      "Startups",
+      "Small businesses",
+      "Entrepreneurs"
+    ]
+  },
+  {
+    "slug": "google-translate",
+    "name": "Google Translate",
+    "category": "translation",
+    "pricing": "free",
+    "price": "Free",
+    "description": "Free translation service supporting 130+ languages.",
+    "features": [
+      "130+ languages",
+      "Text translation",
+      "Image translation",
+      "Real-time"
+    ],
+    "pros": [
+      "Free",
+      "Most languages",
+      "Fast"
+    ],
+    "cons": [
+      "Quality varies",
+      "Not for professional use",
+      "Privacy concerns"
+    ],
+    "alternatives": [
+      "deepl",
+      "microsoft-translator",
+      "papago"
+    ],
+    "website": "https://translate.google.com",
+    "company": "Google",
+    "founded": 2006,
+    "rating": 4.0,
+    "use_cases": [
+      "Quick translation",
+      "Travel",
+      "Casual use",
+      "Learning"
+    ],
+    "target_users": [
+      "Travelers",
+      "Students",
+      "Casual users"
+    ]
+  },
+  {
+    "slug": "microsoft-translator",
+    "name": "Microsoft Translator",
+    "category": "translation",
+    "pricing": "free",
+    "price": "Free",
+    "description": "Microsoft's translation service with offline capabilities.",
+    "features": [
+      "70+ languages",
+      "Offline mode",
+      "Office integration",
+      "API"
+    ],
+    "pros": [
+      "Free",
+      "Offline mode",
+      "Office integration"
+    ],
+    "cons": [
+      "Fewer languages than Google",
+      "Less accurate",
+      "Smaller community"
+    ],
+    "alternatives": [
+      "deepl",
+      "google-translate",
+      "papago"
+    ],
+    "website": "https://translator.microsoft.com",
+    "company": "Microsoft",
+    "founded": 2015,
+    "rating": 3.9,
+    "use_cases": [
+      "Business translation",
+      "Office documents",
+      "Offline use",
+      "Microsoft ecosystem"
+    ],
+    "target_users": [
+      "Business users",
+      "Office workers",
+      "Travelers"
+    ]
+  },
+  {
+    "slug": "zapier",
+    "name": "Zapier",
+    "category": "productivity",
+    "pricing": "freemium",
+    "price": "$19.99/mo",
+    "description": "Automation platform connecting 5000+ apps with AI features.",
+    "features": [
+      "App automation",
+      "AI actions",
+      "Multi-step workflows",
+      "5000+ integrations"
+    ],
+    "pros": [
+      "Most integrations",
+      "Easy to use",
+      "Powerful automation"
+    ],
+    "cons": [
+      "Can be expensive",
+      "Learning curve",
+      "Rate limits free"
+    ],
+    "alternatives": [
+      "make",
+      "ifttt",
+      "n8n"
+    ],
+    "website": "https://zapier.com",
+    "company": "Zapier",
+    "founded": 2011,
+    "rating": 4.5,
+    "use_cases": [
+      "Workflow automation",
+      "Data sync",
+      "Notifications",
+      "Integration"
+    ],
+    "target_users": [
+      "Businesses",
+      "Marketers",
+      "Operations teams"
+    ]
+  },
+  {
+    "slug": "make",
+    "name": "Make",
+    "category": "productivity",
+    "pricing": "freemium",
+    "price": "$9/mo",
+    "description": "Visual automation platform for complex workflows.",
+    "features": [
+      "Visual builder",
+      "Complex workflows",
+      "Data transformation",
+      "1000+ apps"
+    ],
+    "pros": [
+      "More powerful than Zapier",
+      "Cheaper",
+      "Visual interface"
+    ],
+    "cons": [
+      "Steeper learning curve",
+      "Can be confusing",
+      "Complex pricing"
+    ],
+    "alternatives": [
+      "zapier",
+      "ifttt",
+      "n8n"
+    ],
+    "website": "https://make.com",
+    "company": "Make",
+    "founded": 2012,
+    "rating": 4.3,
+    "use_cases": [
+      "Complex automation",
+      "Data processing",
+      "API integration",
+      "Visual workflows"
+    ],
+    "target_users": [
+      "Technical users",
+      "Developers",
+      "Operations teams"
+    ]
+  },
+  {
+    "slug": "n8n",
+    "name": "n8n",
+    "category": "productivity",
+    "pricing": "free",
+    "price": "Free (self-hosted)",
+    "description": "Open-source workflow automation tool you can self-host.",
+    "features": [
+      "Self-hosted",
+      "Open source",
+      "Visual editor",
+      "400+ integrations"
+    ],
+    "pros": [
+      "Free self-hosted",
+      "Full control",
+      "Privacy focused"
+    ],
+    "cons": [
+      "Requires setup",
+      "Smaller community",
+      "Self-maintain"
+    ],
+    "alternatives": [
+      "zapier",
+      "make",
+      "automatisch"
+    ],
+    "website": "https://n8n.io",
+    "company": "n8n",
+    "founded": 2019,
+    "rating": 4.2,
+    "use_cases": [
+      "Self-hosted automation",
+      "Privacy workflows",
+      "Custom integrations",
+      "DevOps"
+    ],
+    "target_users": [
+      "Developers",
+      "Privacy-conscious teams",
+      "Enterprises"
+    ]
+  },
+  {
+    "slug": "huggingface",
+    "name": "Hugging Face",
+    "category": "coding",
+    "pricing": "free",
+    "price": "Free",
+    "description": "Platform for sharing and deploying ML models.",
+    "features": [
+      "Model hub",
+      "Spaces",
+      "Inference API",
+      "Datasets"
+    ],
+    "pros": [
+      "Huge model library",
+      "Free tier",
+      "Community"
+    ],
+    "cons": [
+      "Complex for beginners",
+      "Resource limits",
+      "Documentation varies"
+    ],
+    "alternatives": [
+      "replicate",
+      "openai",
+      "anthropic"
+    ],
+    "website": "https://huggingface.co",
+    "company": "Hugging Face",
+    "founded": 2016,
+    "rating": 4.5,
+    "use_cases": [
+      "ML research",
+      "Model deployment",
+      "Fine-tuning",
+      "Learning"
+    ],
+    "target_users": [
+      "ML engineers",
+      "Researchers",
+      "Data scientists"
+    ]
+  },
+  {
+    "slug": "replicate",
+    "name": "Replicate",
+    "category": "coding",
+    "pricing": "pay-per-use",
+    "price": "Pay per use",
+    "description": "Platform for running ML models in the cloud.",
+    "features": [
+      "Model hosting",
+      "API access",
+      "Pay per use",
+      "Custom models"
+    ],
+    "pros": [
+      "Easy to use",
+      "No setup",
+      "Pay per use"
+    ],
+    "cons": [
+      "Can be expensive",
+      "Cold starts",
+      "Limited free"
+    ],
+    "alternatives": [
+      "huggingface",
+      "modal",
+      "banana"
+    ],
+    "website": "https://replicate.com",
+    "company": "Replicate",
+    "founded": 2019,
+    "rating": 4.2,
+    "use_cases": [
+      "ML inference",
+      "Image generation",
+      "Model deployment",
+      "Prototyping"
+    ],
+    "target_users": [
+      "Developers",
+      "ML engineers",
+      "Startups"
+    ]
+  },
+  {
+    "slug": "cohere",
+    "name": "Cohere",
+    "category": "chatbot",
+    "pricing": "pay-per-use",
+    "price": "API pricing",
+    "description": "Enterprise-focused AI platform with strong RAG capabilities.",
+    "features": [
+      "Enterprise LLM",
+      "RAG",
+      "Embeddings",
+      "Classification"
+    ],
+    "pros": [
+      "Enterprise focused",
+      "Good RAG",
+      "Data privacy"
+    ],
+    "cons": [
+      "Less consumer friendly",
+      "Complex pricing",
+      "Smaller community"
+    ],
+    "alternatives": [
+      "openai",
+      "anthropic",
+      "google"
+    ],
+    "website": "https://cohere.com",
+    "company": "Cohere",
+    "founded": 2019,
+    "rating": 4.1,
+    "use_cases": [
+      "Enterprise AI",
+      "RAG systems",
+      "Classification",
+      "Embeddings"
+    ],
+    "target_users": [
+      "Enterprises",
+      "Developers",
+      "Data teams"
+    ]
+  },
+  {
+    "slug": "anthropic-api",
+    "name": "Claude API",
+    "category": "chatbot",
+    "pricing": "pay-per-use",
+    "price": "API pricing",
+    "description": "Anthropic's API for accessing Claude models.",
+    "features": [
+      "200K context",
+      "Tool use",
+      "Vision",
+      "Fast inference"
+    ],
+    "pros": [
+      "Best for long context",
+      "Good instruction following",
+      "Safe outputs"
+    ],
+    "cons": [
+      "API only",
+      "Complex pricing",
+      "Rate limits"
+    ],
+    "alternatives": [
+      "openai",
+      "cohere",
+      "google"
+    ],
+    "website": "https://console.anthropic.com",
+    "company": "Anthropic",
+    "founded": 2021,
+    "rating": 4.5,
+    "use_cases": [
+      "Long document processing",
+      "Safe AI",
+      "Research",
+      "Enterprise"
+    ],
+    "target_users": [
+      "Developers",
+      "Enterprises",
+      "Researchers"
+    ]
+  },
+  {
+    "slug": "openai-api",
+    "name": "OpenAI API",
+    "category": "chatbot",
+    "pricing": "pay-per-use",
+    "price": "API pricing",
+    "description": "OpenAI's API for GPT-4, DALL-E, and other models.",
+    "features": [
+      "GPT-4",
+      "DALL-E",
+      "Whisper",
+      "Function calling"
+    ],
+    "pros": [
+      "Most capable models",
+      "Wide ecosystem",
+      "Good docs"
+    ],
+    "cons": [
+      "Expensive",
+      "Rate limits",
+      "Privacy concerns"
+    ],
+    "alternatives": [
+      "anthropic-api",
+      "cohere",
+      "google"
+    ],
+    "website": "https://platform.openai.com",
+    "company": "OpenAI",
+    "founded": 2015,
+    "rating": 4.6,
+    "use_cases": [
+      "AI applications",
+      "Content generation",
+      "Code",
+      "Analysis"
+    ],
+    "target_users": [
+      "Developers",
+      "Enterprises",
+      "AI engineers"
+    ]
+  },
+  {
+    "slug": "loom",
+    "name": "Loom",
+    "category": "video",
+    "pricing": "freemium",
+    "price": "$12.50/mo",
+    "description": "Video messaging tool for async communication.",
+    "features": [
+      "Screen recording",
+      "Video messages",
+      "Transcription",
+      "Comments"
+    ],
+    "pros": [
+      "Easy to use",
+      "Great for async",
+      "Good free tier"
+    ],
+    "cons": [
+      "Not for editing",
+      "AI features paid",
+      "Storage limits"
+    ],
+    "alternatives": [
+      "descript",
+      "vidyard",
+      "clip"
+    ],
+    "website": "https://loom.com",
+    "company": "Loom",
+    "founded": 2015,
+    "rating": 4.4,
+    "use_cases": [
+      "Async communication",
+      "Tutorials",
+      "Feedback",
+      "Demos"
+    ],
+    "target_users": [
+      "Remote teams",
+      "Educators",
+      "Sales teams"
+    ]
+  },
+  {
+    "slug": "capcut",
+    "name": "CapCut",
+    "category": "video",
+    "pricing": "freemium",
+    "price": "Free / $7.99/mo",
+    "description": "Free video editor by ByteDance with AI features.",
+    "features": [
+      "Video editing",
+      "AI effects",
+      "Templates",
+      "Auto captions"
+    ],
+    "pros": [
+      "Free",
+      "Easy to use",
+      "Good AI features"
+    ],
+    "cons": [
+      "TikTok branding",
+      "Watermark free version",
+      "Limited export"
+    ],
+    "alternatives": [
+      "premiere",
+      "final-cut",
+      "descript"
+    ],
+    "website": "https://capcut.com",
+    "company": "ByteDance",
+    "founded": 2020,
+    "rating": 4.3,
+    "use_cases": [
+      "Social media videos",
+      "Quick edits",
+      "TikTok content",
+      "Captions"
+    ],
+    "target_users": [
+      "Social media creators",
+      "Beginners",
+      "TikTok users"
+    ]
+  },
+  {
+    "slug": "synthesia",
+    "name": "Synthesia",
+    "category": "video",
+    "pricing": "paid",
+    "price": "$22/mo",
+    "description": "AI video generation with digital avatars for corporate content.",
+    "features": [
+      "AI avatars",
+      "150+ avatars",
+      "120+ languages",
+      "Custom avatars"
+    ],
+    "pros": [
+      "Professional quality",
+      "Multiple languages",
+      "No filming needed"
+    ],
+    "cons": [
+      "Expensive",
+      "Limited customization",
+      "Corporate feel"
+    ],
+    "alternatives": [
+      "heygen",
+      "runway",
+      "descript"
+    ],
+    "website": "https://synthesia.io",
+    "company": "Synthesia",
+    "founded": 2017,
+    "rating": 4.2,
+    "use_cases": [
+      "Training videos",
+      "Corporate comms",
+      "Product demos",
+      "Localization"
+    ],
+    "target_users": [
+      "Enterprises",
+      "L&D teams",
+      "HR departments"
+    ]
+  },
+  {
+    "slug": "heygen",
+    "name": "HeyGen",
+    "category": "video",
+    "pricing": "freemium",
+    "price": "$24/mo",
+    "description": "AI video platform for creating talking head videos.",
+    "features": [
+      "AI avatars",
+      "Voice cloning",
+      "Video translation",
+      "API"
+    ],
+    "pros": [
+      "Realistic avatars",
+      "Easy to use",
+      "Good quality"
+    ],
+    "cons": [
+      "Expensive",
+      "Limited free",
+      "Ethical concerns"
+    ],
+    "alternatives": [
+      "synthesia",
+      "runway",
+      "d-id"
+    ],
+    "website": "https://heygen.com",
+    "company": "HeyGen",
+    "founded": 2020,
+    "rating": 4.3,
+    "use_cases": [
+      "Marketing videos",
+      "Sales outreach",
+      "Training",
+      "Localization"
+    ],
+    "target_users": [
+      "Marketers",
+      "Sales teams",
+      "Content creators"
+    ]
+  },
+  {
+    "slug": "calendly",
+    "name": "Calendly",
+    "category": "productivity",
+    "pricing": "freemium",
+    "price": "$10/mo",
+    "description": "Scheduling automation platform with AI features.",
+    "features": [
+      "Scheduling links",
+      "Calendar sync",
+      "Team scheduling",
+      "Integrations"
+    ],
+    "pros": [
+      "Easy scheduling",
+      "Good integrations",
+      "Professional"
+    ],
+    "cons": [
+      "Limited free features",
+      "Can feel impersonal",
+      "Pricey for teams"
+    ],
+    "alternatives": [
+      "cal.com",
+      "doodle",
+      "reclaim-ai"
+    ],
+    "website": "https://calendly.com",
+    "company": "Calendly",
+    "founded": 2013,
+    "rating": 4.4,
+    "use_cases": [
+      "Meeting scheduling",
+      "Sales calls",
+      "Interviews",
+      "Appointments"
+    ],
+    "target_users": [
+      "Sales teams",
+      "Recruiters",
+      "Professionals"
+    ]
+  },
+  {
+    "slug": "typeform",
+    "name": "Typeform",
+    "category": "productivity",
+    "pricing": "freemium",
+    "price": "$25/mo",
+    "description": "Conversational form and survey builder with AI.",
+    "features": [
+      "Forms",
+      "Surveys",
+      "Quizzes",
+      "Logic jumps"
+    ],
+    "pros": [
+      "Beautiful forms",
+      "Good UX",
+      "Conversational"
+    ],
+    "cons": [
+      "Expensive",
+      "Limited free",
+      "Can be slow"
+    ],
+    "alternatives": [
+      "google-forms",
+      "tally",
+      "jotform"
+    ],
+    "website": "https://typeform.com",
+    "company": "Typeform",
+    "founded": 2012,
+    "rating": 4.3,
+    "use_cases": [
+      "Surveys",
+      "Lead gen",
+      "Feedback",
+      "Quizzes"
+    ],
+    "target_users": [
+      "Marketers",
+      "HR teams",
+      "Researchers"
+    ]
+  },
+  {
+    "slug": "intercom",
+    "name": "Intercom",
+    "category": "marketing",
+    "pricing": "paid",
+    "price": "$74/mo",
+    "description": "Customer messaging platform with AI chatbot.",
+    "features": [
+      "Live chat",
+      "AI bot",
+      "Help center",
+      "Product tours"
+    ],
+    "pros": [
+      "Comprehensive",
+      "Good AI",
+      "All-in-one"
+    ],
+    "cons": [
+      "Expensive",
+      "Complex",
+      "Overkill for small"
+    ],
+    "alternatives": [
+      "drift",
+      "zendesk",
+      "crisp"
+    ],
+    "website": "https://intercom.com",
+    "company": "Intercom",
+    "founded": 2011,
+    "rating": 4.3,
+    "use_cases": [
+      "Customer support",
+      "Sales",
+      "Onboarding",
+      "Engagement"
+    ],
+    "target_users": [
+      "SaaS companies",
+      "Support teams",
+      "Sales teams"
+    ]
+  },
+  {
+    "slug": "drift",
+    "name": "Drift",
+    "category": "marketing",
+    "pricing": "paid",
+    "price": "Custom",
+    "description": "Revenue acceleration platform with conversational AI.",
+    "features": [
+      "Live chat",
+      "AI bot",
+      "Meeting booking",
+      "Email"
+    ],
+    "pros": [
+      "Good for sales",
+      "AI qualification",
+      "Revenue focused"
+    ],
+    "cons": [
+      "Very expensive",
+      "Complex",
+      "Enterprise focused"
+    ],
+    "alternatives": [
+      "intercom",
+      "zendesk",
+      "livechat"
+    ],
+    "website": "https://drift.com",
+    "company": "Drift",
+    "founded": 2014,
+    "rating": 4.1,
+    "use_cases": [
+      "Sales qualification",
+      "Lead routing",
+      "Customer engagement"
+    ],
+    "target_users": [
+      "B2B sales teams",
+      "Revenue teams",
+      "Enterprises"
+    ]
+  },
+  {
+    "slug": "zendesk",
+    "name": "Zendesk",
+    "category": "marketing",
+    "pricing": "paid",
+    "price": "$19/mo",
+    "description": "Customer service platform with AI-powered support.",
+    "features": [
+      "Ticketing",
+      "Live chat",
+      "AI answers",
+      "Knowledge base"
+    ],
+    "pros": [
+      "Comprehensive",
+      "Scalable",
+      "Good integrations"
+    ],
+    "cons": [
+      "Can be expensive",
+      "Complex setup",
+      "Learning curve"
+    ],
+    "alternatives": [
+      "intercom",
+      "freshdesk",
+      "helpscout"
+    ],
+    "website": "https://zendesk.com",
+    "company": "Zendesk",
+    "founded": 2007,
+    "rating": 4.2,
+    "use_cases": [
+      "Customer support",
+      "Help desk",
+      "Ticketing",
+      "Self-service"
+    ],
+    "target_users": [
+      "Support teams",
+      "Enterprises",
+      "SaaS companies"
+    ]
   }
 ]
