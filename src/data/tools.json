@@ -2963,5 +2963,1149 @@
       "Enterprises",
       "SaaS companies"
     ]
+  },
+  {
+    "slug": "replit",
+    "name": "Replit",
+    "category": "coding",
+    "pricing": "freemium",
+    "price": "$25/mo",
+    "description": "Online IDE with AI features for coding in the browser.",
+    "features": [
+      "Online IDE",
+      "AI chat",
+      "Code completion",
+      "Deployment"
+    ],
+    "pros": [
+      "No setup needed",
+      "AI integrated",
+      "Easy deployment"
+    ],
+    "cons": [
+      "Can be slow",
+      "Limited free",
+      "Internet dependent"
+    ],
+    "alternatives": [
+      "cursor",
+      "github-copilot",
+      "codesandbox"
+    ],
+    "website": "https://replit.com",
+    "company": "Replit",
+    "founded": 2016,
+    "rating": 4.2,
+    "use_cases": [
+      "Learning",
+      "Prototyping",
+      "Quick coding",
+      "Collaboration"
+    ],
+    "target_users": [
+      "Students",
+      "Beginners",
+      "Hobbyists"
+    ]
+  },
+  {
+    "slug": "codesandbox",
+    "name": "CodeSandbox",
+    "category": "coding",
+    "pricing": "freemium",
+    "price": "$15/mo",
+    "description": "Online code editor for web development with AI.",
+    "features": [
+      "Online IDE",
+      "Templates",
+      "Collaboration",
+      "Deployment"
+    ],
+    "pros": [
+      "Fast prototyping",
+      "Good templates",
+      "Easy sharing"
+    ],
+    "cons": [
+      "Limited backend",
+      "Can be slow",
+      "Free tier limited"
+    ],
+    "alternatives": [
+      "replit",
+      "stackblitz",
+      "cursor"
+    ],
+    "website": "https://codesandbox.io",
+    "company": "CodeSandbox",
+    "founded": 2017,
+    "rating": 4.1,
+    "use_cases": [
+      "Web prototyping",
+      "Demos",
+      "Collaboration",
+      "Learning"
+    ],
+    "target_users": [
+      "Web developers",
+      "Designers",
+      "Teams"
+    ]
+  },
+  {
+    "slug": "sourcegraph",
+    "name": "Sourcegraph",
+    "category": "coding",
+    "pricing": "freemium",
+    "price": "Free / Custom",
+    "description": "Code intelligence platform with AI-powered code search.",
+    "features": [
+      "Code search",
+      "AI chat",
+      "Code navigation",
+      "Batch changes"
+    ],
+    "pros": [
+      "Great for large codebases",
+      "AI powered",
+      "Free for individuals"
+    ],
+    "cons": [
+      "Complex setup",
+      "Can be slow",
+      "Enterprise focused"
+    ],
+    "alternatives": [
+      "github-copilot",
+      "cursor",
+      "tabnine"
+    ],
+    "website": "https://sourcegraph.com",
+    "company": "Sourcegraph",
+    "founded": 2013,
+    "rating": 4.3,
+    "use_cases": [
+      "Code search",
+      "Code review",
+      "Large codebases",
+      "Onboarding"
+    ],
+    "target_users": [
+      "Enterprise developers",
+      "Large teams",
+      "Open source"
+    ]
+  },
+  {
+    "slug": "playground",
+    "name": "Playground",
+    "category": "image",
+    "pricing": "freemium",
+    "price": "Free / $15/mo",
+    "description": "AI image generator and editor with free tier.",
+    "features": [
+      "Text-to-image",
+      "Image editing",
+      "Templates",
+      "Collaboration"
+    ],
+    "pros": [
+      "Generous free tier",
+      "Good quality",
+      "Easy to use"
+    ],
+    "cons": [
+      "Less powerful than Midjourney",
+      "Limited styles",
+      "Newer product"
+    ],
+    "alternatives": [
+      "midjourney",
+      "dall-e-3",
+      "canva-ai"
+    ],
+    "website": "https://playground.com",
+    "company": "Playground",
+    "founded": 2022,
+    "rating": 4.1,
+    "use_cases": [
+      "Quick images",
+      "Social media",
+      "Concepts",
+      "Design"
+    ],
+    "target_users": [
+      "Content creators",
+      "Marketers",
+      "Designers"
+    ]
+  },
+  {
+    "slug": "craiyon",
+    "name": "Craiyon",
+    "category": "image",
+    "pricing": "free",
+    "price": "Free",
+    "description": "Free AI image generator (formerly DALL-E Mini).",
+    "features": [
+      "Text-to-image",
+      "Free usage",
+      "No signup",
+      "Quick generation"
+    ],
+    "pros": [
+      "Completely free",
+      "No signup",
+      "Easy to use"
+    ],
+    "cons": [
+      "Lower quality",
+      "Ads",
+      "Slow generation"
+    ],
+    "alternatives": [
+      "dall-e-3",
+      "stable-diffusion",
+      "midjourney"
+    ],
+    "website": "https://craiyon.com",
+    "company": "Craiyon",
+    "founded": 2022,
+    "rating": 3.5,
+    "use_cases": [
+      "Fun images",
+      "Quick concepts",
+      "Testing",
+      "Casual use"
+    ],
+    "target_users": [
+      "Casual users",
+      "Hobbyists",
+      "Students"
+    ]
+  },
+  {
+    "slug": "artbreeder",
+    "name": "Artbreeder",
+    "category": "image",
+    "pricing": "freemium",
+    "price": "$8.99/mo",
+    "description": "AI image generation through mixing and evolving images.",
+    "features": [
+      "Image mixing",
+      "Gene editing",
+      "Collaboration",
+      "Animation"
+    ],
+    "pros": [
+      "Unique approach",
+      "Creative exploration",
+      "Community"
+    ],
+    "cons": [
+      "Niche use case",
+      "Learning curve",
+      "Limited control"
+    ],
+    "alternatives": [
+      "midjourney",
+      "stable-diffusion",
+      "leonardo-ai"
+    ],
+    "website": "https://artbreeder.com",
+    "company": "Artbreeder",
+    "founded": 2018,
+    "rating": 4.0,
+    "use_cases": [
+      "Creative exploration",
+      "Character design",
+      "Art",
+      "Animation"
+    ],
+    "target_users": [
+      "Artists",
+      "Creatives",
+      "Game developers"
+    ]
+  },
+  {
+    "slug": "rytr",
+    "name": "Rytr",
+    "category": "writing",
+    "pricing": "freemium",
+    "price": "$9/mo",
+    "description": "AI writing assistant for various content types.",
+    "features": [
+      "Blog posts",
+      "Emails",
+      "Social media",
+      "40+ templates"
+    ],
+    "pros": [
+      "Affordable",
+      "Good templates",
+      "Easy to use"
+    ],
+    "cons": [
+      "Quality varies",
+      "Limited free",
+      "Less powerful than GPT-4"
+    ],
+    "alternatives": [
+      "jasper",
+      "copy-ai",
+      "writesonic"
+    ],
+    "website": "https://rytr.me",
+    "company": "Rytr",
+    "founded": 2021,
+    "rating": 4.0,
+    "use_cases": [
+      "Blog posts",
+      "Emails",
+      "Social media",
+      "Ads"
+    ],
+    "target_users": [
+      "Content creators",
+      "Marketers",
+      "Bloggers"
+    ]
+  },
+  {
+    "slug": "wordtune",
+    "name": "Wordtune",
+    "category": "writing",
+    "pricing": "freemium",
+    "price": "$9.99/mo",
+    "description": "AI writing tool that helps rewrite and improve sentences.",
+    "features": [
+      "Sentence rewriting",
+      "Tone adjustment",
+      "Length control",
+      "Summarization"
+    ],
+    "pros": [
+      "Great for rewriting",
+      "Intuitive",
+      "Free tier"
+    ],
+    "cons": [
+      "Limited free",
+      "Not for long-form",
+      "Can change meaning"
+    ],
+    "alternatives": [
+      "grammarly",
+      "quillbot",
+      "chatgpt"
+    ],
+    "website": "https://wordtune.com",
+    "company": "AI21 Labs",
+    "founded": 2018,
+    "rating": 4.2,
+    "use_cases": [
+      "Email writing",
+      "Sentence improvement",
+      "Academic writing",
+      "Professional comms"
+    ],
+    "target_users": [
+      "Professionals",
+      "Students",
+      "Non-native speakers"
+    ]
+  },
+  {
+    "slug": "sudowrite",
+    "name": "Sudowrite",
+    "category": "writing",
+    "pricing": "paid",
+    "price": "$19/mo",
+    "description": "AI writing tool specifically designed for fiction writers.",
+    "features": [
+      "Story generation",
+      "Character development",
+      "Plot assistance",
+      "Editing"
+    ],
+    "pros": [
+      "Designed for fiction",
+      "Good for brainstorming",
+      "Helpful features"
+    ],
+    "cons": [
+      "Expensive",
+      "Niche use",
+      "Output needs editing"
+    ],
+    "alternatives": [
+      "chatgpt",
+      "claude",
+      "novelai"
+    ],
+    "website": "https://sudowrite.com",
+    "company": "Sudowrite",
+    "founded": 2020,
+    "rating": 4.1,
+    "use_cases": [
+      "Fiction writing",
+      "Brainstorming",
+      "Plot development",
+      "Editing"
+    ],
+    "target_users": [
+      "Fiction writers",
+      "Authors",
+      "Creatives"
+    ]
+  },
+  {
+    "slug": "invideo",
+    "name": "InVideo",
+    "category": "video",
+    "pricing": "freemium",
+    "price": "$25/mo",
+    "description": "Online video editor with AI-powered features.",
+    "features": [
+      "Templates",
+      "AI generation",
+      "Stock footage",
+      "Text-to-video"
+    ],
+    "pros": [
+      "Many templates",
+      "Easy to use",
+      "Good for social"
+    ],
+    "cons": [
+      "Watermark free",
+      "Limited AI",
+      "Can be slow"
+    ],
+    "alternatives": [
+      "capcut",
+      "canva-ai",
+      "descript"
+    ],
+    "website": "https://invideo.io",
+    "company": "InVideo",
+    "founded": 2019,
+    "rating": 4.1,
+    "use_cases": [
+      "Social media videos",
+      "Marketing",
+      "Presentations",
+      "Ads"
+    ],
+    "target_users": [
+      "Marketers",
+      "Content creators",
+      "Small businesses"
+    ]
+  },
+  {
+    "slug": "flexclip",
+    "name": "FlexClip",
+    "category": "video",
+    "pricing": "freemium",
+    "price": "$9.99/mo",
+    "description": "Simple online video maker with AI tools.",
+    "features": [
+      "Templates",
+      "AI tools",
+      "Stock media",
+      "Text-to-speech"
+    ],
+    "pros": [
+      "Easy to use",
+      "Affordable",
+      "Good templates"
+    ],
+    "cons": [
+      "Limited advanced features",
+      "Watermark free",
+      "Basic AI"
+    ],
+    "alternatives": [
+      "capcut",
+      "invideo",
+      "canva-ai"
+    ],
+    "website": "https://flexclip.com",
+    "company": "FlexClip",
+    "founded": 2019,
+    "rating": 4.0,
+    "use_cases": [
+      "Quick videos",
+      "Social media",
+      "Presentations",
+      "Slideshows"
+    ],
+    "target_users": [
+      "Beginners",
+      "Small businesses",
+      "Social media"
+    ]
+  },
+  {
+    "slug": "veed",
+    "name": "Veed.io",
+    "category": "video",
+    "pricing": "freemium",
+    "price": "$18/mo",
+    "description": "Online video editor with AI subtitles and effects.",
+    "features": [
+      "Auto subtitles",
+      "AI tools",
+      "Screen recording",
+      "Templates"
+    ],
+    "pros": [
+      "Great auto subtitles",
+      "Easy to use",
+      "Good for social"
+    ],
+    "cons": [
+      "Expensive",
+      "Watermark free",
+      "Limited free"
+    ],
+    "alternatives": [
+      "capcut",
+      "descript",
+      "clipchamp"
+    ],
+    "website": "https://veed.io",
+    "company": "Veed",
+    "founded": 2018,
+    "rating": 4.2,
+    "use_cases": [
+      "Subtitles",
+      "Social media",
+      "Marketing",
+      "Tutorials"
+    ],
+    "target_users": [
+      "Content creators",
+      "Marketers",
+      "Educators"
+    ]
+  },
+  {
+    "slug": "descript-audio",
+    "name": "Descript Audio",
+    "category": "audio",
+    "pricing": "freemium",
+    "price": "$24/mo",
+    "description": "Audio editing with AI transcription and voice cloning.",
+    "features": [
+      "Transcription",
+      "Voice cloning",
+      "Filler removal",
+      "AI editing"
+    ],
+    "pros": [
+      "Edit audio like text",
+      "Voice cloning",
+      "Easy to use"
+    ],
+    "cons": [
+      "Expensive",
+      "Can be slow",
+      "Learning curve"
+    ],
+    "alternatives": [
+      "elevenlabs",
+      "otter-ai",
+      "adobe-podcast"
+    ],
+    "website": "https://descript.com",
+    "company": "Descript",
+    "founded": 2017,
+    "rating": 4.3,
+    "use_cases": [
+      "Podcast editing",
+      "Voiceovers",
+      "Transcription",
+      "Content"
+    ],
+    "target_users": [
+      "Podcasters",
+      "Content creators",
+      "Journalists"
+    ]
+  },
+  {
+    "slug": "adobe-podcast",
+    "name": "Adobe Podcast",
+    "category": "audio",
+    "pricing": "free",
+    "price": "Free",
+    "description": "AI-powered audio recording and editing by Adobe.",
+    "features": [
+      "Noise removal",
+      "Enhance speech",
+      "Transcription",
+      "Free"
+    ],
+    "pros": [
+      "Great noise removal",
+      "Free",
+      "Easy to use"
+    ],
+    "cons": [
+      "Limited features",
+      "No voice cloning",
+      "Basic editing"
+    ],
+    "alternatives": [
+      "descript",
+      "elevenlabs",
+      "otter-ai"
+    ],
+    "website": "https://podcast.adobe.com",
+    "company": "Adobe",
+    "founded": 2022,
+    "rating": 4.0,
+    "use_cases": [
+      "Podcast recording",
+      "Audio cleanup",
+      "Voiceovers",
+      "Meetings"
+    ],
+    "target_users": [
+      "Podcasters",
+      "Content creators",
+      "Professionals"
+    ]
+  },
+  {
+    "slug": "clickup",
+    "name": "ClickUp",
+    "category": "productivity",
+    "pricing": "freemium",
+    "price": "$7/mo",
+    "description": "All-in-one productivity platform with AI features.",
+    "features": [
+      "Tasks",
+      "Docs",
+      "Goals",
+      "AI assistant"
+    ],
+    "pros": [
+      "Feature rich",
+      "Good free tier",
+      "Customizable"
+    ],
+    "cons": [
+      "Can be overwhelming",
+      "Learning curve",
+      "Performance issues"
+    ],
+    "alternatives": [
+      "notion-ai",
+      "asana",
+      "monday"
+    ],
+    "website": "https://clickup.com",
+    "company": "ClickUp",
+    "founded": 2017,
+    "rating": 4.3,
+    "use_cases": [
+      "Project management",
+      "Team collaboration",
+      "Documentation",
+      "Goals"
+    ],
+    "target_users": [
+      "Teams",
+      "Project managers",
+      "Remote workers"
+    ]
+  },
+  {
+    "slug": "asana",
+    "name": "Asana",
+    "category": "productivity",
+    "pricing": "freemium",
+    "price": "$10.99/mo",
+    "description": "Project management platform with AI-powered features.",
+    "features": [
+      "Tasks",
+      "Timelines",
+      "Portfolios",
+      "AI assistants"
+    ],
+    "pros": [
+      "Clean interface",
+      "Good for teams",
+      "Strong integrations"
+    ],
+    "cons": [
+      "Can be expensive",
+      "Limited free",
+      "Complex for small"
+    ],
+    "alternatives": [
+      "clickup",
+      "monday",
+      "notion-ai"
+    ],
+    "website": "https://asana.com",
+    "company": "Asana",
+    "founded": 2008,
+    "rating": 4.4,
+    "use_cases": [
+      "Project management",
+      "Team coordination",
+      "Work tracking",
+      "Goals"
+    ],
+    "target_users": [
+      "Teams",
+      "Project managers",
+      "Enterprises"
+    ]
+  },
+  {
+    "slug": "monday",
+    "name": "Monday.com",
+    "category": "productivity",
+    "pricing": "freemium",
+    "price": "$9/mo",
+    "description": "Work management platform with AI capabilities.",
+    "features": [
+      "Boards",
+      "Automations",
+      "Dashboards",
+      "AI features"
+    ],
+    "pros": [
+      "Visual interface",
+      "Flexible",
+      "Good automations"
+    ],
+    "cons": [
+      "Can be expensive",
+      "Complex",
+      "Learning curve"
+    ],
+    "alternatives": [
+      "clickup",
+      "asana",
+      "notion-ai"
+    ],
+    "website": "https://monday.com",
+    "company": "Monday.com",
+    "founded": 2012,
+    "rating": 4.3,
+    "use_cases": [
+      "Work management",
+      "Team collaboration",
+      "CRM",
+      "Projects"
+    ],
+    "target_users": [
+      "Teams",
+      "Businesses",
+      "Project managers"
+    ]
+  },
+  {
+    "slug": "convertkit",
+    "name": "ConvertKit",
+    "category": "marketing",
+    "pricing": "freemium",
+    "price": "$9/mo",
+    "description": "Email marketing platform built for creators.",
+    "features": [
+      "Email sequences",
+      "Landing pages",
+      "Automation",
+      "Commerce"
+    ],
+    "pros": [
+      "Creator focused",
+      "Easy to use",
+      "Good deliverability"
+    ],
+    "cons": [
+      "Limited templates",
+      "Can be expensive",
+      "Basic analytics"
+    ],
+    "alternatives": [
+      "mailchimp",
+      "activecampaign",
+      "beehiiv"
+    ],
+    "website": "https://convertkit.com",
+    "company": "ConvertKit",
+    "founded": 2013,
+    "rating": 4.3,
+    "use_cases": [
+      "Email marketing",
+      "Newsletters",
+      "Creator economy",
+      "Commerce"
+    ],
+    "target_users": [
+      "Creators",
+      "Bloggers",
+      "Authors",
+      "Podcasters"
+    ]
+  },
+  {
+    "slug": "beehiiv",
+    "name": "Beehiiv",
+    "category": "marketing",
+    "pricing": "freemium",
+    "price": "$39/mo",
+    "description": "Newsletter platform with built-in growth tools.",
+    "features": [
+      "Newsletter",
+      "Referral program",
+      "Monetization",
+      "Analytics"
+    ],
+    "pros": [
+      "Creator focused",
+      "Growth tools",
+      "Good free tier"
+    ],
+    "cons": [
+      "Newer platform",
+      "Limited integrations",
+      "Can be expensive"
+    ],
+    "alternatives": [
+      "convertkit",
+      "substack",
+      "mailchimp"
+    ],
+    "website": "https://beehiiv.com",
+    "company": "Beehiiv",
+    "founded": 2021,
+    "rating": 4.4,
+    "use_cases": [
+      "Newsletters",
+      "Content monetization",
+      "Audience growth",
+      "Creator economy"
+    ],
+    "target_users": [
+      "Newsletter creators",
+      "Writers",
+      "Content creators"
+    ]
+  },
+  {
+    "slug": "activecampaign",
+    "name": "ActiveCampaign",
+    "category": "marketing",
+    "pricing": "paid",
+    "price": "$29/mo",
+    "description": "Marketing automation platform with CRM and email.",
+    "features": [
+      "Email marketing",
+      "Automation",
+      "CRM",
+      "Sales"
+    ],
+    "pros": [
+      "Powerful automation",
+      "Good CRM",
+      "All-in-one"
+    ],
+    "cons": [
+      "Expensive",
+      "Complex",
+      "Learning curve"
+    ],
+    "alternatives": [
+      "mailchimp",
+      "convertkit",
+      "hubspot"
+    ],
+    "website": "https://activecampaign.com",
+    "company": "ActiveCampaign",
+    "founded": 2003,
+    "rating": 4.4,
+    "use_cases": [
+      "Marketing automation",
+      "Email campaigns",
+      "Sales automation",
+      "CRM"
+    ],
+    "target_users": [
+      "SMBs",
+      "Marketers",
+      "Sales teams"
+    ]
+  },
+  {
+    "slug": "framer",
+    "name": "Framer",
+    "category": "design",
+    "pricing": "freemium",
+    "price": "$5/mo",
+    "description": "Website builder with AI-powered design tools.",
+    "features": [
+      "Website builder",
+      "AI design",
+      "Components",
+      "Animations"
+    ],
+    "pros": [
+      "Great for websites",
+      "AI features",
+      "Modern design"
+    ],
+    "cons": [
+      "Learning curve",
+      "Can be slow",
+      "Limited CMS"
+    ],
+    "alternatives": [
+      "figma",
+      "webflow",
+      "wix"
+    ],
+    "website": "https://framer.com",
+    "company": "Framer",
+    "founded": 2014,
+    "rating": 4.3,
+    "use_cases": [
+      "Website design",
+      "Prototyping",
+      "Landing pages",
+      "Portfolio"
+    ],
+    "target_users": [
+      "Designers",
+      "Startups",
+      "Freelancers"
+    ]
+  },
+  {
+    "slug": "webflow",
+    "name": "Webflow",
+    "category": "design",
+    "pricing": "freemium",
+    "price": "$14/mo",
+    "description": "Visual website builder with CMS and hosting.",
+    "features": [
+      "Visual builder",
+      "CMS",
+      "Hosting",
+      "Interactions"
+    ],
+    "pros": [
+      "Professional websites",
+      "Good CMS",
+      "No code needed"
+    ],
+    "cons": [
+      "Learning curve",
+      "Can be expensive",
+      "Complex"
+    ],
+    "alternatives": [
+      "framer",
+      "wix",
+      "squarespace"
+    ],
+    "website": "https://webflow.com",
+    "company": "Webflow",
+    "founded": 2013,
+    "rating": 4.5,
+    "use_cases": [
+      "Professional websites",
+      "Web design",
+      "CMS",
+      "E-commerce"
+    ],
+    "target_users": [
+      "Designers",
+      "Agencies",
+      "Businesses"
+    ]
+  },
+  {
+    "slug": "phind",
+    "name": "Phind",
+    "category": "search",
+    "pricing": "freemium",
+    "price": "$15/mo",
+    "description": "AI search engine designed for developers.",
+    "features": [
+      "Code search",
+      "Technical answers",
+      "AI chat",
+      "Documentation"
+    ],
+    "pros": [
+      "Great for developers",
+      "Code focused",
+      "Fast"
+    ],
+    "cons": [
+      "Niche use",
+      "Limited general search",
+      "Newer product"
+    ],
+    "alternatives": [
+      "perplexity",
+      "you-com",
+      "stackoverflow"
+    ],
+    "website": "https://phind.com",
+    "company": "Phind",
+    "founded": 2022,
+    "rating": 4.2,
+    "use_cases": [
+      "Code search",
+      "Technical research",
+      "Debugging",
+      "Documentation"
+    ],
+    "target_users": [
+      "Developers",
+      "Engineers",
+      "Students"
+    ]
+  },
+  {
+    "slug": "papago",
+    "name": "Papago",
+    "category": "translation",
+    "pricing": "free",
+    "price": "Free",
+    "description": "AI translator by Naver, strong in Asian languages.",
+    "features": [
+      "Asian languages",
+      "Image translation",
+      "Offline mode",
+      "Conversation"
+    ],
+    "pros": [
+      "Best for Asian languages",
+      "Free",
+      "Good offline"
+    ],
+    "cons": [
+      "Limited for European",
+      "Less accurate general",
+      "Smaller scale"
+    ],
+    "alternatives": [
+      "deepl",
+      "google-translate",
+      "microsoft-translator"
+    ],
+    "website": "https://papago.naver.com",
+    "company": "Naver",
+    "founded": 2016,
+    "rating": 4.1,
+    "use_cases": [
+      "Asian language translation",
+      "Travel",
+      "Korean/Japanese/Chinese"
+    ],
+    "target_users": [
+      "Asian language learners",
+      "Travelers",
+      "K-pop fans"
+    ]
+  },
+  {
+    "slug": "grammarly-go",
+    "name": "GrammarlyGO",
+    "category": "writing",
+    "pricing": "freemium",
+    "price": "$12/mo",
+    "description": "AI writing assistant integrated into Grammarly.",
+    "features": [
+      "AI generation",
+      "Rewriting",
+      "Tone adjustment",
+      "Ideation"
+    ],
+    "pros": [
+      "Integrated with Grammarly",
+      "Good for quick edits",
+      "Widely available"
+    ],
+    "cons": [
+      "Requires Grammarly",
+      "Limited free",
+      "Not for long-form"
+    ],
+    "alternatives": [
+      "grammarly",
+      "wordtune",
+      "chatgpt"
+    ],
+    "website": "https://grammarly.com",
+    "company": "Grammarly",
+    "founded": 2023,
+    "rating": 4.1,
+    "use_cases": [
+      "Quick writing",
+      "Email drafts",
+      "Rewriting",
+      "Ideation"
+    ],
+    "target_users": [
+      "Grammarly users",
+      "Professionals",
+      "Students"
+    ]
+  },
+  {
+    "slug": "jasper-art",
+    "name": "Jasper Art",
+    "category": "image",
+    "pricing": "included",
+    "price": "With Jasper subscription",
+    "description": "AI image generation included with Jasper AI writing platform.",
+    "features": [
+      "Text-to-image",
+      "Marketing focus",
+      "Integration",
+      "Templates"
+    ],
+    "pros": [
+      "Integrated with Jasper",
+      "Marketing focused",
+      "Easy to use"
+    ],
+    "cons": [
+      "Requires Jasper sub",
+      "Limited styles",
+      "Basic quality"
+    ],
+    "alternatives": [
+      "midjourney",
+      "dall-e-3",
+      "canva-ai"
+    ],
+    "website": "https://jasper.ai",
+    "company": "Jasper",
+    "founded": 2022,
+    "rating": 3.9,
+    "use_cases": [
+      "Marketing images",
+      "Blog graphics",
+      "Social media",
+      "Ads"
+    ],
+    "target_users": [
+      "Jasper users",
+      "Marketers",
+      "Content teams"
+    ]
   }
 ]

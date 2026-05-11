@@ -1,4 +1,5 @@
 import { getAllTools, getToolBySlug, getAlternatives } from "@/lib/tools";
+import { toolSchema } from "@/lib/schema";
 import { CATEGORIES } from "@/types";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -13,11 +14,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const tool = getToolBySlug(slug);
   if (!tool) return { title: "Tool Not Found" };
   return {
-    title: `${tool.name} Review - AI Tools Directory`,
-    description: `${tool.name} review: ${tool.description} Compare features, pricing, and alternatives.`,
+    title: `${tool.name} Review 2026 - Features, Pricing & Alternatives`,
+    description: `${tool.name} review: ${tool.description} Compare features, pricing, and alternatives. Rating: ${tool.rating}/5.`,
     openGraph: {
       title: `${tool.name} Review`,
       description: tool.description,
+      type: "website",
     },
   };
 }
@@ -28,161 +30,220 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
   if (!tool) notFound();
 
   const alternatives = getAlternatives(slug);
+  const schema = toolSchema(tool);
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
-      {/* Breadcrumb */}
-      <div className="flex items-center gap-2 text-sm text-[#71717a] mb-8">
-        <Link href="/tools" className="hover:text-white transition">Tools</Link>
-        <span>/</span>
-        <Link href={`/categories/${tool.category}`} className="hover:text-white transition">
-          {CATEGORIES[tool.category] || tool.category}
-        </Link>
-        <span>/</span>
-        <span>{tool.name}</span>
-      </div>
-
-      {/* Header */}
-      <div className="flex items-start gap-6 mb-8">
-        <div className="w-16 h-16 bg-[#18181b] border border-[#27272a] rounded-xl flex items-center justify-center text-2xl">
-          {tool.name.charAt(0)}
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <div className="max-w-4xl mx-auto px-4 py-12">
+        {/* Breadcrumb */}
+        <div className="flex items-center gap-2 text-sm text-[#71717a] mb-8">
+          <Link href="/" className="hover:text-white transition">Home</Link>
+          <span>/</span>
+          <Link href="/tools" className="hover:text-white transition">Tools</Link>
+          <span>/</span>
+          <Link href={`/categories/${tool.category}`} className="hover:text-white transition">
+            {CATEGORIES[tool.category] || tool.category}
+          </Link>
+          <span>/</span>
+          <span>{tool.name}</span>
         </div>
-        <div>
-          <h1 className="text-3xl font-bold mb-2">{tool.name}</h1>
-          <p className="text-[#71717a] mb-4">{tool.description}</p>
-          <div className="flex items-center gap-4">
-            <span className="px-3 py-1 bg-[#18181b] border border-[#27272a] rounded-lg text-sm">
-              {tool.price}
-            </span>
-            <span className="text-[#3b82f6]">★ {tool.rating}/5</span>
-            <a
-              href={tool.website}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 bg-[#3b82f6] hover:bg-[#2563eb] rounded-lg text-sm transition"
-            >
-              Visit Website →
-            </a>
+
+        {/* Header */}
+        <div className="flex flex-col md:flex-row items-start gap-6 mb-8">
+          <div className="w-16 h-16 bg-[#18181b] border border-[#27272a] rounded-xl flex items-center justify-center text-2xl font-bold">
+            {tool.name.charAt(0)}
+          </div>
+          <div className="flex-1">
+            <h1 className="text-3xl font-bold mb-2">{tool.name}</h1>
+            <p className="text-[#71717a] mb-4">{tool.description}</p>
+            <div className="flex flex-wrap items-center gap-3">
+              <span className="px-3 py-1 bg-[#18181b] border border-[#27272a] rounded-lg text-sm">
+                {tool.price}
+              </span>
+              <span className="px-3 py-1 bg-[#3b82f6]/10 text-[#3b82f6] rounded-lg text-sm">
+                ★ {tool.rating}/5
+              </span>
+              <span className="px-3 py-1 bg-[#27272a] rounded-lg text-sm capitalize">
+                {tool.pricing}
+              </span>
+              <a
+                href={tool.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 bg-[#3b82f6] hover:bg-[#2563eb] rounded-lg text-sm transition"
+              >
+                Visit Website →
+              </a>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Main Content */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <div className="lg:col-span-2 space-y-8">
-          {/* Features */}
-          <section>
-            <h2 className="text-xl font-bold mb-4">Key Features</h2>
-            <ul className="space-y-2">
-              {tool.features.map((feature, i) => (
-                <li key={i} className="flex items-start gap-2">
-                  <span className="text-[#3b82f6] mt-1">•</span>
-                  <span>{feature}</span>
-                </li>
-              ))}
-            </ul>
-          </section>
+        {/* Ad Placeholder */}
+        <div className="mb-8 p-4 bg-[#18181b] border border-dashed border-[#27272a] rounded-xl text-center text-sm text-[#71717a]">
+          Advertisement
+        </div>
 
-          {/* Pros & Cons */}
-          <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <h2 className="text-xl font-bold mb-4 text-green-400">Pros</h2>
+        {/* Main Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="lg:col-span-2 space-y-8">
+            {/* Features */}
+            <section>
+              <h2 className="text-xl font-bold mb-4">Key Features</h2>
               <ul className="space-y-2">
-                {tool.pros.map((pro, i) => (
+                {tool.features.map((feature, i) => (
                   <li key={i} className="flex items-start gap-2">
-                    <span className="text-green-400 mt-1">✓</span>
-                    <span>{pro}</span>
+                    <span className="text-[#3b82f6] mt-1">✓</span>
+                    <span>{feature}</span>
                   </li>
                 ))}
               </ul>
-            </div>
-            <div>
-              <h2 className="text-xl font-bold mb-4 text-red-400">Cons</h2>
-              <ul className="space-y-2">
-                {tool.cons.map((con, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <span className="text-red-400 mt-1">✗</span>
-                    <span>{con}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </section>
+            </section>
 
-          {/* Use Cases */}
-          <section>
-            <h2 className="text-xl font-bold mb-4">Best For</h2>
-            <div className="flex flex-wrap gap-2">
-              {tool.use_cases.map((useCase, i) => (
-                <span key={i} className="px-3 py-1 bg-[#18181b] border border-[#27272a] rounded-full text-sm">
-                  {useCase}
-                </span>
-              ))}
-            </div>
-          </section>
+            {/* Pros & Cons */}
+            <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="p-6 bg-[#18181b] border border-[#27272a] rounded-xl">
+                <h2 className="text-lg font-bold mb-4 text-green-400">Pros</h2>
+                <ul className="space-y-2">
+                  {tool.pros.map((pro, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm">
+                      <span className="text-green-400">✓</span>
+                      <span>{pro}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="p-6 bg-[#18181b] border border-[#27272a] rounded-xl">
+                <h2 className="text-lg font-bold mb-4 text-red-400">Cons</h2>
+                <ul className="space-y-2">
+                  {tool.cons.map((con, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm">
+                      <span className="text-red-400">✗</span>
+                      <span>{con}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </section>
 
-          {/* Target Users */}
-          <section>
-            <h2 className="text-xl font-bold mb-4">Who Should Use {tool.name}?</h2>
-            <div className="flex flex-wrap gap-2">
-              {tool.target_users.map((user, i) => (
-                <span key={i} className="px-3 py-1 bg-[#3b82f6]/10 text-[#3b82f6] rounded-full text-sm">
-                  {user}
-                </span>
-              ))}
-            </div>
-          </section>
-        </div>
-
-        {/* Sidebar */}
-        <div className="space-y-6">
-          {/* Quick Info */}
-          <div className="p-6 bg-[#18181b] border border-[#27272a] rounded-xl">
-            <h3 className="font-bold mb-4">Quick Info</h3>
-            <dl className="space-y-3 text-sm">
-              <div className="flex justify-between">
-                <dt className="text-[#71717a]">Category</dt>
-                <dd>{CATEGORIES[tool.category] || tool.category}</dd>
-              </div>
-              <div className="flex justify-between">
-                <dt className="text-[#71717a]">Pricing</dt>
-                <dd className="capitalize">{tool.pricing}</dd>
-              </div>
-              <div className="flex justify-between">
-                <dt className="text-[#71717a]">Price</dt>
-                <dd>{tool.price}</dd>
-              </div>
-              <div className="flex justify-between">
-                <dt className="text-[#71717a]">Company</dt>
-                <dd>{tool.company}</dd>
-              </div>
-              <div className="flex justify-between">
-                <dt className="text-[#71717a]">Founded</dt>
-                <dd>{tool.founded}</dd>
-              </div>
-            </dl>
-          </div>
-
-          {/* Alternatives */}
-          {alternatives.length > 0 && (
-            <div className="p-6 bg-[#18181b] border border-[#27272a] rounded-xl">
-              <h3 className="font-bold mb-4">Alternatives</h3>
-              <div className="space-y-3">
-                {alternatives.map((alt) => (
+            {/* Use Cases */}
+            <section>
+              <h2 className="text-xl font-bold mb-4">Best For</h2>
+              <div className="flex flex-wrap gap-2">
+                {tool.use_cases.map((useCase, i) => (
                   <Link
-                    key={alt.slug}
-                    href={`/tools/${alt.slug}`}
-                    className="block p-3 bg-[#09090b] rounded-lg hover:border-[#3b82f6] border border-transparent transition"
+                    key={i}
+                    href={`/blog/best-${tool.category}-tools`}
+                    className="px-3 py-1 bg-[#18181b] border border-[#27272a] rounded-full text-sm hover:border-[#3b82f6] transition"
                   >
-                    <div className="font-medium">{alt.name}</div>
-                    <div className="text-sm text-[#71717a]">{alt.price}</div>
+                    {useCase}
                   </Link>
                 ))}
               </div>
+            </section>
+
+            {/* Target Users */}
+            <section>
+              <h2 className="text-xl font-bold mb-4">Who Should Use {tool.name}?</h2>
+              <div className="flex flex-wrap gap-2">
+                {tool.target_users.map((user, i) => (
+                  <span key={i} className="px-3 py-1 bg-[#3b82f6]/10 text-[#3b82f6] rounded-full text-sm">
+                    {user}
+                  </span>
+                ))}
+              </div>
+            </section>
+
+            {/* Review Article Link */}
+            <section className="p-6 bg-[#18181b] border border-[#27272a] rounded-xl">
+              <h2 className="text-lg font-bold mb-2">Full Review</h2>
+              <p className="text-sm text-[#71717a] mb-4">
+                Want a detailed review? Read our in-depth analysis of {tool.name}.
+              </p>
+              <Link
+                href={`/blog/${tool.slug}-review`}
+                className="text-[#3b82f6] hover:underline text-sm"
+              >
+                Read {tool.name} Review →
+              </Link>
+            </section>
+          </div>
+
+          {/* Sidebar */}
+          <div className="space-y-6">
+            {/* Quick Info */}
+            <div className="p-6 bg-[#18181b] border border-[#27272a] rounded-xl">
+              <h3 className="font-bold mb-4">Quick Info</h3>
+              <dl className="space-y-3 text-sm">
+                <div className="flex justify-between">
+                  <dt className="text-[#71717a]">Category</dt>
+                  <dd>
+                    <Link href={`/categories/${tool.category}`} className="hover:text-[#3b82f6]">
+                      {CATEGORIES[tool.category] || tool.category}
+                    </Link>
+                  </dd>
+                </div>
+                <div className="flex justify-between">
+                  <dt className="text-[#71717a]">Pricing</dt>
+                  <dd className="capitalize">{tool.pricing}</dd>
+                </div>
+                <div className="flex justify-between">
+                  <dt className="text-[#71717a]">Price</dt>
+                  <dd>{tool.price}</dd>
+                </div>
+                <div className="flex justify-between">
+                  <dt className="text-[#71717a]">Company</dt>
+                  <dd>{tool.company}</dd>
+                </div>
+                <div className="flex justify-between">
+                  <dt className="text-[#71717a]">Founded</dt>
+                  <dd>{tool.founded}</dd>
+                </div>
+                <div className="flex justify-between">
+                  <dt className="text-[#71717a]">Rating</dt>
+                  <dd className="text-[#3b82f6]">★ {tool.rating}/5</dd>
+                </div>
+              </dl>
             </div>
-          )}
+
+            {/* Alternatives */}
+            {alternatives.length > 0 && (
+              <div className="p-6 bg-[#18181b] border border-[#27272a] rounded-xl">
+                <h3 className="font-bold mb-4">Alternatives</h3>
+                <div className="space-y-3">
+                  {alternatives.map((alt) => (
+                    <Link
+                      key={alt.slug}
+                      href={`/tools/${alt.slug}`}
+                      className="block p-3 bg-[#09090b] rounded-lg hover:border-[#3b82f6] border border-transparent transition"
+                    >
+                      <div className="flex items-center justify-between">
+                        <div className="font-medium">{alt.name}</div>
+                        <div className="text-sm text-[#3b82f6]">★ {alt.rating}</div>
+                      </div>
+                      <div className="text-sm text-[#71717a]">{alt.price}</div>
+                    </Link>
+                  ))}
+                </div>
+                <Link
+                  href={`/blog/${tool.slug}-vs-${alternatives[0]?.slug}`}
+                  className="block mt-4 text-center text-sm text-[#3b82f6] hover:underline"
+                >
+                  Compare {tool.name} vs {alternatives[0]?.name} →
+                </Link>
+              </div>
+            )}
+
+            {/* Ad Placeholder */}
+            <div className="p-4 bg-[#18181b] border border-dashed border-[#27272a] rounded-xl text-center text-sm text-[#71717a]">
+              Advertisement
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
