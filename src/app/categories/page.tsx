@@ -3,7 +3,7 @@ import { CATEGORIES } from "@/types";
 import Link from "next/link";
 
 export const metadata = {
-  title: "AI Tool Categories - AI Tools Directory",
+  title: "AI Tool Categories - Toolio",
   description: "Browse AI tools by category: chatbots, image generators, coding assistants, and more.",
 };
 

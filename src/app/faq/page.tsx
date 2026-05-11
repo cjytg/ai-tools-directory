@@ -1,14 +1,14 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Frequently Asked Questions - AI Tools Directory",
+  title: "Frequently Asked Questions - Toolio",
   description: "Common questions about AI tools, our reviews, and how to choose the right tool.",
 };
 
 const faqs = [
   {
-    question: "What is AI Tools Directory?",
-    answer: "AI Tools Directory is a curated collection of AI tools with honest reviews, real pricing, and side-by-side comparisons. We test each tool and provide unbiased recommendations."
+    question: "What is Toolio?",
+    answer: "Toolio is a curated collection of AI tools with honest reviews, real pricing, and side-by-side comparisons. We test each tool and provide unbiased recommendations."
   },
   {
     question: "How do you review AI tools?",

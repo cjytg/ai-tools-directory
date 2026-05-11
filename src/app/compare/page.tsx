@@ -2,7 +2,7 @@ import { getAllTools } from "@/lib/tools";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Compare AI Tools - AI Tools Directory",
+  title: "Compare AI Tools - Toolio",
   description: "Compare AI tools side by side. See features, pricing, and ratings at a glance.",
 };
 
