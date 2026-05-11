@@ -4107,5 +4107,446 @@
       "Marketers",
       "Content teams"
     ]
+  },
+  {
+    "slug": "todoist",
+    "name": "Todoist",
+    "category": "productivity",
+    "pricing": "freemium",
+    "price": "$4/mo",
+    "description": "Popular task management app with natural language input.",
+    "features": [
+      "Task management",
+      "Projects",
+      "Labels",
+      "Recurring tasks"
+    ],
+    "pros": [
+      "Simple and clean",
+      "Cross-platform",
+      "Good free tier"
+    ],
+    "cons": [
+      "Limited free features",
+      "No time tracking",
+      "Basic collaboration"
+    ],
+    "alternatives": [
+      "ticktick",
+      "microsoft-to-do",
+      "notion-ai"
+    ],
+    "website": "https://todoist.com",
+    "company": "Doist",
+    "founded": 2007,
+    "rating": 4.4,
+    "use_cases": [
+      "Personal tasks",
+      "Project management",
+      "Habits",
+      "GTD"
+    ],
+    "target_users": [
+      "Individuals",
+      "Professionals",
+      "Students"
+    ]
+  },
+  {
+    "slug": "ticktick",
+    "name": "TickTick",
+    "category": "productivity",
+    "pricing": "freemium",
+    "price": "$35.99/year",
+    "description": "Task management app with built-in pomodoro timer.",
+    "features": [
+      "Tasks",
+      "Pomodoro",
+      "Calendar",
+      "Habits"
+    ],
+    "pros": [
+      "Pomodoro built-in",
+      "Good value",
+      "Feature rich"
+    ],
+    "cons": [
+      "Less polished",
+      "Smaller community",
+      "Limited integrations"
+    ],
+    "alternatives": [
+      "todoist",
+      "microsoft-to-do",
+      "notion-ai"
+    ],
+    "website": "https://ticktick.com",
+    "company": "TickTick",
+    "founded": 2013,
+    "rating": 4.3,
+    "use_cases": [
+      "Task management",
+      "Time tracking",
+      "Habits",
+      "Calendar"
+    ],
+    "target_users": [
+      "Productivity enthusiasts",
+      "Students",
+      "Professionals"
+    ]
+  },
+  {
+    "slug": "microsoft-to-do",
+    "name": "Microsoft To Do",
+    "category": "productivity",
+    "pricing": "free",
+    "price": "Free",
+    "description": "Simple task management app integrated with Microsoft ecosystem.",
+    "features": [
+      "Tasks",
+      "Lists",
+      "Steps",
+      "Integration"
+    ],
+    "pros": [
+      "Free",
+      "Microsoft integration",
+      "Simple"
+    ],
+    "cons": [
+      "Basic features",
+      "Limited customization",
+      "No advanced features"
+    ],
+    "alternatives": [
+      "todoist",
+      "ticktick",
+      "google-tasks"
+    ],
+    "website": "https://todo.microsoft.com",
+    "company": "Microsoft",
+    "founded": 2019,
+    "rating": 4.0,
+    "use_cases": [
+      "Simple tasks",
+      "Microsoft users",
+      "Lists",
+      "Reminders"
+    ],
+    "target_users": [
+      "Microsoft users",
+      "Casual users",
+      "Students"
+    ]
+  },
+  {
+    "slug": "google-tasks",
+    "name": "Google Tasks",
+    "category": "productivity",
+    "pricing": "free",
+    "price": "Free",
+    "description": "Simple task management integrated with Google Workspace.",
+    "features": [
+      "Tasks",
+      "Lists",
+      "Due dates",
+      "Integration"
+    ],
+    "pros": [
+      "Free",
+      "Google integration",
+      "Simple"
+    ],
+    "cons": [
+      "Very basic",
+      "Limited features",
+      "No collaboration"
+    ],
+    "alternatives": [
+      "todoist",
+      "ticktick",
+      "microsoft-to-do"
+    ],
+    "website": "https://tasks.google.com",
+    "company": "Google",
+    "founded": 2018,
+    "rating": 3.8,
+    "use_cases": [
+      "Simple tasks",
+      "Google users",
+      "Quick lists"
+    ],
+    "target_users": [
+      "Google users",
+      "Casual users"
+    ]
+  },
+  {
+    "slug": "obsidian",
+    "name": "Obsidian",
+    "category": "productivity",
+    "pricing": "free",
+    "price": "Free / $50/year sync",
+    "description": "Knowledge management app with bidirectional linking.",
+    "features": [
+      "Markdown",
+      "Bidirectional links",
+      "Graph view",
+      "Plugins"
+    ],
+    "pros": [
+      "Free for personal",
+      "Very flexible",
+      "Local files"
+    ],
+    "cons": [
+      "Learning curve",
+      "Sync costs",
+      "No collaboration free"
+    ],
+    "alternatives": [
+      "notion-ai",
+      "roam",
+      "logseq"
+    ],
+    "website": "https://obsidian.md",
+    "company": "Dynalist",
+    "founded": 2020,
+    "rating": 4.6,
+    "use_cases": [
+      "Note-taking",
+      "Knowledge base",
+      "PKM",
+      "Research"
+    ],
+    "target_users": [
+      "Researchers",
+      "Writers",
+      "Students",
+      "Developers"
+    ]
+  },
+  {
+    "slug": "roam",
+    "name": "Roam Research",
+    "category": "productivity",
+    "pricing": "paid",
+    "price": "$15/mo",
+    "description": "Note-taking tool for networked thought with bi-directional links.",
+    "features": [
+      "Bi-directional links",
+      "Graph view",
+      "Daily notes",
+      "Queries"
+    ],
+    "pros": [
+      "Pioneered networked notes",
+      "Great for research",
+      "Flexible"
+    ],
+    "cons": [
+      "Expensive",
+      "Learning curve",
+      "No mobile app"
+    ],
+    "alternatives": [
+      "obsidian",
+      "logseq",
+      "notion-ai"
+    ],
+    "website": "https://roamresearch.com",
+    "company": "Roam Research",
+    "founded": 2017,
+    "rating": 4.2,
+    "use_cases": [
+      "Research",
+      "Knowledge management",
+      "Academic writing",
+      "PKM"
+    ],
+    "target_users": [
+      "Researchers",
+      "Academics",
+      "Writers"
+    ]
+  },
+  {
+    "slug": "logseq",
+    "name": "Logseq",
+    "category": "productivity",
+    "pricing": "free",
+    "price": "Free",
+    "description": "Open-source knowledge management with bi-directional links.",
+    "features": [
+      "Bi-directional links",
+      "Graph view",
+      "Outliner",
+      "Local first"
+    ],
+    "pros": [
+      "Free and open source",
+      "Privacy focused",
+      "Active community"
+    ],
+    "cons": [
+      "Less polished",
+      "Sync issues",
+      "Smaller ecosystem"
+    ],
+    "alternatives": [
+      "obsidian",
+      "roam",
+      "notion-ai"
+    ],
+    "website": "https://logseq.com",
+    "company": "Logseq",
+    "founded": 2020,
+    "rating": 4.3,
+    "use_cases": [
+      "Note-taking",
+      "Knowledge base",
+      "Research",
+      "PKM"
+    ],
+    "target_users": [
+      "Privacy advocates",
+      "Researchers",
+      "Developers"
+    ]
+  },
+  {
+    "slug": "coda",
+    "name": "Coda",
+    "category": "productivity",
+    "pricing": "freemium",
+    "price": "$10/mo",
+    "description": "All-in-one doc that combines docs, spreadsheets, and apps.",
+    "features": [
+      "Docs",
+      "Tables",
+      "Automation",
+      "Packs"
+    ],
+    "pros": [
+      "Very flexible",
+      "Good automation",
+      "All-in-one"
+    ],
+    "cons": [
+      "Learning curve",
+      "Can be slow",
+      "Complex pricing"
+    ],
+    "alternatives": [
+      "notion-ai",
+      "airtable",
+      "google-docs"
+    ],
+    "website": "https://coda.io",
+    "company": "Coda",
+    "founded": 2014,
+    "rating": 4.4,
+    "use_cases": [
+      "Docs",
+      "Databases",
+      "Automation",
+      "Project management"
+    ],
+    "target_users": [
+      "Teams",
+      "Product managers",
+      "Operations"
+    ]
+  },
+  {
+    "slug": "airtable",
+    "name": "Airtable",
+    "category": "productivity",
+    "pricing": "freemium",
+    "price": "$20/mo",
+    "description": "Spreadsheet-database hybrid with rich field types.",
+    "features": [
+      "Tables",
+      "Views",
+      "Automations",
+      "Interface designer"
+    ],
+    "pros": [
+      "Visual and flexible",
+      "Good for databases",
+      "Rich field types"
+    ],
+    "cons": [
+      "Can be expensive",
+      "Learning curve",
+      "Row limits free"
+    ],
+    "alternatives": [
+      "coda",
+      "notion-ai",
+      "google-sheets"
+    ],
+    "website": "https://airtable.com",
+    "company": "Airtable",
+    "founded": 2012,
+    "rating": 4.5,
+    "use_cases": [
+      "Databases",
+      "Project tracking",
+      "CRM",
+      "Content calendar"
+    ],
+    "target_users": [
+      "Teams",
+      "Operations",
+      "Marketing",
+      "Sales"
+    ]
+  },
+  {
+    "slug": "google-docs",
+    "name": "Google Docs",
+    "category": "productivity",
+    "pricing": "free",
+    "price": "Free",
+    "description": "Cloud-based document editor with real-time collaboration.",
+    "features": [
+      "Docs",
+      "Collaboration",
+      "Comments",
+      "Version history"
+    ],
+    "pros": [
+      "Free",
+      "Great collaboration",
+      "Widely used"
+    ],
+    "cons": [
+      "Basic formatting",
+      "Limited offline",
+      "Privacy concerns"
+    ],
+    "alternatives": [
+      "microsoft-word",
+      "notion-ai",
+      "coda"
+    ],
+    "website": "https://docs.google.com",
+    "company": "Google",
+    "founded": 2006,
+    "rating": 4.5,
+    "use_cases": [
+      "Document editing",
+      "Collaboration",
+      "Writing",
+      "Reports"
+    ],
+    "target_users": [
+      "Everyone",
+      "Students",
+      "Teams",
+      "Businesses"
+    ]
   }
 ]
