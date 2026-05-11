@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   creator: "Toolio",
   publisher: "Toolio",
   metadataBase: new URL("https://toolio.dev"),
+  alternates: {
+    canonical: "https://toolio.dev",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
