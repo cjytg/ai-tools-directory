@@ -56,11 +56,9 @@ export default function RootLayout({
       <body className="antialiased">
         <header className="border-b border-[#27272a] bg-[#09090b]/80 backdrop-blur-sm sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-2.5 group">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white font-bold text-sm group-hover:scale-105 transition-transform">
-                T
-              </div>
-              <span className="text-xl font-bold tracking-tight">Toolio</span>
+            <Link href="/" className="flex items-center gap-2 group">
+              <img src="/logo.png" alt="Toolio" width={32} height={32} className="group-hover:scale-105 transition-transform" />
+              <img src="/toolio.png" alt="Toolio" height={24} className="h-6 w-auto" />
             </Link>
             <nav className="hidden md:flex items-center gap-6 text-sm text-[#71717a]">
               <Link href="/tools" className="hover:text-white transition">Tools</Link>
@@ -85,8 +83,8 @@ export default function RootLayout({
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
               <div>
                 <div className="flex items-center gap-2 mb-4">
-                  <div className="w-6 h-6 bg-gradient-to-br from-blue-500 to-purple-600 rounded flex items-center justify-center text-white text-xs font-bold">T</div>
-                  <span className="font-bold">Toolio</span>
+                  <img src="/logo.png" alt="Toolio" width={24} height={24} />
+                  <img src="/toolio.png" alt="Toolio" height={20} className="h-5 w-auto" />
                 </div>
                 <p className="text-sm text-[#71717a]">Find the best AI tools. Honest reviews, real pricing.</p>
               </div>
