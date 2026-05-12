@@ -4548,5 +4548,2884 @@
       "Teams",
       "Businesses"
     ]
+  },
+  {
+    "slug": "grok",
+    "name": "Grok",
+    "category": "chatbot",
+    "pricing": "freemium",
+    "price": "$8-30/mo",
+    "description": "AI chatbot by xAI with real-time X/Twitter integration and uncensored responses.",
+    "features": [
+      "Real-time X integration",
+      "Unfiltered responses",
+      "Image generation via Grok Imagine",
+      "DeepSearch capability"
+    ],
+    "pros": [
+      "Access to real-time data via X",
+      "Less restrictive than competitors",
+      "Witty personality"
+    ],
+    "cons": [
+      "Requires X Premium subscription",
+      "Less polished UX",
+      "Smaller knowledge base"
+    ],
+    "alternatives": [
+      "chatgpt",
+      "claude",
+      "gemini"
+    ],
+    "website": "https://grok.x.ai",
+    "company": "xAI",
+    "founded": 2023,
+    "rating": 4.2,
+    "use_cases": [
+      "Real-time research",
+      "News analysis",
+      "Content creation"
+    ],
+    "target_users": [
+      "Social media users",
+      "Researchers",
+      "Journalists"
+    ]
+  },
+  {
+    "slug": "perplexity-ai",
+    "name": "Perplexity AI",
+    "category": "chatbot",
+    "pricing": "freemium",
+    "price": "$20/mo",
+    "description": "AI-powered research assistant that provides sourced answers from the web in real time.",
+    "features": [
+      "Web-sourced answers",
+      "Citation links",
+      "Multiple model choices",
+      "Collections feature"
+    ],
+    "pros": [
+      "Always cites sources",
+      "Real-time web search",
+      "Less hallucination"
+    ],
+    "cons": [
+      "Requires internet for best results",
+      "Less creative writing ability",
+      "Free tier limited"
+    ],
+    "alternatives": [
+      "chatgpt",
+      "gemini",
+      "grok"
+    ],
+    "website": "https://perplexity.ai",
+    "company": "Perplexity",
+    "founded": 2022,
+    "rating": 4.4,
+    "use_cases": [
+      "Research",
+      "Fact-checking",
+      "News analysis"
+    ],
+    "target_users": [
+      "Researchers",
+      "Students",
+      "Professionals"
+    ]
+  },
+  {
+    "slug": "character-ai",
+    "name": "Character.AI",
+    "category": "chatbot",
+    "pricing": "freemium",
+    "price": "$9.99/mo",
+    "description": "AI chatbot platform for creating and interacting with custom characters and personalities.",
+    "features": [
+      "Custom character creation",
+      "Role-playing scenarios",
+      "Community characters",
+      "Voice chat"
+    ],
+    "pros": [
+      "Highly engaging conversations",
+      "Massive character library",
+      "Fun and entertaining"
+    ],
+    "cons": [
+      "Not for serious tasks",
+      "Quality varies by character",
+      "Limited factual accuracy"
+    ],
+    "alternatives": [
+      "chatgpt",
+      "pi-ai"
+    ],
+    "website": "https://character.ai",
+    "company": "Character Technologies",
+    "founded": 2021,
+    "rating": 4.1,
+    "use_cases": [
+      "Entertainment",
+      "Role-playing",
+      "Companionship"
+    ],
+    "target_users": [
+      "Gamers",
+      "Writers",
+      "Hobbyists"
+    ]
+  },
+  {
+    "slug": "pi-ai",
+    "name": "Pi AI",
+    "category": "chatbot",
+    "pricing": "free",
+    "price": "Free",
+    "description": "Personal AI assistant by Inflection AI designed for emotional intelligence and supportive conversation.",
+    "features": [
+      "Emotional intelligence",
+      "Voice conversation",
+      "Supportive tone",
+      "Web browsing"
+    ],
+    "pros": [
+      "Warm, empathetic responses",
+      "Great voice mode",
+      "Free to use"
+    ],
+    "cons": [
+      "Less capable for technical tasks",
+      "Smaller knowledge base",
+      "Limited customization"
+    ],
+    "alternatives": [
+      "chatgpt",
+      "character-ai",
+      "claude"
+    ],
+    "website": "https://pi.ai",
+    "company": "Inflection AI",
+    "founded": 2022,
+    "rating": 4.0,
+    "use_cases": [
+      "Personal support",
+      "Practice conversations",
+      "Mental wellness"
+    ],
+    "target_users": [
+      "Everyone",
+      "Therapy seekers",
+      "Language learners"
+    ]
+  },
+  {
+    "slug": "deepseek",
+    "name": "DeepSeek",
+    "category": "chatbot",
+    "pricing": "free",
+    "price": "Free",
+    "description": "Open-source AI chatbot with strong coding and math capabilities, competitive with GPT-4.",
+    "features": [
+      "Strong coding ability",
+      "Math reasoning",
+      "Open weights",
+      "Generous free tier"
+    ],
+    "pros": [
+      "Impressive free performance",
+      "Great for coding",
+      "Open model availability"
+    ],
+    "cons": [
+      "Less polished UX",
+      "Slower response times",
+      "Limited ecosystem"
+    ],
+    "alternatives": [
+      "chatgpt",
+      "claude",
+      "mistral"
+    ],
+    "website": "https://deepseek.com",
+    "company": "DeepSeek",
+    "founded": 2023,
+    "rating": 4.3,
+    "use_cases": [
+      "Coding",
+      "Math problem solving",
+      "Research"
+    ],
+    "target_users": [
+      "Developers",
+      "Students",
+      "Researchers"
+    ]
+  },
+  {
+    "slug": "qwen",
+    "name": "Qwen",
+    "category": "chatbot",
+    "pricing": "free",
+    "price": "Free",
+    "description": "Alibaba's open-source LLM with strong multilingual support and vision capabilities.",
+    "features": [
+      "Multilingual (100+ languages)",
+      "Vision understanding",
+      "Open weights",
+      "Long context window"
+    ],
+    "pros": [
+      "Excellent Chinese/Asian language support",
+      "Strong vision capabilities",
+      "Open model access"
+    ],
+    "cons": [
+      "Less known in Western markets",
+      "Limited third-party integrations",
+      "Data privacy concerns for some"
+    ],
+    "alternatives": [
+      "chatgpt",
+      "gemini",
+      "mistral"
+    ],
+    "website": "https://qwen.ai",
+    "company": "Alibaba Group",
+    "founded": 2023,
+    "rating": 4.2,
+    "use_cases": [
+      "Translation",
+      "Vision tasks",
+      "Multilingual content"
+    ],
+    "target_users": [
+      "Developers",
+      "International users",
+      "Researchers"
+    ]
+  },
+  {
+    "slug": "reka",
+    "name": "Reka AI",
+    "category": "chatbot",
+    "pricing": "freemium",
+    "price": "$10-50/mo",
+    "description": "Multimodal AI assistant with strong reasoning and tool-use capabilities.",
+    "features": [
+      "Multimodal understanding",
+      "Tool execution",
+      "API access",
+      "Research-focused"
+    ],
+    "pros": [
+      "Strong reasoning",
+      "Multimodal from ground up",
+      "Good API"
+    ],
+    "cons": [
+      "Less mainstream awareness",
+      "Smaller community",
+      "Higher pricing tier"
+    ],
+    "alternatives": [
+      "chatgpt",
+      "gemini",
+      "claude"
+    ],
+    "website": "https://reka.ai",
+    "company": "Reka AI",
+    "founded": 2023,
+    "rating": 3.9,
+    "use_cases": [
+      "Research",
+      "Data analysis",
+      "Enterprise AI"
+    ],
+    "target_users": [
+      "Researchers",
+      "Developers",
+      "Enterprises"
+    ]
+  },
+  {
+    "slug": "poe",
+    "name": "Poe",
+    "category": "chatbot",
+    "pricing": "freemium",
+    "price": "$19.99/mo",
+    "description": "Quora's platform to access multiple AI models (GPT-4, Claude, Gemini) in one interface.",
+    "features": [
+      "Multiple AI models",
+      "Custom bots",
+      "Fast responses",
+      "Cross-platform"
+    ],
+    "pros": [
+      "One app for all AI models",
+      "Create custom AI bots",
+      "Free tier available"
+    ],
+    "cons": [
+      "Dependent on third-party APIs",
+      "Subscription can be pricey",
+      "Model availability varies"
+    ],
+    "alternatives": [
+      "chatgpt",
+      "claude",
+      "perplexity-ai"
+    ],
+    "website": "https://poe.com",
+    "company": "Quora",
+    "founded": 2022,
+    "rating": 4.2,
+    "use_cases": [
+      "Model comparison",
+      "Content creation",
+      "Research"
+    ],
+    "target_users": [
+      "AI enthusiasts",
+      "Content creators",
+      "Students"
+    ]
+  },
+  {
+    "slug": "groq",
+    "name": "Groq",
+    "category": "chatbot",
+    "pricing": "freemium",
+    "price": "$10-50/mo",
+    "description": "Ultra-fast AI inference platform with instant response times for Llama, Mixtral, and custom models.",
+    "features": [
+      "Lightning-fast inference",
+      "Llama/Mixtral models",
+      "API access",
+      "Free tier"
+    ],
+    "pros": [
+      "Fastest AI responses available",
+      "Open model focus",
+      "Great developer experience"
+    ],
+    "cons": [
+      "Limited proprietary models",
+      "Consumer app is basic",
+      "Model selection limited"
+    ],
+    "alternatives": [
+      "openai-api",
+      "mistral",
+      "anthropic-api"
+    ],
+    "website": "https://groq.com",
+    "company": "Groq",
+    "founded": 2016,
+    "rating": 4.1,
+    "use_cases": [
+      "Real-time chat",
+      "API development",
+      "Prototyping"
+    ],
+    "target_users": [
+      "Developers",
+      "Startups",
+      "AI researchers"
+    ]
+  },
+  {
+    "slug": "openrouter",
+    "name": "OpenRouter",
+    "category": "chatbot",
+    "pricing": "pay-per-use",
+    "price": "$0.0001-0.10/1K tokens",
+    "description": "Unified API gateway to access 100+ AI models from one endpoint with smart routing.",
+    "features": [
+      "100+ AI models",
+      "Single API key",
+      "Smart model routing",
+      "Usage tracking"
+    ],
+    "pros": [
+      "Access everything from one API",
+      "Pay only for what you use",
+      "Great for developers"
+    ],
+    "cons": [
+      "Not a consumer chat interface",
+      "Requires API knowledge",
+      "Pricing complexity"
+    ],
+    "alternatives": [
+      "openai-api",
+      "groq",
+      "together-ai"
+    ],
+    "website": "https://openrouter.ai",
+    "company": "OpenRouter",
+    "founded": 2023,
+    "rating": 4.0,
+    "use_cases": [
+      "API integration",
+      "Model testing",
+      "Multi-model apps"
+    ],
+    "target_users": [
+      "Developers",
+      "AI startups",
+      "Researchers"
+    ]
+  },
+  {
+    "slug": "cline",
+    "name": "Cline",
+    "category": "coding",
+    "pricing": "free",
+    "price": "Free (BYO API key)",
+    "description": "Open-source autonomous coding agent that runs inside VS Code, capable of building entire projects.",
+    "features": [
+      "Autonomous coding",
+      "VS Code extension",
+      "Browser automation",
+      "Terminal commands"
+    ],
+    "pros": [
+      "Open source and free",
+      "Can build complete projects",
+      "Extremely powerful"
+    ],
+    "cons": [
+      "Requires API key",
+      "Can make mistakes on complex tasks",
+      "Steep learning curve"
+    ],
+    "alternatives": [
+      "cursor",
+      "windsurf",
+      "github-copilot"
+    ],
+    "website": "https://cline.bot",
+    "company": "Open Source",
+    "founded": 2023,
+    "rating": 4.2,
+    "use_cases": [
+      "Full project building",
+      "Code generation",
+      "Automation"
+    ],
+    "target_users": [
+      "Developers",
+      "Startups",
+      "Solo founders"
+    ]
+  },
+  {
+    "slug": "devin-ai",
+    "name": "Devin AI",
+    "category": "coding",
+    "pricing": "paid",
+    "price": "$500/mo",
+    "description": "Autonomous AI software engineer that can plan, code, debug, and deploy entire projects independently.",
+    "features": [
+      "Autonomous project building",
+      "Planning and execution",
+      "Debug and fix",
+      "Deployment ready"
+    ],
+    "pros": [
+      "Truly autonomous",
+      "Handles end-to-end tasks",
+      "Impressive capability"
+    ],
+    "cons": [
+      "Very expensive",
+      "Limited access",
+      "Still experimental"
+    ],
+    "alternatives": [
+      "cursor",
+      "cline",
+      "github-copilot"
+    ],
+    "website": "https://devin.ai",
+    "company": "Cognition Labs",
+    "founded": 2023,
+    "rating": 4.0,
+    "use_cases": [
+      "Full project development",
+      "Bug fixing",
+      "Research tasks"
+    ],
+    "target_users": [
+      "Startups",
+      "Enterprises",
+      "Tech teams"
+    ]
+  },
+  {
+    "slug": "sourcegraph-cody",
+    "name": "Cody (Sourcegraph)",
+    "category": "coding",
+    "pricing": "freemium",
+    "price": "$9/mo",
+    "description": "AI coding assistant with deep codebase context using Sourcegraph's code intelligence platform.",
+    "features": [
+      "Codebase context",
+      "Chat interface",
+      "Code fix",
+      "Multi-repo search"
+    ],
+    "pros": [
+      "Understands your codebase deeply",
+      "Great for large repos",
+      "Free tier available"
+    ],
+    "cons": [
+      "Setup can be complex",
+      "Best with Sourcegraph",
+      "Less mainstream"
+    ],
+    "alternatives": [
+      "github-copilot",
+      "cursor",
+      "codeium"
+    ],
+    "website": "https://sourcegraph.com/cody",
+    "company": "Sourcegraph",
+    "founded": 2022,
+    "rating": 4.1,
+    "use_cases": [
+      "Large codebase navigation",
+      "Refactoring",
+      "Code review"
+    ],
+    "target_users": [
+      "Senior developers",
+      "Tech leads",
+      "Enterprises"
+    ]
+  },
+  {
+    "slug": "aider",
+    "name": "Aider",
+    "category": "coding",
+    "pricing": "free",
+    "price": "Free (BYO API key)",
+    "description": "Command-line AI coding tool that lets you pair-program with GPT/Claude directly in your terminal.",
+    "features": [
+      "Terminal-based",
+      "Git integration",
+      "Multi-file editing",
+      "Open source"
+    ],
+    "pros": [
+      "Great for terminal users",
+      "Strong Git workflow",
+      "Free with own API key"
+    ],
+    "cons": [
+      "No GUI",
+      "Requires API key setup",
+      "Less beginner-friendly"
+    ],
+    "alternatives": [
+      "cursor",
+      "cline",
+      "github-copilot"
+    ],
+    "website": "https://aider.chat",
+    "company": "Open Source",
+    "founded": 2023,
+    "rating": 4.3,
+    "use_cases": [
+      "Terminal-based development",
+      "Git workflows",
+      "Quick fixes"
+    ],
+    "target_users": [
+      "Terminal users",
+      "DevOps",
+      "Experienced developers"
+    ]
+  },
+  {
+    "slug": "bloop",
+    "name": "Bloop",
+    "category": "coding",
+    "pricing": "free",
+    "price": "Free",
+    "description": "AI-powered code search and understanding tool for navigating large codebases with natural language.",
+    "features": [
+      "Code search",
+      "AI explanations",
+      "Repository navigation",
+      "Local-first"
+    ],
+    "pros": [
+      "Fast code search",
+      "AI-powered explanations",
+      "Local-first option"
+    ],
+    "cons": [
+      "Niche use case",
+      "Less full-featured",
+      "Smaller community"
+    ],
+    "alternatives": [
+      "sourcegraph-cody",
+      "github-copilot",
+      "cursor"
+    ],
+    "website": "https://bloop.ai",
+    "company": "Bloop AI",
+    "founded": 2022,
+    "rating": 3.9,
+    "use_cases": [
+      "Code navigation",
+      "Onboarding",
+      "Code review"
+    ],
+    "target_users": [
+      "Developers",
+      "Tech leads",
+      "New team members"
+    ]
+  },
+  {
+    "slug": "flux",
+    "name": "Flux",
+    "category": "image",
+    "pricing": "freemium",
+    "price": "Free (open weights)",
+    "description": "Next-gen open-source image model by Black Forest Labs with photorealistic quality and text rendering.",
+    "features": [
+      "Photorealistic output",
+      "Text in images",
+      "Open weights",
+      "High resolution"
+    ],
+    "pros": [
+      "Exceptional quality",
+      "Accurate text rendering",
+      "Open model available"
+    ],
+    "cons": [
+      "Computational requirements",
+      "Newer ecosystem",
+      "API costs for cloud"
+    ],
+    "alternatives": [
+      "midjourney",
+      "dall-e-3",
+      "stable-diffusion"
+    ],
+    "website": "https://blackforestlabs.ai",
+    "company": "Black Forest Labs",
+    "founded": 2024,
+    "rating": 4.6,
+    "use_cases": [
+      "Photorealistic images",
+      "Marketing",
+      "Product design"
+    ],
+    "target_users": [
+      "Designers",
+      "Marketers",
+      "Developers"
+    ]
+  },
+  {
+    "slug": "recraft",
+    "name": "Recraft",
+    "category": "image",
+    "pricing": "freemium",
+    "price": "$10-40/mo",
+    "description": "AI design tool for creating vector art, icons, illustrations, and brand-consistent visuals.",
+    "features": [
+      "Vector generation",
+      "Brand kit",
+      "Icon creation",
+      "Style consistency"
+    ],
+    "pros": [
+      "Vector output",
+      "Brand consistency tools",
+      "Great for UI/UX"
+    ],
+    "cons": [
+      "Less photo-realistic",
+      "Smaller user base",
+      "Limited free tier"
+    ],
+    "alternatives": [
+      "midjourney",
+      "ideogram",
+      "canva-ai"
+    ],
+    "website": "https://recraft.ai",
+    "company": "Recraft",
+    "founded": 2023,
+    "rating": 4.2,
+    "use_cases": [
+      "Vector art",
+      "Icons",
+      "Brand assets"
+    ],
+    "target_users": [
+      "UI/UX designers",
+      "Brand designers",
+      "Illustrators"
+    ]
+  },
+  {
+    "slug": "krea",
+    "name": "Krea AI",
+    "category": "image",
+    "pricing": "freemium",
+    "price": "$8-40/mo",
+    "description": "Real-time AI image generation and enhancement tool with live canvas editing capabilities.",
+    "features": [
+      "Real-time generation",
+      "Canvas editing",
+      "Image upscaling",
+      "Pattern generation"
+    ],
+    "pros": [
+      "Real-time feedback",
+      "Interactive canvas",
+      "Great upscaling"
+    ],
+    "cons": [
+      "Learning curve",
+      "Limited free usage",
+      "Less mainstream"
+    ],
+    "alternatives": [
+      "midjourney",
+      "stable-diffusion",
+      "leonardo-ai"
+    ],
+    "website": "https://krea.ai",
+    "company": "Krea",
+    "founded": 2023,
+    "rating": 4.1,
+    "use_cases": [
+      "Real-time design",
+      "Image enhancement",
+      "Pattern creation"
+    ],
+    "target_users": [
+      "Designers",
+      "Artists",
+      "Content creators"
+    ]
+  },
+  {
+    "slug": "clipdrop",
+    "name": "Clipdrop",
+    "category": "image",
+    "pricing": "freemium",
+    "price": "$7.99-14.99/mo",
+    "description": "AI-powered image editing toolkit with background removal, upscaling, and object replacement.",
+    "features": [
+      "Background removal",
+      "Image upscaling",
+      "Object removal",
+      "Relighting"
+    ],
+    "pros": [
+      "Multiple tools in one",
+      "High quality results",
+      "Easy to use"
+    ],
+    "cons": [
+      "Subscription for full features",
+      "Some tools better than others",
+      "Limited free tier"
+    ],
+    "alternatives": [
+      "remove-bg",
+      "canva-ai",
+      "adobe-firefly"
+    ],
+    "website": "https://clipdrop.co",
+    "company": "Stability AI",
+    "founded": 2020,
+    "rating": 4.3,
+    "use_cases": [
+      "Image editing",
+      "Product photography",
+      "Social media"
+    ],
+    "target_users": [
+      "Marketers",
+      "Photographers",
+      "E-commerce sellers"
+    ]
+  },
+  {
+    "slug": "mage-ai",
+    "name": "Mage.space",
+    "category": "image",
+    "pricing": "freemium",
+    "price": "$12-50/mo",
+    "description": "AI image generation platform with uncensored models and a large library of community styles.",
+    "features": [
+      "Uncensored generation",
+      "Style library",
+      "Custom models",
+      "NSFW support"
+    ],
+    "pros": [
+      "Fewer restrictions",
+      "Large style variety",
+      "Good community"
+    ],
+    "cons": [
+      "Quality varies",
+      "Interface is basic",
+      "Less professional polish"
+    ],
+    "alternatives": [
+      "stable-diffusion",
+      "leonardo-ai",
+      "civitai"
+    ],
+    "website": "https://mage.space",
+    "company": "Mage",
+    "founded": 2022,
+    "rating": 3.8,
+    "use_cases": [
+      "Creative art",
+      "Personal projects",
+      "Experimental generation"
+    ],
+    "target_users": [
+      "Artists",
+      "Hobbyists",
+      "Content creators"
+    ]
+  },
+  {
+    "slug": "civitai",
+    "name": "Civitai",
+    "category": "image",
+    "pricing": "free",
+    "price": "Free (with paid features)",
+    "description": "Community-driven platform for sharing and discovering Stable Diffusion models, LoRAs, and embeddings.",
+    "features": [
+      "Model sharing",
+      "LoRA downloads",
+      "Image gallery",
+      "On-site generation"
+    ],
+    "pros": [
+      "Largest model library",
+      "Community-driven",
+      "Free to browse"
+    ],
+    "cons": [
+      "Not a standalone generator",
+      "NSFW content",
+      "Requires SD knowledge"
+    ],
+    "alternatives": [
+      "stable-diffusion",
+      "leonardo-ai",
+      "mage-ai"
+    ],
+    "website": "https://civitai.com",
+    "company": "Civitai",
+    "founded": 2022,
+    "rating": 4.4,
+    "use_cases": [
+      "Model discovery",
+      "SD fine-tuning",
+      "Community art"
+    ],
+    "target_users": [
+      "SD users",
+      "AI artists",
+      "Researchers"
+    ]
+  },
+  {
+    "slug": "getimg",
+    "name": "Getimg.ai",
+    "category": "image",
+    "pricing": "freemium",
+    "price": "$12-49/mo",
+    "description": "All-in-one AI image generation platform with 50+ models and inpainting capabilities.",
+    "features": [
+      "50+ AI models",
+      "Inpainting",
+      "Outpainting",
+      "Image-to-image"
+    ],
+    "pros": [
+      "Wide model selection",
+      "Advanced editing tools",
+      "Good free tier"
+    ],
+    "cons": [
+      "Can be overwhelming",
+      "Quality varies by model",
+      "Interface is cluttered"
+    ],
+    "alternatives": [
+      "stable-diffusion",
+      "leonardo-ai",
+      "midjourney"
+    ],
+    "website": "https://getimg.ai",
+    "company": "Getimg",
+    "founded": 2022,
+    "rating": 4.0,
+    "use_cases": [
+      "Image generation",
+      "Editing",
+      "Experimentation"
+    ],
+    "target_users": [
+      "Artists",
+      "Designers",
+      "Hobbyists"
+    ]
+  },
+  {
+    "slug": "dreamstudio",
+    "name": "DreamStudio",
+    "category": "image",
+    "pricing": "paid",
+    "price": "$10 for 1000 credits",
+    "description": "Stability AI's official image generation platform with fine-tuned SDXL models and advanced controls.",
+    "features": [
+      "SDXL models",
+      "Image editing",
+      "Prompt guidance",
+      "Batch generation"
+    ],
+    "pros": [
+      "Official Stability AI platform",
+      "High-quality output",
+      "Advanced controls"
+    ],
+    "cons": [
+      "Pay-per-use pricing",
+      "Less free than alternatives",
+      "Requires credits management"
+    ],
+    "alternatives": [
+      "stable-diffusion",
+      "midjourney",
+      "leonardo-ai"
+    ],
+    "website": "https://dreamstudio.ai",
+    "company": "Stability AI",
+    "founded": 2022,
+    "rating": 4.2,
+    "use_cases": [
+      "Professional image generation",
+      "Brand assets",
+      "Product visuals"
+    ],
+    "target_users": [
+      "Designers",
+      "Agencies",
+      "Brands"
+    ]
+  },
+  {
+    "slug": "remove-bg",
+    "name": "Remove.bg",
+    "category": "image",
+    "pricing": "freemium",
+    "price": "$9-40/mo",
+    "description": "AI-powered background removal tool that works in seconds for photos and product images.",
+    "features": [
+      "One-click removal",
+      "API access",
+      "Bulk processing",
+      "HD downloads"
+    ],
+    "pros": [
+      "Fast and accurate",
+      "Simple to use",
+      "API available"
+    ],
+    "cons": [
+      "Limited free tier",
+      "Expensive for bulk",
+      "Only does background removal"
+    ],
+    "alternatives": [
+      "clipdrop",
+      "canva-ai",
+      "photoroom"
+    ],
+    "website": "https://remove.bg",
+    "company": "Kaleido AI",
+    "founded": 2018,
+    "rating": 4.4,
+    "use_cases": [
+      "Product photos",
+      "Profile pictures",
+      "Marketing materials"
+    ],
+    "target_users": [
+      "E-commerce",
+      "Marketers",
+      "Photographers"
+    ]
+  },
+  {
+    "slug": "photoroom",
+    "name": "Photoroom",
+    "category": "image",
+    "pricing": "freemium",
+    "price": "$9.99/mo",
+    "description": "AI photo editor for product photography with background removal, shadows, and scene generation.",
+    "features": [
+      "Background removal",
+      "AI shadows",
+      "Scene generation",
+      "Batch editing"
+    ],
+    "pros": [
+      "Great for product photos",
+      "AI-generated scenes",
+      "Mobile-friendly"
+    ],
+    "cons": [
+      "Best features are paid",
+      "Less for general editing",
+      "Subscription required for HD"
+    ],
+    "alternatives": [
+      "remove-bg",
+      "clipdrop",
+      "canva-ai"
+    ],
+    "website": "https://photoroom.com",
+    "company": "Photoroom",
+    "founded": 2019,
+    "rating": 4.3,
+    "use_cases": [
+      "Product photography",
+      "E-commerce listings",
+      "Social media"
+    ],
+    "target_users": [
+      "E-commerce sellers",
+      "Small businesses",
+      "Marketers"
+    ]
+  },
+  {
+    "slug": "prowritingaid",
+    "name": "ProWritingAid",
+    "category": "writing",
+    "pricing": "paid",
+    "price": "$10/mo",
+    "description": "Comprehensive writing analysis tool with 25+ reports on grammar, style, readability, and more.",
+    "features": [
+      "25+ writing reports",
+      "Grammar checking",
+      "Style analysis",
+      "Plagiarism check"
+    ],
+    "pros": [
+      "Most comprehensive analysis",
+      "Great for long-form writing",
+      "Desktop app available"
+    ],
+    "cons": [
+      "Interface can be overwhelming",
+      "Learning curve",
+      "Less real-time than Grammarly"
+    ],
+    "alternatives": [
+      "grammarly",
+      "quillbot",
+      "hemingway"
+    ],
+    "website": "https://prowritingaid.com",
+    "company": "Orpheus Technology",
+    "founded": 2012,
+    "rating": 4.3,
+    "use_cases": [
+      "Book writing",
+      "Professional editing",
+      "Style improvement"
+    ],
+    "target_users": [
+      "Authors",
+      "Editors",
+      "Professional writers"
+    ]
+  },
+  {
+    "slug": "hemingway",
+    "name": "Hemingway Editor",
+    "category": "writing",
+    "pricing": "paid",
+    "price": "$19.99 one-time",
+    "description": "Writing editor that highlights complex sentences, adverbs, and passive voice for clearer prose.",
+    "features": [
+      "Readability scoring",
+      "Sentence highlighting",
+      "Bold clarity",
+      "Export options"
+    ],
+    "pros": [
+      "One-time payment",
+      "Simple interface",
+      "Forces clear writing"
+    ],
+    "cons": [
+      "No grammar checking",
+      "Limited AI features",
+      "No free online version"
+    ],
+    "alternatives": [
+      "grammarly",
+      "prowritingaid",
+      "quillbot"
+    ],
+    "website": "https://hemingwayapp.com",
+    "company": "Hemingway",
+    "founded": 2014,
+    "rating": 4.1,
+    "use_cases": [
+      "Editing",
+      "Blog writing",
+      "Academic papers"
+    ],
+    "target_users": [
+      "Writers",
+      "Bloggers",
+      "Students"
+    ]
+  },
+  {
+    "slug": "novelai",
+    "name": "NovelAI",
+    "category": "writing",
+    "pricing": "paid",
+    "price": "$10-25/mo",
+    "description": "AI-powered storytelling platform for creative writing with custom models and unlimited generation.",
+    "features": [
+      "AI storytelling",
+      "Custom models",
+      "Image generation",
+      "Unlimited writing"
+    ],
+    "pros": [
+      "Creative freedom",
+      "Uncensored",
+      "Combined text + image"
+    ],
+    "cons": [
+      "Subscription only",
+      "Not for business",
+      "Quality varies"
+    ],
+    "alternatives": [
+      "sudowrite",
+      "jasper",
+      "chatgpt"
+    ],
+    "website": "https://novelai.net",
+    "company": "NovelAI",
+    "founded": 2020,
+    "rating": 4.0,
+    "use_cases": [
+      "Creative fiction",
+      "Role-playing",
+      "Story writing"
+    ],
+    "target_users": [
+      "Writers",
+      "Storytellers",
+      "Hobbyists"
+    ]
+  },
+  {
+    "slug": "longshot",
+    "name": "LongShot AI",
+    "category": "writing",
+    "pricing": "freemium",
+    "price": "$19/mo",
+    "description": "AI writing tool focused on long-form content with fact-checking and internal linking suggestions.",
+    "features": [
+      "Long-form writing",
+      "Fact-checking",
+      "Internal linking",
+      "WordPress integration"
+    ],
+    "pros": [
+      "Built for long articles",
+      "Fact-checking feature",
+      "SEO integration"
+    ],
+    "cons": [
+      "Less versatile for short content",
+      "Smaller user base",
+      "UI needs polish"
+    ],
+    "alternatives": [
+      "writesonic",
+      "jasper",
+      "surfer-seo"
+    ],
+    "website": "https://longshot.ai",
+    "company": "LongShot",
+    "founded": 2021,
+    "rating": 3.8,
+    "use_cases": [
+      "Blog posts",
+      "Long articles",
+      "SEO content"
+    ],
+    "target_users": [
+      "Bloggers",
+      "Content marketers",
+      "SEO writers"
+    ]
+  },
+  {
+    "slug": "luma-dream-machine",
+    "name": "Luma Dream Machine",
+    "category": "video",
+    "pricing": "freemium",
+    "price": "$29.99-99.99/mo",
+    "description": "High-quality AI video generation model with realistic motion and physics understanding.",
+    "features": [
+      "Text-to-video",
+      "Image-to-video",
+      "Keyframe control",
+      "120fps output"
+    ],
+    "pros": [
+      "Realistic motion",
+      "High resolution output",
+      "Physics understanding"
+    ],
+    "cons": [
+      "Expensive tiers",
+      "Limited free generations",
+      "Can be slow during peak"
+    ],
+    "alternatives": [
+      "runway",
+      "pika",
+      "kling"
+    ],
+    "website": "https://lumalabs.ai/dream-machine",
+    "company": "Luma AI",
+    "founded": 2021,
+    "rating": 4.4,
+    "use_cases": [
+      "Video production",
+      "Film making",
+      "Marketing videos"
+    ],
+    "target_users": [
+      "Filmmakers",
+      "Creators",
+      "Marketers"
+    ]
+  },
+  {
+    "slug": "fliki",
+    "name": "Fliki",
+    "category": "video",
+    "pricing": "freemium",
+    "price": "$21-49/mo",
+    "description": "AI text-to-video platform with voiceover generation and stock media integration.",
+    "features": [
+      "Text-to-video",
+      "AI voiceover",
+      "Stock media",
+      "Subtitle generation"
+    ],
+    "pros": [
+      "Easy text-to-video",
+      "Good voice quality",
+      "Fast production"
+    ],
+    "cons": [
+      "Limited customization",
+      "Subscription pricing",
+      "Quality varies"
+    ],
+    "alternatives": [
+      "invideo",
+      "pictory",
+      "runway"
+    ],
+    "website": "https://fliki.ai",
+    "company": "Fliki",
+    "founded": 2021,
+    "rating": 4.0,
+    "use_cases": [
+      "Explainer videos",
+      "Social media",
+      "Content repurposing"
+    ],
+    "target_users": [
+      "Content creators",
+      "Marketers",
+      "Educators"
+    ]
+  },
+  {
+    "slug": "pictory",
+    "name": "Pictory",
+    "category": "video",
+    "pricing": "paid",
+    "price": "$19-99/mo",
+    "description": "AI video editing platform that transforms long-form content into short, shareable clips.",
+    "features": [
+      "Auto summarization",
+      "Short clip creation",
+      "Caption generation",
+      "Brand kit"
+    ],
+    "pros": [
+      "Great for repurposing content",
+      "Automatic highlights",
+      "Easy workflow"
+    ],
+    "cons": [
+      "No free tier",
+      "Limited creative control",
+      "Subscription only"
+    ],
+    "alternatives": [
+      "invideo",
+      "fliki",
+      "descript"
+    ],
+    "website": "https://pictory.ai",
+    "company": "Pictory",
+    "founded": 2020,
+    "rating": 4.1,
+    "use_cases": [
+      "Content repurposing",
+      "Short-form clips",
+      "Social media"
+    ],
+    "target_users": [
+      "Content marketers",
+      "YouTubers",
+      "Podcasters"
+    ]
+  },
+  {
+    "slug": "uberduck",
+    "name": "Uberduck",
+    "category": "audio",
+    "pricing": "freemium",
+    "price": "$5-50/mo",
+    "description": "AI voice platform for creating rap, singing, and voiceover content with thousands of voice models.",
+    "features": [
+      "Rap generation",
+      "Voice models",
+      "Lip sync",
+      "API access"
+    ],
+    "pros": [
+      "Fun and creative",
+      "Large voice library",
+      "Free tier available"
+    ],
+    "cons": [
+      "Niche use case",
+      "Quality varies by voice",
+      "Less professional"
+    ],
+    "alternatives": [
+      "elevenlabs",
+      "suno",
+      "udio"
+    ],
+    "website": "https://uberduck.ai",
+    "company": "Uberduck",
+    "founded": 2021,
+    "rating": 3.8,
+    "use_cases": [
+      "Rap creation",
+      "Fun projects",
+      "Voice experiments"
+    ],
+    "target_users": [
+      "Musicians",
+      "Content creators",
+      "Hobbyists"
+    ]
+  },
+  {
+    "slug": "naturalreader",
+    "name": "NaturalReader",
+    "category": "audio",
+    "pricing": "freemium",
+    "price": "$9.95/mo",
+    "description": "Text-to-speech software for reading documents, web pages, and eBooks with natural voices.",
+    "features": [
+      "Document reading",
+      "Web page reading",
+      "OCR",
+      "Multiple voice options"
+    ],
+    "pros": [
+      "Good for documents",
+      "OCR for scans",
+      "Simple interface"
+    ],
+    "cons": [
+      "Limited free voices",
+      "Less natural than premium competitors",
+      "Outdated UI"
+    ],
+    "alternatives": [
+      "speechify",
+      "murf",
+      "elevenlabs"
+    ],
+    "website": "https://naturalreaders.com",
+    "company": "NaturalReader",
+    "founded": 2004,
+    "rating": 4.0,
+    "use_cases": [
+      "Document reading",
+      "Accessibility",
+      "Language learning"
+    ],
+    "target_users": [
+      "Students",
+      "Accessibility users",
+      "Professionals"
+    ]
+  },
+  {
+    "slug": "podcastle",
+    "name": "Podcastle",
+    "category": "audio",
+    "pricing": "freemium",
+    "price": "$11.99-34.99/mo",
+    "description": "AI-powered podcast recording and editing platform with noise removal and transcription.",
+    "features": [
+      "AI recording",
+      "Noise removal",
+      "Transcription",
+      "Editing suite"
+    ],
+    "pros": [
+      "All-in-one podcast tool",
+      "Good AI noise removal",
+      "Easy collaboration"
+    ],
+    "cons": [
+      "Limited free tier",
+      "Subscription required for best features",
+      "Learning curve"
+    ],
+    "alternatives": [
+      "descript",
+      "riverside",
+      "zencastr"
+    ],
+    "website": "https://podcastle.ai",
+    "company": "Podcastle",
+    "founded": 2020,
+    "rating": 4.1,
+    "use_cases": [
+      "Podcast recording",
+      "Audio editing",
+      "Interviews"
+    ],
+    "target_users": [
+      "Podcasters",
+      "Interviewers",
+      "Content creators"
+    ]
+  },
+  {
+    "slug": "riverside",
+    "name": "Riverside.fm",
+    "category": "audio",
+    "pricing": "freemium",
+    "price": "$15-24/mo",
+    "description": "Professional podcast and interview recording platform with separate audio/video tracks.",
+    "features": [
+      "Local recording",
+      "Separate tracks",
+      "AI editing",
+      "Live streaming"
+    ],
+    "pros": [
+      "Studio quality recordings",
+      "Separate tracks",
+      "Easy collaboration"
+    ],
+    "cons": [
+      "Requires good internet",
+      "Subscription pricing",
+      "Less AI-focused"
+    ],
+    "alternatives": [
+      "descript",
+      "podcastle",
+      "zencastr"
+    ],
+    "website": "https://riverside.fm",
+    "company": "Riverside",
+    "founded": 2018,
+    "rating": 4.3,
+    "use_cases": [
+      "Podcast recording",
+      "Remote interviews",
+      "Video podcasts"
+    ],
+    "target_users": [
+      "Podcasters",
+      "Journalists",
+      "Interviewers"
+    ]
+  },
+  {
+    "slug": "udio",
+    "name": "Udio",
+    "category": "audio",
+    "pricing": "freemium",
+    "price": "$9.99-39.99/mo",
+    "description": "AI music generator that creates full songs with vocals and instrumentation from text prompts.",
+    "features": [
+      "Full song generation",
+      "Vocal generation",
+      "Style variety",
+      "Lyrics creation"
+    ],
+    "pros": [
+      "High-quality music",
+      "Vocal generation",
+      "Competes with Suno"
+    ],
+    "cons": [
+      "Newer platform",
+      "Subscription for commercial use",
+      "Can produce odd results"
+    ],
+    "alternatives": [
+      "suno",
+      "uberduck",
+      "stable-audio"
+    ],
+    "website": "https://udio.com",
+    "company": "Uncharted Labs",
+    "founded": 2023,
+    "rating": 4.4,
+    "use_cases": [
+      "Music creation",
+      "Prototyping",
+      "Content creation"
+    ],
+    "target_users": [
+      "Musicians",
+      "Content creators",
+      "Hobbyists"
+    ]
+  },
+  {
+    "slug": "stable-audio",
+    "name": "Stable Audio",
+    "category": "audio",
+    "pricing": "freemium",
+    "price": "$11.99/mo",
+    "description": "AI audio generation tool by Stability AI for creating music tracks and sound effects.",
+    "features": [
+      "Music generation",
+      "Sound effects",
+      "Length control",
+      "Structure control"
+    ],
+    "pros": [
+      "Good quality audio",
+      "Structure control",
+      "From Stability AI"
+    ],
+    "cons": [
+      "Less vocal-focused",
+      "Smaller library",
+      "Limited commercial use on free"
+    ],
+    "alternatives": [
+      "suno",
+      "udio",
+      "beatoven"
+    ],
+    "website": "https://stableaudio.com",
+    "company": "Stability AI",
+    "founded": 2023,
+    "rating": 4.1,
+    "use_cases": [
+      "Background music",
+      "Sound effects",
+      "Podcast intros"
+    ],
+    "target_users": [
+      "Content creators",
+      "Podcasters",
+      "Video editors"
+    ]
+  },
+  {
+    "slug": "wix-ai",
+    "name": "Wix AI",
+    "category": "design",
+    "pricing": "freemium",
+    "price": "$17-159/mo",
+    "description": "Website builder with AI-powered site generation, text creation, and design suggestions.",
+    "features": [
+      "AI site builder",
+      "AI text generation",
+      "Design suggestions",
+      "E-commerce"
+    ],
+    "pros": [
+      "Easy to use",
+      "AI-assisted creation",
+      "All-in-one platform"
+    ],
+    "cons": [
+      "Templates can look generic",
+      "Limited code access",
+      "Performance issues"
+    ],
+    "alternatives": [
+      "framer",
+      "webflow",
+      "squarespace"
+    ],
+    "website": "https://wix.com",
+    "company": "Wix",
+    "founded": 2006,
+    "rating": 4.0,
+    "use_cases": [
+      "Small business sites",
+      "Portfolios",
+      "Blogs"
+    ],
+    "target_users": [
+      "Small businesses",
+      "Freelancers",
+      "Bloggers"
+    ]
+  },
+  {
+    "slug": "squarespace",
+    "name": "Squarespace",
+    "category": "design",
+    "pricing": "paid",
+    "price": "$16-49/mo",
+    "description": "Premium website builder with stunning templates and built-in e-commerce capabilities.",
+    "features": [
+      "Premium templates",
+      "E-commerce",
+      "Scheduling",
+      "Analytics"
+    ],
+    "pros": [
+      "Beautiful templates",
+      "Great for portfolios",
+      "Reliable hosting"
+    ],
+    "cons": [
+      "Less flexible than competitors",
+      "No free tier",
+      "Limited third-party apps"
+    ],
+    "alternatives": [
+      "wix-ai",
+      "framer",
+      "webflow"
+    ],
+    "website": "https://squarespace.com",
+    "company": "Squarespace",
+    "founded": 2003,
+    "rating": 4.3,
+    "use_cases": [
+      "Portfolios",
+      "Small business sites",
+      "Online stores"
+    ],
+    "target_users": [
+      "Designers",
+      "Photographers",
+      "Small businesses"
+    ]
+  },
+  {
+    "slug": "tldraw",
+    "name": "tldraw",
+    "category": "design",
+    "pricing": "free",
+    "price": "Free (open source)",
+    "description": "Infinite canvas whiteboard with AI-powered diagram generation and collaborative drawing.",
+    "features": [
+      "Infinite canvas",
+      "AI diagrams",
+      "Collaborative",
+      "Open source"
+    ],
+    "pros": [
+      "Free and open source",
+      "Great for brainstorming",
+      "AI diagram generation"
+    ],
+    "cons": [
+      "Basic design tools",
+      "Limited export options",
+      "Simple interface"
+    ],
+    "alternatives": [
+      "excalidraw",
+      "figma",
+      "miro"
+    ],
+    "website": "https://tldraw.com",
+    "company": "tldraw",
+    "founded": 2021,
+    "rating": 4.1,
+    "use_cases": [
+      "Diagramming",
+      "Brainstorming",
+      "Prototyping"
+    ],
+    "target_users": [
+      "Developers",
+      "Designers",
+      "Teams"
+    ]
+  },
+  {
+    "slug": "excalidraw",
+    "name": "Excalidraw",
+    "category": "design",
+    "pricing": "free",
+    "price": "Free",
+    "description": "Virtual whiteboard for hand-drawn style diagrams and collaborative sketching.",
+    "features": [
+      "Hand-drawn style",
+      "Collaborative",
+      "End-to-end encryption",
+      "Open source"
+    ],
+    "pros": [
+      "Unique hand-drawn look",
+      "Free",
+      "Great collaboration"
+    ],
+    "cons": [
+      "Limited design tools",
+      "No AI features",
+      "Basic functionality"
+    ],
+    "alternatives": [
+      "tldraw",
+      "figma",
+      "miro"
+    ],
+    "website": "https://excalidraw.com",
+    "company": "Open Source",
+    "founded": 2020,
+    "rating": 4.2,
+    "use_cases": [
+      "Sketching",
+      "Prototyping",
+      "Documentation"
+    ],
+    "target_users": [
+      "Developers",
+      "Designers",
+      "Educators"
+    ]
+  },
+  {
+    "slug": "miro",
+    "name": "Miro",
+    "category": "design",
+    "pricing": "freemium",
+    "price": "$8-16/mo",
+    "description": "Collaborative online whiteboard with AI-powered brainstorming, mind mapping, and diagramming.",
+    "features": [
+      "AI brainstorming",
+      "Mind mapping",
+      "Diagramming",
+      "Integrations"
+    ],
+    "pros": [
+      "Excellent collaboration",
+      "AI features",
+      "Wide integration ecosystem"
+    ],
+    "cons": [
+      "Expensive for teams",
+      "Can be slow with large boards",
+      "Learning curve"
+    ],
+    "alternatives": [
+      "figjam",
+      "tldraw",
+      "excalidraw"
+    ],
+    "website": "https://miro.com",
+    "company": "Miro",
+    "founded": 2011,
+    "rating": 4.4,
+    "use_cases": [
+      "Team collaboration",
+      "Brainstorming",
+      "Workshops"
+    ],
+    "target_users": [
+      "Teams",
+      "Product managers",
+      "Designers"
+    ]
+  },
+  {
+    "slug": "figjam",
+    "name": "FigJam",
+    "category": "design",
+    "pricing": "freemium",
+    "price": "$5/mo",
+    "description": "Figma's collaborative whiteboard for brainstorming, workshops, and team ideation with AI features.",
+    "features": [
+      "AI summarization",
+      "Sticky notes",
+      "Voting",
+      "Templates"
+    ],
+    "pros": [
+      "Seamless Figma integration",
+      "Great for workshops",
+      "Affordable"
+    ],
+    "cons": [
+      "Basic compared to Miro",
+      "Limited standalone features",
+      "Figma ecosystem only"
+    ],
+    "alternatives": [
+      "miro",
+      "tldraw",
+      "excalidraw"
+    ],
+    "website": "https://figma.com/figjam",
+    "company": "Figma",
+    "founded": 2022,
+    "rating": 4.3,
+    "use_cases": [
+      "Brainstorming",
+      "Workshops",
+      "Team retrospectives"
+    ],
+    "target_users": [
+      "Design teams",
+      "Product teams",
+      "Developers"
+    ]
+  },
+  {
+    "slug": "v0",
+    "name": "v0 by Vercel",
+    "category": "design",
+    "pricing": "freemium",
+    "price": "$20-50/mo",
+    "description": "AI-powered UI generation tool that converts text prompts into React components with Tailwind CSS.",
+    "features": [
+      "Text-to-UI",
+      "React components",
+      "Tailwind CSS",
+      "Iterative refinement"
+    ],
+    "pros": [
+      "Instant UI generation",
+      "Clean code output",
+      "Great for developers"
+    ],
+    "cons": [
+      "Limited to React/Tailwind",
+      "Subscription required",
+      "Can be generic"
+    ],
+    "alternatives": [
+      "bolt-new",
+      "cursor",
+      "figma"
+    ],
+    "website": "https://v0.dev",
+    "company": "Vercel",
+    "founded": 2023,
+    "rating": 4.3,
+    "use_cases": [
+      "UI prototyping",
+      "Component generation",
+      "Design systems"
+    ],
+    "target_users": [
+      "Frontend developers",
+      "Designers",
+      "Startups"
+    ]
+  },
+  {
+    "slug": "bolt-new",
+    "name": "bolt.new",
+    "category": "design",
+    "pricing": "freemium",
+    "price": "$20-100/mo",
+    "description": "AI-powered full-stack web development platform that builds complete apps from prompts.",
+    "features": [
+      "Full app generation",
+      "Code editing",
+      "Live preview",
+      "Deployment"
+    ],
+    "pros": [
+      "Builds complete apps",
+      "Live preview",
+      "Good developer experience"
+    ],
+    "cons": [
+      "Subscription pricing",
+      "Complex apps may need refinement",
+      "Still evolving"
+    ],
+    "alternatives": [
+      "v0",
+      "cursor",
+      "replit"
+    ],
+    "website": "https://bolt.new",
+    "company": "StackBlitz",
+    "founded": 2023,
+    "rating": 4.2,
+    "use_cases": [
+      "App prototyping",
+      "Quick development",
+      "Full-stack projects"
+    ],
+    "target_users": [
+      "Developers",
+      "Startups",
+      "Solo founders"
+    ]
+  },
+  {
+    "slug": "lovable",
+    "name": "Lovable",
+    "category": "design",
+    "pricing": "freemium",
+    "price": "$20-60/mo",
+    "description": "AI full-stack builder that turns ideas into production-ready web applications with natural language.",
+    "features": [
+      "Natural language coding",
+      "Supabase integration",
+      "GitHub sync",
+      "Full-stack generation"
+    ],
+    "pros": [
+      "Easy for non-developers",
+      "Production-ready output",
+      "Supabase integration"
+    ],
+    "cons": [
+      "Newer platform",
+      "Limited customization",
+      "Subscription required"
+    ],
+    "alternatives": [
+      "bolt-new",
+      "v0",
+      "cursor"
+    ],
+    "website": "https://lovable.dev",
+    "company": "Lovable",
+    "founded": 2024,
+    "rating": 4.1,
+    "use_cases": [
+      "App building",
+      "Prototyping",
+      "MVP creation"
+    ],
+    "target_users": [
+      "Non-technical founders",
+      "Startups",
+      "Developers"
+    ]
+  },
+  {
+    "slug": "galileo-ai",
+    "name": "Galileo AI",
+    "category": "design",
+    "pricing": "freemium",
+    "price": "$12-36/mo",
+    "description": "AI UI design tool that generates Figma-ready interfaces from text descriptions.",
+    "features": [
+      "Text-to-UI",
+      "Figma export",
+      "Component generation",
+      "Design system support"
+    ],
+    "pros": [
+      "Figma integration",
+      "High-quality UI",
+      "Design system awareness"
+    ],
+    "cons": [
+      "Subscription required",
+      "Limited to UI generation",
+      "Less for custom designs"
+    ],
+    "alternatives": [
+      "v0",
+      "figma",
+      "framer"
+    ],
+    "website": "https://galileo.ai",
+    "company": "Galileo",
+    "founded": 2022,
+    "rating": 4.0,
+    "use_cases": [
+      "UI design",
+      "Wireframing",
+      "Design prototyping"
+    ],
+    "target_users": [
+      "Designers",
+      "Product teams",
+      "Developers"
+    ]
+  },
+  {
+    "slug": "hubspot-ai",
+    "name": "HubSpot AI",
+    "category": "marketing",
+    "pricing": "freemium",
+    "price": "$15-3600/mo",
+    "description": "AI-powered CRM and marketing platform with content creation, lead scoring, and campaign optimization.",
+    "features": [
+      "Content creation",
+      "Lead scoring",
+      "Email optimization",
+      "Campaign analytics"
+    ],
+    "pros": [
+      "All-in-one platform",
+      "Powerful CRM integration",
+      "Scalable"
+    ],
+    "cons": [
+      "Very expensive at scale",
+      "Complex setup",
+      "Learning curve"
+    ],
+    "alternatives": [
+      "salesforce-einstein",
+      "mailchimp",
+      "klaviyo"
+    ],
+    "website": "https://hubspot.com",
+    "company": "HubSpot",
+    "founded": 2006,
+    "rating": 4.3,
+    "use_cases": [
+      "CRM",
+      "Email marketing",
+      "Content marketing"
+    ],
+    "target_users": [
+      "Marketing teams",
+      "Sales teams",
+      "Small businesses"
+    ]
+  },
+  {
+    "slug": "brevo",
+    "name": "Brevo",
+    "category": "marketing",
+    "pricing": "freemium",
+    "price": "$25-65/mo",
+    "description": "All-in-one marketing platform for email, SMS, chat, and CRM with AI-powered automation.",
+    "features": [
+      "Email + SMS",
+      "AI content generation",
+      "CRM",
+      "Automation workflows"
+    ],
+    "pros": [
+      "Generous free tier",
+      "Multi-channel",
+      "Good automation"
+    ],
+    "cons": [
+      "Less brand recognition",
+      "SMS costs extra",
+      "UI needs polish"
+    ],
+    "alternatives": [
+      "mailchimp",
+      "hubspot-ai",
+      "activecampaign"
+    ],
+    "website": "https://brevo.com",
+    "company": "Brevo",
+    "founded": 2012,
+    "rating": 4.1,
+    "use_cases": [
+      "Email marketing",
+      "SMS campaigns",
+      "CRM"
+    ],
+    "target_users": [
+      "Small businesses",
+      "E-commerce",
+      "Startups"
+    ]
+  },
+  {
+    "slug": "klaviyo",
+    "name": "Klaviyo",
+    "category": "marketing",
+    "pricing": "freemium",
+    "price": "$20-2450/mo",
+    "description": "E-commerce focused marketing platform with AI-powered email, SMS, and customer segmentation.",
+    "features": [
+      "AI email generation",
+      "Predictive analytics",
+      "Customer segmentation",
+      "SMS marketing"
+    ],
+    "pros": [
+      "Best for e-commerce",
+      "Powerful segmentation",
+      "Great integrations"
+    ],
+    "cons": [
+      "Expensive for large lists",
+      "Complex for beginners",
+      "E-commerce focused only"
+    ],
+    "alternatives": [
+      "mailchimp",
+      "hubspot-ai",
+      "omnisend"
+    ],
+    "website": "https://klaviyo.com",
+    "company": "Klaviyo",
+    "founded": 2012,
+    "rating": 4.4,
+    "use_cases": [
+      "E-commerce marketing",
+      "Email campaigns",
+      "Customer retention"
+    ],
+    "target_users": [
+      "E-commerce brands",
+      "DTC companies",
+      "Online retailers"
+    ]
+  },
+  {
+    "slug": "omnisend",
+    "name": "Omnisend",
+    "category": "marketing",
+    "pricing": "freemium",
+    "price": "$16-498/mo",
+    "description": "E-commerce marketing automation with AI product recommendations and multi-channel campaigns.",
+    "features": [
+      "AI product recommendations",
+      "SMS + email",
+      "Push notifications",
+      "Automation"
+    ],
+    "pros": [
+      "Great for e-commerce",
+      "Multi-channel",
+      "Good automation templates"
+    ],
+    "cons": [
+      "Limited outside e-commerce",
+      "Free tier small",
+      "Less known brand"
+    ],
+    "alternatives": [
+      "klaviyo",
+      "mailchimp",
+      "brevo"
+    ],
+    "website": "https://omnisend.com",
+    "company": "Omnisend",
+    "founded": 2014,
+    "rating": 4.1,
+    "use_cases": [
+      "E-commerce campaigns",
+      "Abandoned cart recovery",
+      "Product recommendations"
+    ],
+    "target_users": [
+      "E-commerce stores",
+      "Online retailers",
+      "DTC brands"
+    ]
+  },
+  {
+    "slug": "google-gemini",
+    "name": "Google Gemini",
+    "category": "search",
+    "pricing": "freemium",
+    "price": "$20/mo",
+    "description": "Google's multimodal AI with web search integration, code execution, and advanced reasoning.",
+    "features": [
+      "Web search integration",
+      "Code execution",
+      "Multimodal input",
+      "Google workspace integration"
+    ],
+    "pros": [
+      "Access to Google's search index",
+      "Strong multimodal",
+      "Good free tier"
+    ],
+    "cons": [
+      "Sometimes hallucinates",
+      "Privacy concerns",
+      "Less creative than Claude"
+    ],
+    "alternatives": [
+      "chatgpt",
+      "perplexity-ai",
+      "copilot"
+    ],
+    "website": "https://gemini.google.com",
+    "company": "Google",
+    "founded": 2023,
+    "rating": 4.3,
+    "use_cases": [
+      "Research",
+      "Coding",
+      "General assistant"
+    ],
+    "target_users": [
+      "Everyone",
+      "Students",
+      "Developers"
+    ]
+  },
+  {
+    "slug": "kagi",
+    "name": "Kagi",
+    "category": "search",
+    "pricing": "paid",
+    "price": "$5-10/mo",
+    "description": "Premium ad-free search engine with AI summaries, customizable results, and privacy focus.",
+    "features": [
+      "Ad-free search",
+      "AI summaries",
+      "Customizable rankings",
+      "Privacy-focused"
+    ],
+    "pros": [
+      "No ads or tracking",
+      "High-quality results",
+      "AI-powered summaries"
+    ],
+    "cons": [
+      "Paid only",
+      "Smaller index than Google",
+      "Less mainstream"
+    ],
+    "alternatives": [
+      "perplexity-ai",
+      "google-gemini",
+      "duckduckgo"
+    ],
+    "website": "https://kagi.com",
+    "company": "Kagi",
+    "founded": 2021,
+    "rating": 4.4,
+    "use_cases": [
+      "Privacy-focused search",
+      "Research",
+      "Daily use"
+    ],
+    "target_users": [
+      "Privacy-conscious users",
+      "Researchers",
+      "Professionals"
+    ]
+  },
+  {
+    "slug": "duckduckgo",
+    "name": "DuckDuckGo AI Chat",
+    "category": "search",
+    "pricing": "free",
+    "price": "Free",
+    "description": "Privacy-first search engine now offering AI chat with multiple models without tracking.",
+    "features": [
+      "AI chat",
+      "Multiple models",
+      "No tracking",
+      "Privacy-focused"
+    ],
+    "pros": [
+      "Free and private",
+      "No account needed",
+      "Multiple AI models"
+    ],
+    "cons": [
+      "Basic AI features",
+      "Less powerful than dedicated AI tools",
+      "Limited functionality"
+    ],
+    "alternatives": [
+      "perplexity-ai",
+      "google-gemini",
+      "you-com"
+    ],
+    "website": "https://duckduckgo.com",
+    "company": "DuckDuckGo",
+    "founded": 2008,
+    "rating": 4.1,
+    "use_cases": [
+      "Private search",
+      "Quick AI queries",
+      "Daily use"
+    ],
+    "target_users": [
+      "Privacy-conscious users",
+      "Everyone",
+      "Researchers"
+    ]
+  },
+  {
+    "slug": "andisearch",
+    "name": "Andi Search",
+    "category": "search",
+    "pricing": "freemium",
+    "price": "Free (with premium)",
+    "description": "AI-powered search engine with generative answers, ad-free experience, and visual results.",
+    "features": [
+      "Generative answers",
+      "Ad-free",
+      "Visual results",
+      "Privacy-focused"
+    ],
+    "pros": [
+      "Clean interface",
+      "AI-powered answers",
+      "No ads"
+    ],
+    "cons": [
+      "Smaller index",
+      "Less accurate than major engines",
+      "Limited features"
+    ],
+    "alternatives": [
+      "perplexity-ai",
+      "kagi",
+      "google-gemini"
+    ],
+    "website": "https://andisearch.com",
+    "company": "Andi",
+    "founded": 2022,
+    "rating": 3.8,
+    "use_cases": [
+      "Simple search",
+      "Privacy-focused",
+      "AI answers"
+    ],
+    "target_users": [
+      "Privacy-conscious users",
+      "Casual searchers"
+    ]
+  },
+  {
+    "slug": "consensus",
+    "name": "Consensus",
+    "category": "search",
+    "pricing": "freemium",
+    "price": "$9.99-24.99/mo",
+    "description": "AI-powered academic search engine that extracts findings from scientific research papers.",
+    "features": [
+      "Research paper search",
+      "AI summaries",
+      "Evidence-based answers",
+      "Citation tracking"
+    ],
+    "pros": [
+      "Science-focused",
+      "Evidence-based",
+      "Great for research"
+    ],
+    "cons": [
+      "Academic focus only",
+      "Limited for general search",
+      "Subscription for full features"
+    ],
+    "alternatives": [
+      "perplexity-ai",
+      "elicit",
+      "semantic-scholar"
+    ],
+    "website": "https://consensus.app",
+    "company": "Consensus",
+    "founded": 2021,
+    "rating": 4.3,
+    "use_cases": [
+      "Academic research",
+      "Fact-checking",
+      "Literature review"
+    ],
+    "target_users": [
+      "Researchers",
+      "Students",
+      "Academics"
+    ]
+  },
+  {
+    "slug": "elicit",
+    "name": "Elicit",
+    "category": "search",
+    "pricing": "freemium",
+    "price": "$10-75/mo",
+    "description": "AI research assistant that automates literature review by analyzing and summarizing research papers.",
+    "features": [
+      "Paper summarization",
+      "Literature review",
+      "Data extraction",
+      "Research Q&A"
+    ],
+    "pros": [
+      "Saves hours of research",
+      "Automated analysis",
+      "Good for systematic reviews"
+    ],
+    "cons": [
+      "Academic focus only",
+      "Subscription required",
+      "Can miss nuance"
+    ],
+    "alternatives": [
+      "consensus",
+      "semantic-scholar",
+      "researchrabbit"
+    ],
+    "website": "https://elicit.com",
+    "company": "Ought",
+    "founded": 2020,
+    "rating": 4.4,
+    "use_cases": [
+      "Literature review",
+      "Research synthesis",
+      "Paper discovery"
+    ],
+    "target_users": [
+      "Researchers",
+      "Academics",
+      "Graduate students"
+    ]
+  },
+  {
+    "slug": "semantic-scholar",
+    "name": "Semantic Scholar",
+    "category": "search",
+    "pricing": "free",
+    "price": "Free",
+    "description": "AI-powered academic search engine from Allen AI with citation analysis and paper recommendations.",
+    "features": [
+      "Paper search",
+      "Citation analysis",
+      "Recommendations",
+      "TLDR summaries"
+    ],
+    "pros": [
+      "Free",
+      "AI-powered insights",
+      "Massive paper database"
+    ],
+    "cons": [
+      "No generation features",
+      "Academic only",
+      "Less interactive than competitors"
+    ],
+    "alternatives": [
+      "consensus",
+      "elicit",
+      "google-scholar"
+    ],
+    "website": "https://semanticscholar.org",
+    "company": "Allen Institute for AI",
+    "founded": 2015,
+    "rating": 4.2,
+    "use_cases": [
+      "Paper discovery",
+      "Citation tracking",
+      "Research"
+    ],
+    "target_users": [
+      "Researchers",
+      "Students",
+      "Academics"
+    ]
+  },
+  {
+    "slug": "notebooklm",
+    "name": "NotebookLM",
+    "category": "search",
+    "pricing": "free",
+    "price": "Free",
+    "description": "Google's AI research assistant that analyzes your documents and sources for grounded Q&A.",
+    "features": [
+      "Source-grounded AI",
+      "Audio overview",
+      "Document analysis",
+      "Podcast generation"
+    ],
+    "pros": [
+      "Grounded in your sources",
+      "No hallucinations",
+      "Great audio summaries"
+    ],
+    "cons": [
+      "Source-dependent",
+      "Limited to uploaded content",
+      "No web search"
+    ],
+    "alternatives": [
+      "perplexity-ai",
+      "consensus",
+      "chatgpt"
+    ],
+    "website": "https://notebooklm.google",
+    "company": "Google",
+    "founded": 2024,
+    "rating": 4.4,
+    "use_cases": [
+      "Document analysis",
+      "Study notes",
+      "Research"
+    ],
+    "target_users": [
+      "Students",
+      "Researchers",
+      "Professionals"
+    ]
+  },
+  {
+    "slug": "lingva-ai",
+    "name": "Lingva AI",
+    "category": "translation",
+    "pricing": "freemium",
+    "price": "$10-50/mo",
+    "description": "AI translation platform with context-aware translations for business and creative content.",
+    "features": [
+      "Context-aware translation",
+      "Business glossaries",
+      "100+ languages",
+      "API access"
+    ],
+    "pros": [
+      "Better context understanding",
+      "Business-focused",
+      "Good API"
+    ],
+    "cons": [
+      "Newer platform",
+      "Less known",
+      "Pricing unclear"
+    ],
+    "alternatives": [
+      "deepl",
+      "google-translate",
+      "reverso"
+    ],
+    "website": "https://lingva-ai.com",
+    "company": "Lingva AI",
+    "founded": 2023,
+    "rating": 3.8,
+    "use_cases": [
+      "Business translation",
+      "Localization",
+      "Content translation"
+    ],
+    "target_users": [
+      "Businesses",
+      "Translators",
+      "Content teams"
+    ]
+  },
+  {
+    "slug": "reverso",
+    "name": "Reverso",
+    "category": "translation",
+    "pricing": "freemium",
+    "price": "$7.50-14.99/mo",
+    "description": "Language learning and translation platform with contextual examples, conjugation, and AI-powered tools.",
+    "features": [
+      "Contextual translation",
+      "Conjugation",
+      "Examples",
+      "Grammar checker"
+    ],
+    "pros": [
+      "Great for language learners",
+      "Contextual examples",
+      "Multiple tools"
+    ],
+    "cons": [
+      "Less accurate for technical text",
+      "Interface feels dated",
+      "Subscription for full features"
+    ],
+    "alternatives": [
+      "deepl",
+      "linguee",
+      "google-translate"
+    ],
+    "website": "https://reverso.net",
+    "company": "Reverso",
+    "founded": 2001,
+    "rating": 4.1,
+    "use_cases": [
+      "Language learning",
+      "Translation",
+      "Grammar checking"
+    ],
+    "target_users": [
+      "Language learners",
+      "Students",
+      "Translators"
+    ]
+  },
+  {
+    "slug": "linguee",
+    "name": "Linguee",
+    "category": "translation",
+    "pricing": "free",
+    "price": "Free",
+    "description": "Bilingual dictionary and search engine that shows translations in context from real-world sources.",
+    "features": [
+      "Context-based translation",
+      "Bilingual dictionary",
+      "Real-world examples",
+      "Professional translations"
+    ],
+    "pros": [
+      "Shows real usage context",
+      "Free",
+      "Great for professional translation"
+    ],
+    "cons": [
+      "No full sentence translation",
+      "Limited languages",
+      "Less AI-powered"
+    ],
+    "alternatives": [
+      "deepl",
+      "reverso",
+      "google-translate"
+    ],
+    "website": "https://linguee.com",
+    "company": "DeepL",
+    "founded": 2008,
+    "rating": 4.3,
+    "use_cases": [
+      "Word lookup",
+      "Context checking",
+      "Professional translation"
+    ],
+    "target_users": [
+      "Translators",
+      "Writers",
+      "Language professionals"
+    ]
+  },
+  {
+    "slug": "unbabel",
+    "name": "Unbabel",
+    "category": "translation",
+    "pricing": "paid",
+    "price": "Custom pricing",
+    "description": "Enterprise translation platform combining AI and human editors for high-quality customer support translation.",
+    "features": [
+      "AI + human editing",
+      "Customer support focus",
+      "Real-time translation",
+      "API access"
+    ],
+    "pros": [
+      "High accuracy",
+      "Human-reviewed",
+      "Enterprise-ready"
+    ],
+    "cons": [
+      "Expensive",
+      "Not for individuals",
+      "Custom pricing only"
+    ],
+    "alternatives": [
+      "deepl",
+      "google-translate-api",
+      "smartling"
+    ],
+    "website": "https://unbabel.com",
+    "company": "Unbabel",
+    "founded": 2013,
+    "rating": 4.2,
+    "use_cases": [
+      "Customer support",
+      "Enterprise localization",
+      "Real-time translation"
+    ],
+    "target_users": [
+      "Enterprises",
+      "Support teams",
+      "Global companies"
+    ]
+  },
+  {
+    "slug": "smartling",
+    "name": "Smartling",
+    "category": "translation",
+    "pricing": "paid",
+    "price": "Custom pricing",
+    "description": "Enterprise translation management platform with AI-powered translation memory and workflow automation.",
+    "features": [
+      "Translation management",
+      "AI translation",
+      "Workflow automation",
+      "Integrations"
+    ],
+    "pros": [
+      "Enterprise-grade",
+      "Great workflow tools",
+      "Wide integrations"
+    ],
+    "cons": [
+      "Expensive",
+      "Complex setup",
+      "Not for individuals"
+    ],
+    "alternatives": [
+      "unbabel",
+      "deepl-enterprise",
+      "crowdin"
+    ],
+    "website": "https://smartling.com",
+    "company": "Smartling",
+    "founded": 2009,
+    "rating": 4.3,
+    "use_cases": [
+      "Enterprise localization",
+      "Translation management",
+      "Global content"
+    ],
+    "target_users": [
+      "Enterprises",
+      "Localization teams",
+      "Global brands"
+    ]
+  },
+  {
+    "slug": "crowdin",
+    "name": "Crowdin",
+    "category": "translation",
+    "pricing": "freemium",
+    "price": "$29-199/mo",
+    "description": "Collaborative localization platform for managing translations of software, websites, and apps.",
+    "features": [
+      "Crowd translation",
+      "AI suggestions",
+      "Version control",
+      "Developer integrations"
+    ],
+    "pros": [
+      "Great for software localization",
+      "Community collaboration",
+      "Developer-friendly"
+    ],
+    "cons": [
+      "Complex for non-developers",
+      "Free tier limited",
+      "Learning curve"
+    ],
+    "alternatives": [
+      "smartling",
+      "lokalise",
+      "transifex"
+    ],
+    "website": "https://crowdin.com",
+    "company": "Crowdin",
+    "founded": 2009,
+    "rating": 4.4,
+    "use_cases": [
+      "Software localization",
+      "App translation",
+      "Open source projects"
+    ],
+    "target_users": [
+      "Developers",
+      "Localization managers",
+      "Open source projects"
+    ]
+  },
+  {
+    "slug": "lokalise",
+    "name": "Lokalise",
+    "category": "translation",
+    "pricing": "freemium",
+    "price": "$49-399/mo",
+    "description": "Modern translation management system with AI-powered features for software and content localization.",
+    "features": [
+      "AI translation",
+      "QA checks",
+      "Developer integrations",
+      "Collaboration"
+    ],
+    "pros": [
+      "Modern interface",
+      "Strong developer tools",
+      "AI-powered"
+    ],
+    "cons": [
+      "Expensive",
+      "Overkill for small projects",
+      "Learning curve"
+    ],
+    "alternatives": [
+      "crowdin",
+      "smartling",
+      "transifex"
+    ],
+    "website": "https://lokalise.com",
+    "company": "Lokalise",
+    "founded": 2016,
+    "rating": 4.3,
+    "use_cases": [
+      "Software localization",
+      "Content management",
+      "Translation workflows"
+    ],
+    "target_users": [
+      "Development teams",
+      "Localization managers",
+      "Product teams"
+    ]
   }
 ]
