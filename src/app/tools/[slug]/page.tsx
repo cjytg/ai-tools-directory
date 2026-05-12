@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import ToolLogo from "@/components/ToolLogo";
 import AdUnit from "@/components/AdUnit";
 import AffiliateLink from "@/components/AffiliateLink";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export async function generateStaticParams() {
   const tools = getAllTools();
@@ -27,11 +28,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     .join(", ");
 
   return {
-    title: `${tool.name} Review 2026 - Features, Pricing & Alternatives`,
-    description: `${tool.name} review: ${tool.description} Rating: ${tool.rating}/5. Price: ${tool.price}. Alternatives: ${altNames}.`,
+    title: `${tool.name} Review 2026: Features, Pricing, Pros & Cons`,
+    description: `Honest ${tool.name} review: Rating ${tool.rating}/5. Price: ${tool.price}. Discover features, pros & cons. Compare with top alternatives like ${altNames || "similar AI tools"}.`,
     openGraph: {
       title: `${tool.name} Review - Toolio`,
-      description: tool.description,
+      description: `Read our in-depth ${tool.name} review. Features, pricing, pros & cons, and how it compares to alternatives.`,
       type: "article",
     },
     twitter: {
@@ -52,6 +53,14 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
 
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "https://toolio-ai.com" },
+          { name: "Tools", url: "https://toolio-ai.com/tools" },
+          { name: CATEGORIES[tool.category] || tool.category, url: `https://toolio-ai.com/categories/${tool.category}` },
+          { name: tool.name, url: `https://toolio-ai.com/tools/${tool.slug}` },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}

@@ -3,6 +3,7 @@ import { articleSchema } from "@/lib/schema";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import AdUnit from "@/components/AdUnit";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export async function generateStaticParams() {
   const posts = getAllPosts();
@@ -56,6 +57,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "https://toolio-ai.com" },
+          { name: "Blog", url: "https://toolio-ai.com/blog" },
+          { name: post.title, url: `https://toolio-ai.com/blog/${post.slug}` },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}

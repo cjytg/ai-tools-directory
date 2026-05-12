@@ -1,5 +1,8 @@
 "use client";
 
+import { useState } from "react";
+import Image from "next/image";
+
 // Fallback colors for when favicon fails to load
 const FALLBACK_COLORS: Record<string, string> = {
   chatgpt: "#10a37f",
@@ -45,6 +48,8 @@ interface ToolLogoProps {
 }
 
 export default function ToolLogo({ name, slug, size = "md", website }: ToolLogoProps) {
+  const [failed, setFailed] = useState(false);
+
   const sizeClasses = {
     sm: "w-8 h-8",
     md: "w-12 h-12",
@@ -54,31 +59,31 @@ export default function ToolLogo({ name, slug, size = "md", website }: ToolLogoP
   const fallbackBg = FALLBACK_COLORS[slug] || "#27272a";
   
   // Try to get favicon from Google Favicon API
-  // Falls back to domain root favicon if no website URL provided
   const domain = website ? new URL(website).hostname : slug;
   const faviconUrl = `https://www.google.com/s2/favicons?domain=${domain}&sz=64`;
+
+  if (failed) {
+    return (
+      <div
+        className={`${sizeClasses[size]} rounded-lg flex items-center justify-center flex-shrink-0`}
+        style={{ backgroundColor: fallbackBg }}
+      >
+        <span className="font-bold text-white text-lg">{name.charAt(0)}</span>
+      </div>
+    );
+  }
 
   return (
     <div
       className={`${sizeClasses[size]} rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden bg-zinc-800`}
     >
-      <img
+      <Image
         src={faviconUrl}
         alt={`${name} logo`}
+        width={64}
+        height={64}
         className="w-full h-full object-contain p-1"
-        onError={(e) => {
-          // Fallback to letter avatar if favicon fails
-          const target = e.target as HTMLImageElement;
-          target.style.display = "none";
-          const parent = target.parentElement;
-          if (parent && !parent.querySelector(".fallback-letter")) {
-            const fallback = document.createElement("span");
-            fallback.className = "fallback-letter font-bold text-white text-lg";
-            fallback.textContent = name.charAt(0);
-            parent.appendChild(fallback);
-            (parent as HTMLElement).style.backgroundColor = fallbackBg;
-          }
-        }}
+        onError={() => setFailed(true)}
       />
     </div>
   );
