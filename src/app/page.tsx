@@ -94,7 +94,7 @@ export default function Home() {
                     {tool.price}
                   </span>
                   <span className="text-sm text-[#3b82f6] font-medium">
-                    &starf; {tool.rating}
+                    ★ {tool.rating}
                   </span>
                 </div>
               </Link>
