@@ -1,5 +1,5 @@
 import { getAllTools, getToolBySlug, getAlternatives } from "@/lib/tools";
-import { toolSchema } from "@/lib/schema";
+import { toolSchema, faqSchema } from "@/lib/schema";
 import { CATEGORIES } from "@/types";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -7,6 +7,47 @@ import ToolLogo from "@/components/ToolLogo";
 import AdUnit from "@/components/AdUnit";
 import AffiliateLink from "@/components/AffiliateLink";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+
+function generateFAQs(tool: ReturnType<typeof getToolBySlug>) {
+  if (!tool) return [];
+  const faqs = [
+    {
+      q: `What is ${tool.name}?`,
+      a: `${tool.name} is a ${tool.category} tool developed by ${tool.company}. ${tool.description}`,
+    },
+    {
+      q: `How much does ${tool.name} cost?`,
+      a: `${tool.name} offers a ${tool.pricing} pricing model at ${tool.price}. ${tool.pricing === "freemium" ? "You can start with the free plan and upgrade as you need more features." : tool.pricing === "free" ? "It is completely free to use with no hidden costs." : "Check their website for the latest pricing details."}`,
+    },
+    {
+      q: `What are the main features of ${tool.name}?`,
+      a: `${tool.name} offers ${tool.features.length} core features including ${tool.features.slice(0, 3).join(", ").toLowerCase()}.`,
+    },
+    {
+      q: `Is ${tool.name} worth it in 2026?`,
+      a: `With a rating of ${tool.rating}/5, ${tool.name} remains one of the top choices in the ${tool.category} category. Its strengths include ${tool.pros.slice(0, 2).join(", ").toLowerCase()}.`,
+    },
+  ];
+
+  // Add alternatives FAQ if available
+  if (tool.alternatives && tool.alternatives.length > 0) {
+    const altTools = tool.alternatives
+      .slice(0, 2)
+      .map((slug) => {
+        const t = getAllTools().find((t) => t.slug === slug);
+        return t?.name;
+      })
+      .filter(Boolean);
+    if (altTools.length > 0) {
+      faqs.push({
+        q: `What are the best alternatives to ${tool.name}?`,
+        a: `Top alternatives to ${tool.name} include ${altTools.join(" and ")}, which offer similar capabilities in the ${tool.category} space.`,
+      });
+    }
+  }
+
+  return faqs;
+}
 
 export async function generateStaticParams() {
   const tools = getAllTools();
@@ -64,6 +105,10 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(generateFAQs(tool))) }}
       />
       <div className="max-w-4xl mx-auto px-4 py-12">
         {/* Breadcrumb */}
@@ -194,6 +239,22 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
               >
                 Read {tool.name} Review →
               </Link>
+            </section>
+
+            {/* FAQ Section */}
+            <section>
+              <h2 className="text-xl font-bold mb-6">Frequently Asked Questions</h2>
+              <div className="space-y-4">
+                {generateFAQs(tool).map((faq, i) => (
+                  <details key={i} className="group p-4 bg-[#18181b] border border-[#27272a] rounded-xl">
+                    <summary className="font-medium cursor-pointer list-none flex items-center justify-between">
+                      {faq.q}
+                      <span className="text-[#3b82f6] transition group-open:rotate-45 text-lg leading-none">+</span>
+                    </summary>
+                    <p className="mt-3 text-sm text-[#a1a1aa] leading-relaxed">{faq.a}</p>
+                  </details>
+                ))}
+              </div>
             </section>
           </div>
 

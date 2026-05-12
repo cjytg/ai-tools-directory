@@ -83,6 +83,34 @@ export function toolSchema(tool: {
   };
 }
 
+interface FAQPage {
+  "@context": string;
+  "@type": string;
+  mainEntity: Array<{
+    "@type": string;
+    name: string;
+    acceptedAnswer: {
+      "@type": string;
+      text: string;
+    };
+  }>;
+}
+
+export function faqSchema(questions: Array<{ q: string; a: string }>): FAQPage {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: questions.map((qa) => ({
+      "@type": "Question",
+      name: qa.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: qa.a,
+      },
+    })),
+  };
+}
+
 export function articleSchema(article: {
   title: string;
   description: string;

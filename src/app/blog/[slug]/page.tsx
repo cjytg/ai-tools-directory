@@ -1,9 +1,11 @@
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
+import { getAllTools } from "@/lib/tools";
 import { articleSchema } from "@/lib/schema";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import AdUnit from "@/components/AdUnit";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import AffiliateLink from "@/components/AffiliateLink";
 
 export async function generateStaticParams() {
   const posts = getAllPosts();
@@ -41,6 +43,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const relatedPosts = allPosts
     .filter((p) => p.category === post.category && p.slug !== post.slug)
     .slice(0, 3);
+
+  // Auto-link tool mentions in blog content
+  const allTools = getAllTools();
+  const mentionedTools = allTools.filter((tool) =>
+    post.content.toLowerCase().includes(tool.name.toLowerCase())
+  );
 
   // Simple markdown rendering
   const contentHtml = post.content
@@ -113,6 +121,30 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <AdUnit slot="0000000008" format="rectangle" className="my-8 w-full" />
 
         </article>
+
+        {/* Tools Mentioned in This Article */}
+        {mentionedTools.length > 0 && (
+          <div className="mt-12 pt-8 border-t border-[#27272a]">
+            <h2 className="text-xl font-bold mb-6">Tools Mentioned in This Article</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+              {mentionedTools.slice(0, 6).map((tool) => (
+                <Link
+                  key={tool.slug}
+                  href={`/tools/${tool.slug}`}
+                  className="flex items-center gap-3 p-3 bg-[#18181b] border border-[#27272a] rounded-lg hover:border-[#3b82f6] transition group"
+                >
+                  <div className="w-8 h-8 bg-[#27272a] rounded-lg flex items-center justify-center text-xs font-bold text-white uppercase group-hover:bg-[#3b82f6] transition">
+                    {tool.name.charAt(0)}
+                  </div>
+                  <div>
+                    <div className="text-sm font-medium">{tool.name}</div>
+                    <div className="text-xs text-[#71717a]">★ {tool.rating} · {tool.price}</div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Related articles */}
         {relatedPosts.length > 0 && (
