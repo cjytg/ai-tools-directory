@@ -1,9 +1,11 @@
 import { getAllTools, getCategories } from "@/lib/tools";
+import { getAllPosts } from "@/lib/blog";
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const tools = getAllTools();
   const categories = getCategories();
+  const posts = getAllPosts();
 
   const baseUrl = "https://aitoolsdirectory.vercel.app";
 
@@ -18,6 +20,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}/categories/${cat}`,
     lastModified: new Date(),
     changeFrequency: "weekly" as const,
+    priority: 0.7,
+  }));
+
+  const blogPages = posts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.date),
+    changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
 
@@ -80,6 +89,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     ...toolPages,
     ...categoryPages,
+    ...blogPages,
     ...comparePages,
   ];
 }
