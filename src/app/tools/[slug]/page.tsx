@@ -126,7 +126,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
 
         {/* Header */}
         <div className="flex flex-col md:flex-row items-start gap-6 mb-8">
-          <ToolLogo name={tool.name} slug={tool.slug} size="lg" website={tool.website} />
+          <ToolLogo name={tool.name} slug={tool.slug} size="lg" website={tool.website} priority />
           <div className="flex-1">
             <h1 className="text-3xl font-bold mb-2">{tool.name}</h1>
             <p className="text-[#71717a] mb-4">{tool.description}</p>

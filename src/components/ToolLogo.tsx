@@ -45,9 +45,10 @@ interface ToolLogoProps {
   slug: string;
   size?: "sm" | "md" | "lg";
   website?: string;
+  priority?: boolean; // For LCP optimization
 }
 
-export default function ToolLogo({ name, slug, size = "md", website }: ToolLogoProps) {
+export default function ToolLogo({ name, slug, size = "md", website, priority = false }: ToolLogoProps) {
   const [failed, setFailed] = useState(false);
 
   const sizeClasses = {
@@ -84,6 +85,7 @@ export default function ToolLogo({ name, slug, size = "md", website }: ToolLogoP
         height={64}
         className="w-full h-full object-contain p-1"
         onError={() => setFailed(true)}
+        priority={priority}
       />
     </div>
   );

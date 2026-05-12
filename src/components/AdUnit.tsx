@@ -45,7 +45,10 @@ export default function AdUnit({
   return (
     <ins
       className={`adsbygoogle ${className || ""}`}
-      style={{ display: "block" }}
+      style={{ 
+        display: "block",
+        minHeight: format === "rectangle" || format === "in-article" ? 250 : format === "leaderboard" ? 90 : 100,
+      }}
       data-ad-client={ADSENSE_PUBLISHER_ID}
       data-ad-slot={slot}
       data-ad-format={FORMAT_MAP[format]}
