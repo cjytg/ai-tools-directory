@@ -37,7 +37,7 @@ export default function NewsletterPage() {
             />
             <button
               type="submit"
-              className="px-6 py-3 bg-white text-black rounded-lg font-medium hover:bg-gray-100 transition"
+              className="px-6 py-3 bg-[#3b82f6] text-white rounded-lg font-medium hover:bg-[#2563eb] transition"
             >
               Subscribe
             </button>

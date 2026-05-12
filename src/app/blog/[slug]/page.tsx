@@ -128,7 +128,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <p className="text-[#71717a] mb-4">Browse our collection of 100+ AI tools with honest reviews.</p>
           <Link
             href="/tools"
-            className="inline-block px-6 py-3 bg-white text-black rounded-lg font-medium hover:bg-gray-100 transition"
+            className="inline-block px-6 py-3 bg-[#3b82f6] text-white rounded-lg font-medium hover:bg-[#2563eb] transition"
           >
             Browse All Tools
           </Link>

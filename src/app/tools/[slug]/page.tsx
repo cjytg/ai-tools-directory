@@ -88,7 +88,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                 href={tool.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 bg-white text-black rounded-lg text-sm font-medium hover:bg-gray-100 transition"
+                className="px-4 py-2 bg-[#3b82f6] text-white rounded-lg text-sm font-medium hover:bg-[#2563eb] transition"
               >
                 Visit {tool.name} →
               </a>
