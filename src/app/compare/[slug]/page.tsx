@@ -45,6 +45,7 @@ function generateVerdict(a: Tool, b: Tool): string {
     const fewerFeatures = aFeatureCount > bFeatureCount ? b : a;
     paragraphs.push(
       `When it comes to feature depth, ${moreFeatures.name} offers ${moreFeatures.features?.length} core features ` +
+      `including ${moreFeatures.features?.slice(0, 2).join(" and ").toLowerCase()}, ` +
       `compared to ${fewerFeatures.name}'s ${fewerFeatures.features?.length}, ` +
       `giving it a broader toolkit for complex workflows.`
     );
@@ -60,18 +61,38 @@ function generateVerdict(a: Tool, b: Tool): string {
       );
     } else {
       paragraphs.push(
-        `Both tools are priced at ${a.price}, so cost isn't a differentiator here.`
+        `Both tools are priced around ${a.price}, so cost isn't a differentiator here — ` +
+        `the decision comes down to capabilities rather than budget.`
       );
     }
+  } else if (aPrice === "free") {
+    paragraphs.push(
+      `Both tools are free to use, making this a zero-risk comparison — try both and keep the one that fits your workflow.`
+    );
+  }
+
+  // Weaknesses comparison
+  if (a.cons && a.cons.length > 0 && b.cons && b.cons.length > 0) {
+    paragraphs.push(
+      `Neither tool is perfect: ${a.name}'s main drawbacks include ${a.cons.slice(0, 2).join(", ").toLowerCase()}, ` +
+      `while ${b.name} users typically cite ${b.cons.slice(0, 1).join(", ").toLowerCase()} as its biggest limitation.`
+    );
   }
 
   // Use case recommendation
   if (a.use_cases && a.use_cases.length > 0 && b.use_cases && b.use_cases.length > 0) {
     const sharedCases = a.use_cases.filter((u: string) => b.use_cases?.includes(u));
+    const aOnly = a.use_cases.filter((u: string) => !b.use_cases?.includes(u));
     if (sharedCases.length > 0) {
       paragraphs.push(
         `Both tools excel at ${sharedCases.slice(0, 2).join(" and ").toLowerCase()}, ` +
         `so either choice will serve you well for these core use cases.`
+      );
+    }
+    if (aOnly.length > 0) {
+      paragraphs.push(
+        `However, ${a.name} has an edge in ${aOnly.slice(0, 1).join(", ").toLowerCase()}, ` +
+        `which might be the tiebreaker if that's important to you.`
       );
     }
   }
@@ -79,8 +100,8 @@ function generateVerdict(a: Tool, b: Tool): string {
   // Target audience
   if (a.target_users && a.target_users.length > 0) {
     paragraphs.push(
-      `${a.name} is particularly popular among ${a.target_users.slice(0, 2).join(" and ").toLowerCase()}, ` +
-      `while ${b.name} tends to attract ${b.target_users?.slice(0, 2).join(" and ").toLowerCase() || "a similar audience"}.`
+      `In terms of target audience, ${a.name} is particularly popular among ${a.target_users.slice(0, 2).join(" and ").toLowerCase()}, ` +
+      `while ${b.name} tends to attract ${b.target_users?.slice(0, 2).join(" and ").toLowerCase() || "professionals in the same space"}.`
     );
   }
 
