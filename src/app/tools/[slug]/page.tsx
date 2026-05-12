@@ -4,6 +4,8 @@ import { CATEGORIES } from "@/types";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ToolLogo from "@/components/ToolLogo";
+import AdUnit from "@/components/AdUnit";
+import AffiliateLink from "@/components/AffiliateLink";
 
 export async function generateStaticParams() {
   const tools = getAllTools();
@@ -84,22 +86,19 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
               <span className="px-3 py-1 bg-[#27272a] rounded-lg text-sm capitalize">
                 {tool.pricing}
               </span>
-              <a
+              <AffiliateLink
                 href={tool.website}
-                target="_blank"
-                rel="noopener noreferrer"
+                affiliateUrl={tool.affiliate_url}
                 className="px-4 py-2 bg-[#3b82f6] text-white rounded-lg text-sm font-medium hover:bg-[#2563eb] transition"
               >
                 Visit {tool.name} →
-              </a>
+              </AffiliateLink>
             </div>
           </div>
         </div>
 
-        {/* Ad placeholder */}
-        <div className="mb-8 p-4 bg-[#18181b] border border-dashed border-[#27272a] rounded-xl text-center text-sm text-[#52525b]">
-          Advertisement
-        </div>
+        {/* Ad: below hero section */}
+        <AdUnit slot="0000000001" format="leaderboard" className="mb-8 w-full" />
 
         {/* Content */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -245,10 +244,8 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
               </div>
             )}
 
-            {/* Ad placeholder */}
-            <div className="p-4 bg-[#18181b] border border-dashed border-[#27272a] rounded-xl text-center text-sm text-[#52525b]">
-              Advertisement
-            </div>
+            {/* Ad: sidebar */}
+            <AdUnit slot="0000000002" format="rectangle" className="w-full" />
           </div>
         </div>
       </div>

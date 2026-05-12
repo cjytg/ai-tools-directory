@@ -15,6 +15,7 @@ export interface Tool {
   rating: number;
   use_cases: string[];
   target_users: string[];
+  affiliate_url?: string;
 }
 
 export interface BlogPost {

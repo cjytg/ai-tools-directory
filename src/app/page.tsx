@@ -4,6 +4,7 @@ import { CATEGORIES } from "@/types";
 import Link from "next/link";
 import Icon from "@/components/Icon";
 import ToolLogo from "@/components/ToolLogo";
+import AdUnit from "@/components/AdUnit";
 
 export default function Home() {
   const tools = getAllTools();
@@ -54,6 +55,13 @@ export default function Home() {
             <span className="text-lg font-semibold">OpenAI</span>
             <span className="text-lg font-semibold">Stripe</span>
           </div>
+        </div>
+      </section>
+
+      {/* Ad: below trusted-by section */}
+      <section className="py-4 px-4">
+        <div className="max-w-4xl mx-auto">
+          <AdUnit slot="0000000004" format="leaderboard" className="w-full" />
         </div>
       </section>
 

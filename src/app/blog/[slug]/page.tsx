@@ -2,6 +2,7 @@ import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import { articleSchema } from "@/lib/schema";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import AdUnit from "@/components/AdUnit";
 
 export async function generateStaticParams() {
   const posts = getAllPosts();
@@ -84,10 +85,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             <p className="text-lg text-[#71717a]">{post.description}</p>
           </header>
 
-          {/* Ad placeholder */}
-          <div className="mb-8 p-4 bg-[#18181b] border border-dashed border-[#27272a] rounded-xl text-center text-sm text-[#52525b]">
-            Advertisement
-          </div>
+          {/* Ad: after article header */}
+          <AdUnit slot="0000000003" format="in-article" className="mb-8 w-full" />
 
           <div
             className="prose prose-invert max-w-none"
