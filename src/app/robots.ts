@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/"],
     },
-    sitemap: "https://aitoolsdirectory.vercel.app/sitemap.xml",
+    sitemap: "https://toolio.vercel.app/sitemap.xml",
   };
 }

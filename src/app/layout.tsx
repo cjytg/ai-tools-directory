@@ -13,14 +13,14 @@ export const metadata: Metadata = {
   authors: [{ name: "Toolio" }],
   creator: "Toolio",
   publisher: "Toolio",
-  metadataBase: new URL("https://toolio.dev"),
+  metadataBase: new URL("https://toolio.vercel.app"),
   alternates: {
-    canonical: "https://toolio.dev",
+    canonical: "https://toolio.vercel.app",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://toolio.dev",
+    url: "https://toolio.vercel.app",
     siteName: "Toolio",
     title: "Toolio - Find the Best AI Tools",
     description: "Discover and compare 100+ AI tools. Honest reviews, real pricing, no fluff.",
