@@ -49,9 +49,9 @@ export function organizationSchema(): Organization {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Toolio",
-    url: "https://toolio.vercel.app",
+    url: "https://toolio-ai.com",
     description: "Find the best AI tools for your needs.",
-    logo: "https://toolio.vercel.app/logo.png",
+    logo: "https://toolio-ai.com/logo.png",
   };
 }
 
@@ -101,7 +101,7 @@ export function articleSchema(article: {
     publisher: {
       "@type": "Organization",
       name: "Toolio",
-      logo: "https://toolio.vercel.app/logo.png",
+      logo: "https://toolio-ai.com/logo.png",
     },
   };
 }

@@ -7,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const categories = getCategories();
   const posts = getAllPosts();
 
-  const baseUrl = "https://toolio.vercel.app";
+  const baseUrl = "https://toolio-ai.com";
 
   const toolPages = tools.map((tool) => ({
     url: `${baseUrl}/tools/${tool.slug}`,
