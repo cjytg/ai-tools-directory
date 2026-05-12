@@ -1,7 +1,111 @@
 import { getAllTools, getToolBySlug } from "@/lib/tools";
+import type { Tool } from "@/types";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import AffiliateLink from "@/components/AffiliateLink";
+
+function generateVerdict(a: Tool, b: Tool): string {
+  const winner = a.rating > b.rating ? a : b.rating > a.rating ? b : null;
+  const loser = winner === a ? b : winner === b ? a : null;
+  const ratingDiff = Math.abs(a.rating - b.rating).toFixed(1);
+  const aFeatureCount = a.features?.length ?? 0;
+  const bFeatureCount = b.features?.length ?? 0;
+
+  // Opening
+  const paragraphs: string[] = [];
+  paragraphs.push(
+    `${a.name} and ${b.name} are two of the most popular tools in the ${a.category} category, ` +
+    `but they take different approaches to solving the same problems. ` +
+    `${a.name}, developed by ${a.company} (founded ${a.founded}), ` +
+    `is described as "${a.description.toLowerCase()}". ` +
+    `Meanwhile, ${b.name} by ${b.company} (founded ${b.founded}) ` +
+    `"${b.description.toLowerCase()}".`
+  );
+
+  // Rating & performance comparison
+  if (winner && loser) {
+    paragraphs.push(
+      `In terms of overall user satisfaction, ${winner.name} edges ahead with a rating of ` +
+      `${winner.rating}/5.0, compared to ${loser.name}'s ${loser.rating}/5.0 — a difference of ` +
+      `${ratingDiff} points. ${winner.name}'s strongest advantages include ${winner.pros?.slice(0, 2).join(", ").toLowerCase() || "its feature set"}, ` +
+      `while ${loser.name} is praised for ${loser.pros?.slice(0, 1).join(", ").toLowerCase() || "its unique approach"}.`
+    );
+  } else {
+    paragraphs.push(
+      `Both tools share the same rating of ${a.rating}/5.0, making this a genuinely close comparison. ` +
+      `Your choice comes down to specific needs rather than overall quality.`
+    );
+  }
+
+  // Features & value comparison
+  const aPrice = a.pricing ?? "unknown";
+  const bPrice = b.pricing ?? "unknown";
+  if (aFeatureCount !== bFeatureCount) {
+    const moreFeatures = aFeatureCount > bFeatureCount ? a : b;
+    const fewerFeatures = aFeatureCount > bFeatureCount ? b : a;
+    paragraphs.push(
+      `When it comes to feature depth, ${moreFeatures.name} offers ${moreFeatures.features?.length} core features ` +
+      `compared to ${fewerFeatures.name}'s ${fewerFeatures.features?.length}, ` +
+      `giving it a broader toolkit for complex workflows.`
+    );
+  }
+  if (aPrice !== bPrice) {
+    const cheaper = (a.pricing === "free" || b.pricing === "free")
+      ? (a.pricing === "free" ? a : b)
+      : null;
+    if (cheaper) {
+      paragraphs.push(
+        `On the pricing front, ${cheaper.name} offers a ${cheaper.pricing} model at ${cheaper.price}, ` +
+        `making it the more budget-friendly option for teams watching their spend.`
+      );
+    } else {
+      paragraphs.push(
+        `Both tools are priced at ${a.price}, so cost isn't a differentiator here.`
+      );
+    }
+  }
+
+  // Use case recommendation
+  if (a.use_cases && a.use_cases.length > 0 && b.use_cases && b.use_cases.length > 0) {
+    const sharedCases = a.use_cases.filter((u: string) => b.use_cases?.includes(u));
+    if (sharedCases.length > 0) {
+      paragraphs.push(
+        `Both tools excel at ${sharedCases.slice(0, 2).join(" and ").toLowerCase()}, ` +
+        `so either choice will serve you well for these core use cases.`
+      );
+    }
+  }
+
+  // Target audience
+  if (a.target_users && a.target_users.length > 0) {
+    paragraphs.push(
+      `${a.name} is particularly popular among ${a.target_users.slice(0, 2).join(" and ").toLowerCase()}, ` +
+      `while ${b.name} tends to attract ${b.target_users?.slice(0, 2).join(" and ").toLowerCase() || "a similar audience"}.`
+    );
+  }
+
+  // Final verdict
+  if (winner && loser && parseFloat(ratingDiff) >= 0.3) {
+    paragraphs.push(
+      `Our verdict: ${winner.name} is the stronger choice overall, ` +
+      `especially if you value ${winner.pros?.[0]?.toLowerCase() || "its top-rated features"}. ` +
+      `However, if ${loser.pros?.[0]?.toLowerCase() || "its unique strengths"} matters more to your workflow, ` +
+      `${loser.name} remains a solid alternative.`
+    );
+  } else if (winner && loser) {
+    paragraphs.push(
+      `Our verdict: ${winner.name} holds a slight edge, but the gap is narrow enough that ` +
+      `both tools are worth trying. Start with the free tier of each and see which fits your workflow better.`
+    );
+  } else {
+    paragraphs.push(
+      `Our verdict: With identical ratings, you can't go wrong with either. ` +
+      `Try both free versions and pick the one that clicks with your workflow.`
+    );
+  }
+
+  return paragraphs.join(" ");
+}
 
 export async function generateStaticParams() {
   const tools = getAllTools();
@@ -164,10 +268,9 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
       {/* Verdict */}
       <div className="p-8 bg-[#18181b] border border-[#27272a] rounded-xl">
         <h2 className="text-xl font-bold mb-4">The Verdict</h2>
-        <p className="text-[#71717a] mb-4">
-          Both {toolA.name} and {toolB.name} are solid choices in the {toolA.category} space.
-          Here&apos;s a quick summary:
-        </p>
+        <div className="prose prose-invert max-w-none mb-6">
+          <p className="text-[#a1a1aa] leading-relaxed">{generateVerdict(toolA, toolB)}</p>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="p-4 bg-[#09090b] rounded-lg">
             <div className="font-medium mb-2">Choose {toolA.name} if:</div>
