@@ -44,6 +44,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
+  const bestPages = [
+    "research", "social-media", "content-creation", "coding", "marketing",
+    "email-marketing", "project-management", "productivity", "video-creation",
+    "design", "academic-writing", "customer-support", "seo",
+  ].map((slug) => ({
+    url: `${baseUrl}/best/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.8,
+  }));
+
   return [
     {
       url: baseUrl,
@@ -55,6 +66,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/tools`,
       lastModified: new Date(),
       changeFrequency: "daily",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/best`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
       priority: 0.9,
     },
     {
@@ -91,5 +108,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...categoryPages,
     ...blogPages,
     ...comparePages,
+    ...bestPages,
   ];
 }

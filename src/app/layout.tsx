@@ -94,6 +94,7 @@ export default function RootLayout({
               <Link href="/tools" className="hover:text-white transition">Tools</Link>
               <Link href="/categories" className="hover:text-white transition">Categories</Link>
               <Link href="/compare" className="hover:text-white transition">Compare</Link>
+              <Link href="/best" className="hover:text-white transition">Best</Link>
               <Link href="/blog" className="hover:text-white transition">Blog</Link>
             </nav>
             <div className="flex items-center gap-3">
@@ -125,6 +126,7 @@ export default function RootLayout({
                 <h3 className="font-bold mb-4 text-sm">Browse</h3>
                 <ul className="space-y-2 text-sm text-[#71717a]">
                   <li><Link href="/tools" className="hover:text-white transition">All Tools</Link></li>
+                  <li><Link href="/best" className="hover:text-white transition">Best by Use Case</Link></li>
                   <li><Link href="/categories" className="hover:text-white transition">Categories</Link></li>
                   <li><Link href="/compare" className="hover:text-white transition">Compare</Link></li>
                   <li><Link href="/blog" className="hover:text-white transition">Blog</Link></li>
