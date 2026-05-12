@@ -111,6 +111,13 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Ad: After Featured Tools */}
+      <section className="py-8 px-4">
+        <div className="max-w-7xl mx-auto">
+          <AdUnit slot="0000000005" format="leaderboard" className="w-full" />
+        </div>
+      </section>
+
       {/* Categories */}
       <section className="py-16 px-4 bg-[#0f0f0f]">
         <div className="max-w-7xl mx-auto">
@@ -138,6 +145,13 @@ export default function Home() {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      {/* Ad: After Categories */}
+      <section className="py-8 px-4">
+        <div className="max-w-7xl mx-auto">
+          <AdUnit slot="0000000006" format="leaderboard" className="w-full" />
         </div>
       </section>
 

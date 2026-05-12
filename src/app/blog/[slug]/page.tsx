@@ -108,6 +108,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               We may earn a commission if you make a purchase, at no additional cost to you.
             </p>
           </div>
+
+          {/* Ad: After article content */}
+          <AdUnit slot="0000000008" format="rectangle" className="my-8 w-full" />
+
         </article>
 
         {/* Related articles */}

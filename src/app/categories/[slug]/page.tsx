@@ -3,6 +3,7 @@ import { CATEGORIES } from "@/types";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ToolLogo from "@/components/ToolLogo";
+import AdUnit from "@/components/AdUnit";
 
 export async function generateStaticParams() {
   const categories = getCategories();
@@ -106,6 +107,11 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
             </div>
           </Link>
         ))}
+      </div>
+
+      {/* Ad: After tools list */}
+      <div className="mt-8">
+        <AdUnit slot="0000000009" format="leaderboard" className="w-full" />
       </div>
 
       {/* Related categories */}

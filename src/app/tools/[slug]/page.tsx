@@ -179,6 +179,9 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
               </div>
             </section>
 
+            {/* Ad: After target users */}
+            <AdUnit slot="0000000007" format="rectangle" className="my-8 w-full" />
+
             {/* Review link */}
             <section className="p-6 bg-[#18181b] border border-[#27272a] rounded-xl">
               <h2 className="text-lg font-bold mb-2">Full Review</h2>

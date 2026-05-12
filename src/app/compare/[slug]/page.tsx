@@ -1,6 +1,7 @@
 import { getAllTools, getToolBySlug } from "@/lib/tools";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import AffiliateLink from "@/components/AffiliateLink";
 
 export async function generateStaticParams() {
   const tools = getAllTools();
@@ -189,22 +190,20 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
 
       {/* CTA */}
       <div className="flex justify-center gap-4 mt-8">
-        <a
+        <AffiliateLink
           href={toolA.website}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-6 py-3 bg-[#3b82f6] hover:bg-[#2563eb] rounded-lg transition"
+          affiliateUrl={toolA.affiliate_url}
+          className="px-6 py-3 bg-[#3b82f6] hover:bg-[#2563eb] rounded-lg transition text-white"
         >
           Try {toolA.name} →
-        </a>
-        <a
+        </AffiliateLink>
+        <AffiliateLink
           href={toolB.website}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-6 py-3 border border-[#27272a] hover:border-[#3b82f6] rounded-lg transition"
+          affiliateUrl={toolB.affiliate_url}
+          className="px-6 py-3 border border-[#27272a] hover:border-[#3b82f6] rounded-lg transition text-white"
         >
           Try {toolB.name} →
-        </a>
+        </AffiliateLink>
       </div>
     </div>
   );

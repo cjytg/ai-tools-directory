@@ -42,7 +42,8 @@
       "Developers",
       "Students",
       "Marketers"
-    ]
+    ],
+    "affiliate_url": "https://chatgpt.com/?ref=toolio"
   },
   {
     "slug": "claude",
@@ -87,7 +88,8 @@
       "Writers",
       "Developers",
       "Lawyers"
-    ]
+    ],
+    "affiliate_url": "https://claude.com/?ref=toolio"
   },
   {
     "slug": "midjourney",
@@ -132,7 +134,8 @@
       "Artists",
       "Marketers",
       "Content creators"
-    ]
+    ],
+    "affiliate_url": "https://midjourney.com/?ref=toolio"
   },
   {
     "slug": "dall-e-3",
@@ -267,7 +270,8 @@
       "Developers",
       "Students",
       "Engineers"
-    ]
+    ],
+    "affiliate_url": "https://github.copilot.com/?ref=toolio"
   },
   {
     "slug": "cursor",
@@ -311,7 +315,8 @@
       "Professional developers",
       "Full-stack engineers",
       "AI enthusiasts"
-    ]
+    ],
+    "affiliate_url": "https://cursor.com/?ref=toolio"
   },
   {
     "slug": "runway",
@@ -356,7 +361,8 @@
       "Marketers",
       "Filmmakers",
       "Content creators"
-    ]
+    ],
+    "affiliate_url": "https://runway.com/?ref=toolio"
   },
   {
     "slug": "suno",
@@ -445,7 +451,8 @@
       "Students",
       "Teams",
       "Writers"
-    ]
+    ],
+    "affiliate_url": "https://notion.ai.com/?ref=toolio"
   },
   {
     "slug": "jasper",
@@ -490,7 +497,8 @@
       "Content teams",
       "Agencies",
       "Businesses"
-    ]
+    ],
+    "affiliate_url": "https://jasper.com/?ref=toolio"
   },
   {
     "slug": "grammarly",
@@ -535,7 +543,8 @@
       "Professionals",
       "Writers",
       "Non-native speakers"
-    ]
+    ],
+    "affiliate_url": "https://grammarly.com/?ref=toolio"
   },
   {
     "slug": "perplexity",
@@ -625,7 +634,8 @@
       "Marketers",
       "Small businesses",
       "Students"
-    ]
+    ],
+    "affiliate_url": "https://canva.ai.com/?ref=toolio"
   },
   {
     "slug": "descript",
@@ -670,7 +680,8 @@
       "YouTubers",
       "Content creators",
       "Marketers"
-    ]
+    ],
+    "affiliate_url": "https://descript.com/?ref=toolio"
   },
   {
     "slug": "elevenlabs",
@@ -715,7 +726,8 @@
       "Authors",
       "Marketers",
       "Developers"
-    ]
+    ],
+    "affiliate_url": "https://elevenlabs.com/?ref=toolio"
   },
   {
     "slug": "gamma",
@@ -805,7 +817,8 @@
       "Content marketers",
       "Bloggers",
       "Agencies"
-    ]
+    ],
+    "affiliate_url": "https://surfer.seo.com/?ref=toolio"
   },
   {
     "slug": "loom-ai",
@@ -895,7 +908,8 @@
       "Businesses",
       "Researchers",
       "International teams"
-    ]
+    ],
+    "affiliate_url": "https://deepl.com/?ref=toolio"
   },
   {
     "slug": "gemini",
@@ -939,7 +953,8 @@
       "Researchers",
       "Students",
       "Professionals"
-    ]
+    ],
+    "affiliate_url": "https://gemini.com/?ref=toolio"
   },
   {
     "slug": "copilot",
@@ -1249,7 +1264,8 @@
       "Students",
       "Indie developers",
       "Budget-conscious devs"
-    ]
+    ],
+    "affiliate_url": "https://codeium.com/?ref=toolio"
   },
   {
     "slug": "tabnine",
@@ -1334,7 +1350,8 @@
       "Developers",
       "AI enthusiasts",
       "Full-stack engineers"
-    ]
+    ],
+    "affiliate_url": "https://windsurf.com/?ref=toolio"
   },
   {
     "slug": "pika",
@@ -1378,7 +1395,8 @@
       "Content creators",
       "Marketers",
       "Social media managers"
-    ]
+    ],
+    "affiliate_url": "https://pika.com/?ref=toolio"
   },
   {
     "slug": "kling",
@@ -1422,7 +1440,8 @@
       "Content creators",
       "Marketers",
       "Video enthusiasts"
-    ]
+    ],
+    "affiliate_url": "https://kling.com/?ref=toolio"
   },
   {
     "slug": "murf",
@@ -1466,7 +1485,8 @@
       "Content creators",
       "Educators",
       "Marketers"
-    ]
+    ],
+    "affiliate_url": "https://murf.com/?ref=toolio"
   },
   {
     "slug": "play-ht",
@@ -1510,7 +1530,8 @@
       "Podcasters",
       "Content creators",
       "Authors"
-    ]
+    ],
+    "affiliate_url": "https://play.ht.com/?ref=toolio"
   },
   {
     "slug": "speechify",
@@ -1598,7 +1619,8 @@
       "Marketers",
       "Content teams",
       "Agencies"
-    ]
+    ],
+    "affiliate_url": "https://copy.ai.com/?ref=toolio"
   },
   {
     "slug": "writesonic",
@@ -1642,7 +1664,8 @@
       "Bloggers",
       "Marketers",
       "Content creators"
-    ]
+    ],
+    "affiliate_url": "https://writesonic.com/?ref=toolio"
   },
   {
     "slug": "quillbot",
@@ -1686,7 +1709,8 @@
       "Students",
       "Researchers",
       "Non-native speakers"
-    ]
+    ],
+    "affiliate_url": "https://quillbot.com/?ref=toolio"
   },
   {
     "slug": "otter-ai",
@@ -1865,7 +1889,8 @@
       "Marketers",
       "Agencies",
       "Businesses"
-    ]
+    ],
+    "affiliate_url": "https://semrush.com/?ref=toolio"
   },
   {
     "slug": "ahrefs",
@@ -1909,7 +1934,8 @@
       "SEO professionals",
       "Content marketers",
       "Agencies"
-    ]
+    ],
+    "affiliate_url": "https://ahrefs.com/?ref=toolio"
   },
   {
     "slug": "mailchimp",
@@ -2083,7 +2109,8 @@
       "UI/UX designers",
       "Product teams",
       "Developers"
-    ]
+    ],
+    "affiliate_url": "https://figma.com/?ref=toolio"
   },
   {
     "slug": "looka",
@@ -2699,7 +2726,8 @@
       "Enterprises",
       "L&D teams",
       "HR departments"
-    ]
+    ],
+    "affiliate_url": "https://synthesia.com/?ref=toolio"
   },
   {
     "slug": "heygen",
@@ -2743,7 +2771,8 @@
       "Marketers",
       "Sales teams",
       "Content creators"
-    ]
+    ],
+    "affiliate_url": "https://heygen.com/?ref=toolio"
   },
   {
     "slug": "calendly",
@@ -3006,7 +3035,8 @@
       "Students",
       "Beginners",
       "Hobbyists"
-    ]
+    ],
+    "affiliate_url": "https://replit.com/?ref=toolio"
   },
   {
     "slug": "codesandbox",
@@ -3887,7 +3917,8 @@
       "Designers",
       "Startups",
       "Freelancers"
-    ]
+    ],
+    "affiliate_url": "https://framer.com/?ref=toolio"
   },
   {
     "slug": "webflow",
@@ -3931,7 +3962,8 @@
       "Designers",
       "Agencies",
       "Businesses"
-    ]
+    ],
+    "affiliate_url": "https://webflow.com/?ref=toolio"
   },
   {
     "slug": "phind",
@@ -4633,7 +4665,8 @@
       "Researchers",
       "Students",
       "Professionals"
-    ]
+    ],
+    "affiliate_url": "https://perplexity.ai.com/?ref=toolio"
   },
   {
     "slug": "character-ai",
@@ -5836,7 +5869,8 @@
       "Filmmakers",
       "Creators",
       "Marketers"
-    ]
+    ],
+    "affiliate_url": "https://luma.dream.machine.com/?ref=toolio"
   },
   {
     "slug": "fliki",
