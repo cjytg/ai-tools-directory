@@ -1,8 +1,9 @@
 import { searchTools, getAllTools } from "@/lib/tools";
 import { getAllPosts } from "@/lib/blog";
-import { CATEGORIES } from "@/types";
+import { CATEGORIES, type Tool } from "@/types";
 import Link from "next/link";
 import ToolLogo from "@/components/ToolLogo";
+import type { BlogPost } from "@/lib/blog";
 
 export const metadata = {
   title: "Search AI Tools - Toolio",
@@ -25,8 +26,8 @@ async function SearchContent({
   const { q } = await searchParams;
   const query = q || "";
 
-  let tools = [];
-  let posts = [];
+  let tools: Tool[] = [];
+  let posts: BlogPost[] = [];
 
   if (query.length >= 2) {
     tools = searchTools(query);
