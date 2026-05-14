@@ -157,6 +157,16 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
         {/* Content */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 space-y-8">
+            {/* Overview */}
+            {tool.overview && (
+              <section>
+                <h2 className="text-xl font-bold mb-4">Overview</h2>
+                <div className="prose prose-invert max-w-none">
+                  <p className="text-[#a1a1aa] leading-relaxed text-[15px]">{tool.overview}</p>
+                </div>
+              </section>
+            )}
+
             {/* Features */}
             <section>
               <h2 className="text-xl font-bold mb-4">Key Features</h2>
