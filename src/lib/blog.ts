@@ -51,6 +51,13 @@ export function getPostBySlug(slug: string): BlogPost | undefined {
   };
 }
 
+export function getExistingPostSlugs(): string[] {
+  if (!fs.existsSync(blogDir)) return [];
+  return fs.readdirSync(blogDir)
+    .filter(f => f.endsWith(".mdx"))
+    .map(f => f.replace(".mdx", ""));
+}
+
 export function getPostsByCategory(category: string): BlogPost[] {
   return getAllPosts().filter((p) => p.category === category);
 }

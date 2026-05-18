@@ -1,4 +1,5 @@
 import { getAllTools, getToolBySlug, getAlternatives } from "@/lib/tools";
+import { getExistingPostSlugs } from "@/lib/blog";
 import { toolSchema, faqSchema } from "@/lib/schema";
 import { CATEGORIES } from "@/types";
 import Link from "next/link";
@@ -241,18 +242,20 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
             <AdUnit slot="0000000007" format="rectangle" className="my-8 w-full" />
 
             {/* Review link */}
-            <section className="p-6 bg-[#18181b] border border-[#27272a] rounded-xl">
-              <h2 className="text-lg font-bold mb-2">Full Review</h2>
-              <p className="text-sm text-[#71717a] mb-4">
-                Want a detailed review? Read our in-depth analysis of {tool.name}.
-              </p>
-              <Link
-                href={`/blog/${tool.slug}-review`}
-                className="text-[#3b82f6] hover:underline text-sm font-medium"
-              >
-                Read {tool.name} Review →
-              </Link>
-            </section>
+            {getExistingPostSlugs().includes(`${tool.slug}-review`) && (
+              <section className="p-6 bg-[#18181b] border border-[#27272a] rounded-xl">
+                <h2 className="text-lg font-bold mb-2">Full Review</h2>
+                <p className="text-sm text-[#71717a] mb-4">
+                  Want a detailed review? Read our in-depth analysis of {tool.name}.
+                </p>
+                <Link
+                  href={`/blog/${tool.slug}-review`}
+                  className="text-[#3b82f6] hover:underline text-sm font-medium"
+                >
+                  Read {tool.name} Review →
+                </Link>
+              </section>
+            )}
 
             {/* FAQ Section */}
             <section>

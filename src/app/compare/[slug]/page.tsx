@@ -7,125 +7,69 @@ import AffiliateLink from "@/components/AffiliateLink";
 function generateVerdict(a: Tool, b: Tool): string {
   const winner = a.rating > b.rating ? a : b.rating > a.rating ? b : null;
   const loser = winner === a ? b : winner === b ? a : null;
-  const ratingDiff = Math.abs(a.rating - b.rating).toFixed(1);
-  const aFeatureCount = a.features?.length ?? 0;
-  const bFeatureCount = b.features?.length ?? 0;
+  
+  // 1. Intro
+  const intro = `${a.name} (by ${a.company}) and ${b.name} (by ${b.company}) both compete in the ${a.category} space, but they serve slightly different needs. This deep dive breaks down exactly how they compare across features, pricing, and target audience to help you make the right choice.`;
 
-  // Opening
-  const paragraphs: string[] = [];
-  paragraphs.push(
-    `${a.name} and ${b.name} are two of the most popular tools in the ${a.category} category, ` +
-    `but they take different approaches to solving the same problems. ` +
-    `${a.name}, developed by ${a.company} (founded ${a.founded}), ` +
-    `is described as "${a.description.toLowerCase()}". ` +
-    `Meanwhile, ${b.name} by ${b.company} (founded ${b.founded}) ` +
-    `"${b.description.toLowerCase()}".`
-  );
-
-  // Rating & performance comparison
-  if (winner && loser) {
-    paragraphs.push(
-      `In terms of overall user satisfaction, ${winner.name} edges ahead with a rating of ` +
-      `${winner.rating}/5.0, compared to ${loser.name}'s ${loser.rating}/5.0 — a difference of ` +
-      `${ratingDiff} points. ${winner.name}'s strongest advantages include ${winner.pros?.slice(0, 2).join(", ").toLowerCase() || "its feature set"}, ` +
-      `while ${loser.name} is praised for ${loser.pros?.slice(0, 1).join(", ").toLowerCase() || "its unique approach"}.`
-    );
+  // 2. Feature & Capability Comparison
+  let features = "";
+  if (a.features.length !== b.features.length) {
+    const more = a.features.length > b.features.length ? a : b;
+    const less = more === a ? b : a;
+    features = `<strong>Feature Set:</strong> ${more.name} offers a broader toolkit with ${more.features.length} core capabilities including ${more.features.slice(0, 2).join(" and ")}, while ${less.name} focuses on a leaner set of ${less.features.length} features, prioritizing simplicity over depth.`;
   } else {
-    paragraphs.push(
-      `Both tools share the same rating of ${a.rating}/5.0, making this a genuinely close comparison. ` +
-      `Your choice comes down to specific needs rather than overall quality.`
-    );
+    features = `<strong>Feature Parity:</strong> Both tools offer ${a.features.length} core features, but their strengths differ. ${a.name} excels at ${a.features[0]?.toLowerCase()}, whereas ${b.name} puts more emphasis on ${b.features[1]?.toLowerCase() || "streamlined workflows"}.`;
   }
 
-  // Features & value comparison
-  const aPrice = a.pricing ?? "unknown";
-  const bPrice = b.pricing ?? "unknown";
-  if (aFeatureCount !== bFeatureCount) {
-    const moreFeatures = aFeatureCount > bFeatureCount ? a : b;
-    const fewerFeatures = aFeatureCount > bFeatureCount ? b : a;
-    paragraphs.push(
-      `When it comes to feature depth, ${moreFeatures.name} offers ${moreFeatures.features?.length} core features ` +
-      `including ${moreFeatures.features?.slice(0, 2).join(" and ").toLowerCase()}, ` +
-      `compared to ${fewerFeatures.name}'s ${fewerFeatures.features?.length}, ` +
-      `giving it a broader toolkit for complex workflows.`
-    );
+  // 3. Target Audience & Use Cases
+  let audience = "";
+  const aUsers = a.target_users?.slice(0, 2).join(" and ") || "professionals";
+  const bUsers = b.target_users?.slice(0, 2).join(" and ") || "professionals";
+  
+  const sharedCases = a.use_cases?.filter((u: string) => b.use_cases?.includes(u)) || [];
+  const aOnly = a.use_cases?.filter((u: string) => !b.use_cases?.includes(u)) || [];
+  const bOnly = b.use_cases?.filter((u: string) => !a.use_cases?.includes(u)) || [];
+
+  if (sharedCases.length > 0) {
+    audience += `Both ${a.name} and ${b.name} are excellent for ${sharedCases.slice(0, 2).join(" and ")}.`;
   }
-  if (aPrice !== bPrice) {
-    const cheaper = (a.pricing === "free" || b.pricing === "free")
-      ? (a.pricing === "free" ? a : b)
-      : null;
+  if (aOnly.length > 0) {
+    audience += ` However, ${a.name} has a distinct advantage for ${aOnly.slice(0, 2).join(" and ")}.`;
+  }
+  if (bOnly.length > 0) {
+    audience += ` On the other hand, ${b.name} is better suited for ${bOnly.slice(0, 2).join(" and ")}.`;
+  }
+
+  audience += ` ${a.name} is particularly popular among ${aUsers}, while ${b.name} tends to attract ${bUsers}.`;
+
+  // 4. Pricing Analysis
+  let pricing = "";
+  if (a.pricing === b.pricing) {
+    pricing = `<strong>Pricing:</strong> Both tools operate on a ${a.pricing} model starting at ${a.price}, making cost a non-factor in your decision.`;
+  } else {
+    const cheaper = a.pricing === "free" ? a : b.pricing === "free" ? b : null;
     if (cheaper) {
-      paragraphs.push(
-        `On the pricing front, ${cheaper.name} offers a ${cheaper.pricing} model at ${cheaper.price}, ` +
-        `making it the more budget-friendly option for teams watching their spend.`
-      );
+      pricing = `<strong>Value for Money:</strong> ${cheaper.name} offers a ${cheaper.pricing} tier, making it the more accessible option for individuals or small teams. ${cheaper === a ? b.name : a.name}'s ${cheaper === a ? b.pricing : a.pricing} model starts at ${cheaper === a ? b.price : a.price}, which may be justified by its more advanced features.`;
     } else {
-      paragraphs.push(
-        `Both tools are priced around ${a.price}, so cost isn't a differentiator here — ` +
-        `the decision comes down to capabilities rather than budget.`
-      );
-    }
-  } else if (aPrice === "free") {
-    paragraphs.push(
-      `Both tools are free to use, making this a zero-risk comparison — try both and keep the one that fits your workflow.`
-    );
-  }
-
-  // Weaknesses comparison
-  if (a.cons && a.cons.length > 0 && b.cons && b.cons.length > 0) {
-    paragraphs.push(
-      `Neither tool is perfect: ${a.name}'s main drawbacks include ${a.cons.slice(0, 2).join(", ").toLowerCase()}, ` +
-      `while ${b.name} users typically cite ${b.cons.slice(0, 1).join(", ").toLowerCase()} as its biggest limitation.`
-    );
-  }
-
-  // Use case recommendation
-  if (a.use_cases && a.use_cases.length > 0 && b.use_cases && b.use_cases.length > 0) {
-    const sharedCases = a.use_cases.filter((u: string) => b.use_cases?.includes(u));
-    const aOnly = a.use_cases.filter((u: string) => !b.use_cases?.includes(u));
-    if (sharedCases.length > 0) {
-      paragraphs.push(
-        `Both tools excel at ${sharedCases.slice(0, 2).join(" and ").toLowerCase()}, ` +
-        `so either choice will serve you well for these core use cases.`
-      );
-    }
-    if (aOnly.length > 0) {
-      paragraphs.push(
-        `However, ${a.name} has an edge in ${aOnly.slice(0, 1).join(", ").toLowerCase()}, ` +
-        `which might be the tiebreaker if that's important to you.`
-      );
+      pricing = `<strong>Pricing:</strong> ${a.name} costs ${a.price} (${a.pricing}), while ${b.name} is priced at ${b.price} (${b.pricing}). Choose based on which pricing model aligns better with your budget and usage patterns.`;
     }
   }
 
-  // Target audience
-  if (a.target_users && a.target_users.length > 0) {
-    paragraphs.push(
-      `In terms of target audience, ${a.name} is particularly popular among ${a.target_users.slice(0, 2).join(" and ").toLowerCase()}, ` +
-      `while ${b.name} tends to attract ${b.target_users?.slice(0, 2).join(" and ").toLowerCase() || "professionals in the same space"}.`
-    );
+  // 5. Cons / Limitations
+  let cons = "";
+  if (a.cons.length > 0 && b.cons.length > 0) {
+    cons = `<strong>Limitations to Consider:</strong> No tool is perfect. ${a.name} falls short on ${a.cons[0]?.toLowerCase()}, which might be a dealbreaker if that's critical for your workflow. Meanwhile, ${b.name} users often cite ${b.cons[0]?.toLowerCase()} as its main drawback.`;
   }
 
-  // Final verdict
-  if (winner && loser && parseFloat(ratingDiff) >= 0.3) {
-    paragraphs.push(
-      `Our verdict: ${winner.name} is the stronger choice overall, ` +
-      `especially if you value ${winner.pros?.[0]?.toLowerCase() || "its top-rated features"}. ` +
-      `However, if ${loser.pros?.[0]?.toLowerCase() || "its unique strengths"} matters more to your workflow, ` +
-      `${loser.name} remains a solid alternative.`
-    );
-  } else if (winner && loser) {
-    paragraphs.push(
-      `Our verdict: ${winner.name} holds a slight edge, but the gap is narrow enough that ` +
-      `both tools are worth trying. Start with the free tier of each and see which fits your workflow better.`
-    );
+  // 6. Final Verdict
+  let verdict = "";
+  if (winner && loser) {
+    verdict = `<strong>Final Verdict:</strong> We recommend ${winner.name} as the stronger overall choice (${winner.rating}/5.0 vs ${loser.rating}/5.0). It pulls ahead because of ${winner.pros[0]?.toLowerCase() || "its superior feature set"}. However, if you specifically need ${loser.pros[0]?.toLowerCase() || "its unique approach"}, ${loser.name} remains a highly capable alternative that might fit your specific niche better.`;
   } else {
-    paragraphs.push(
-      `Our verdict: With identical ratings, you can't go wrong with either. ` +
-      `Try both free versions and pick the one that clicks with your workflow.`
-    );
+    verdict = `<strong>Final Verdict:</strong> It's a tie. Both ${a.name} and ${b.name} share the same ${a.rating}/5.0 rating, meaning you can't go wrong with either. We suggest trying the free version of both and picking the one that feels more intuitive for your daily tasks.`;
   }
 
-  return paragraphs.join(" ");
+  return `${intro}<br/><br/>${features}<br/><br/>${audience}<br/><br/>${pricing}<br/><br/>${cons}<br/><br/>${verdict}`;
 }
 
 export async function generateStaticParams() {
