@@ -1,11 +1,5 @@
 {
-  "rewrites": [],
   "redirects": [
-    {
-      "source": "https://www.toolio-ai.com/:path(.*)",
-      "destination": "https://toolio-ai.com/:path",
-      "permanent": true
-    },
     {
       "source": "/blog/grammarly-go-review",
       "destination": "/blog/grammarly-review",
@@ -16,6 +10,5 @@
       "destination": "/tools/replit",
       "permanent": true
     }
-  ],
-  "headers": []
+  ]
 }
