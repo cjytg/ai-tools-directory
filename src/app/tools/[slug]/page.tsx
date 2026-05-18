@@ -81,6 +81,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: `${tool.name} Review`,
       description: tool.description,
     },
+    alternates: {
+      canonical: `https://toolio-ai.com/tools/${tool.slug}`,
+    },
   };
 }
 

@@ -6,6 +6,9 @@ import Icon from "@/components/Icon";
 export const metadata = {
   title: "AI Tool Categories - Toolio",
   description: "Browse AI tools by category: chatbots, image generators, coding assistants, and more.",
+  alternates: {
+    canonical: "https://toolio-ai.com/categories",
+  },
 };
 
 export default function CategoriesPage() {

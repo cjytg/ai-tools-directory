@@ -4,6 +4,9 @@ import Link from "next/link";
 export const metadata = {
   title: "AI Tools Blog - Guides, Reviews & Tutorials",
   description: "Learn about AI tools with our in-depth guides, reviews, and tutorials.",
+  alternates: {
+    canonical: "https://toolio-ai.com/blog",
+  },
 };
 
 export default function BlogPage() {

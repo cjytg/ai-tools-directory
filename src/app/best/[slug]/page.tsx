@@ -152,6 +152,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description: page.description,
       type: "article",
     },
+    alternates: {
+      canonical: `https://toolio-ai.com/best/${slug}`,
+    },
   };
 }
 

@@ -21,6 +21,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: `Best ${categoryName} - Toolio`,
       description: `Compare ${tools.length} ${categoryName.toLowerCase()} with honest reviews.`,
     },
+    alternates: {
+      canonical: `https://toolio-ai.com/categories/${slug}`,
+    },
   };
 }
 

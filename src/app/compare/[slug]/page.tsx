@@ -151,6 +151,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${toolA.name} vs ${toolB.name} - Which is Better?`,
     description: `Compare ${toolA.name} and ${toolB.name}: features, pricing, pros and cons. Find out which AI tool is right for you.`,
+    alternates: {
+      canonical: `https://toolio-ai.com/compare/${slug}`,
+    },
   };
 }
 
