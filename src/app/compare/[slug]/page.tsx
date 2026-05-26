@@ -7,25 +7,25 @@ import AffiliateLink from "@/components/AffiliateLink";
 function generateVerdict(a: Tool, b: Tool): string {
   const winner = a.rating > b.rating ? a : b.rating > a.rating ? b : null;
   const loser = winner === a ? b : winner === b ? a : null;
-  
+
   // 1. Intro
-  const intro = `${a.name} (by ${a.company}) and ${b.name} (by ${b.company}) both compete in the ${a.category} space, but they serve slightly different needs. This deep dive breaks down exactly how they compare across features, pricing, and target audience to help you make the right choice.`;
+  const intro = `${a.name} (by ${a.company}, founded ${a.founded}) and ${b.name} (by ${b.company}, founded ${b.founded}) both compete in the ${a.category} space, but they serve slightly different needs.`;
 
   // 2. Feature & Capability Comparison
   let features = "";
   if (a.features.length !== b.features.length) {
     const more = a.features.length > b.features.length ? a : b;
     const less = more === a ? b : a;
-    features = `<strong>Feature Set:</strong> ${more.name} offers a broader toolkit with ${more.features.length} core capabilities including ${more.features.slice(0, 2).join(" and ")}, while ${less.name} focuses on a leaner set of ${less.features.length} features, prioritizing simplicity over depth.`;
+    features = `${more.name} offers a broader toolkit with ${more.features.length} core capabilities including ${more.features.slice(0, 2).join(" and ")}, while ${less.name} focuses on a leaner set of ${less.features.length} features, prioritizing simplicity over depth.`;
   } else {
-    features = `<strong>Feature Parity:</strong> Both tools offer ${a.features.length} core features, but their strengths differ. ${a.name} excels at ${a.features[0]?.toLowerCase()}, whereas ${b.name} puts more emphasis on ${b.features[1]?.toLowerCase() || "streamlined workflows"}.`;
+    features = `Both tools offer ${a.features.length} core features, but their strengths differ. ${a.name} excels at ${a.features[0]?.toLowerCase()}, whereas ${b.name} puts more emphasis on ${b.features[1]?.toLowerCase() || "streamlined workflows"}.`;
   }
 
   // 3. Target Audience & Use Cases
   let audience = "";
   const aUsers = a.target_users?.slice(0, 2).join(" and ") || "professionals";
   const bUsers = b.target_users?.slice(0, 2).join(" and ") || "professionals";
-  
+
   const sharedCases = a.use_cases?.filter((u: string) => b.use_cases?.includes(u)) || [];
   const aOnly = a.use_cases?.filter((u: string) => !b.use_cases?.includes(u)) || [];
   const bOnly = b.use_cases?.filter((u: string) => !a.use_cases?.includes(u)) || [];
@@ -39,37 +39,38 @@ function generateVerdict(a: Tool, b: Tool): string {
   if (bOnly.length > 0) {
     audience += ` On the other hand, ${b.name} is better suited for ${bOnly.slice(0, 2).join(" and ")}.`;
   }
-
   audience += ` ${a.name} is particularly popular among ${aUsers}, while ${b.name} tends to attract ${bUsers}.`;
 
   // 4. Pricing Analysis
   let pricing = "";
   if (a.pricing === b.pricing) {
-    pricing = `<strong>Pricing:</strong> Both tools operate on a ${a.pricing} model starting at ${a.price}, making cost a non-factor in your decision.`;
+    pricing = `Both tools operate on a ${a.pricing} model starting at ${a.price}, making cost a non-factor in your decision.`;
   } else {
     const cheaper = a.pricing === "free" ? a : b.pricing === "free" ? b : null;
     if (cheaper) {
-      pricing = `<strong>Value for Money:</strong> ${cheaper.name} offers a ${cheaper.pricing} tier, making it the more accessible option for individuals or small teams. ${cheaper === a ? b.name : a.name}'s ${cheaper === a ? b.pricing : a.pricing} model starts at ${cheaper === a ? b.price : a.price}, which may be justified by its more advanced features.`;
+      pricing = `${cheaper.name} offers a ${cheaper.pricing} tier, making it the more accessible option for individuals or small teams. ${cheaper === a ? b.name : a.name}'s ${cheaper === a ? b.pricing : a.pricing} model starts at ${cheaper === a ? b.price : a.price}.`;
     } else {
-      pricing = `<strong>Pricing:</strong> ${a.name} costs ${a.price} (${a.pricing}), while ${b.name} is priced at ${b.price} (${b.pricing}). Choose based on which pricing model aligns better with your budget and usage patterns.`;
+      pricing = `${a.name} costs ${a.price} (${a.pricing}), while ${b.name} is priced at ${b.price} (${b.pricing}). Choose based on which pricing model aligns better with your budget.`;
     }
   }
 
   // 5. Cons / Limitations
   let cons = "";
   if (a.cons.length > 0 && b.cons.length > 0) {
-    cons = `<strong>Limitations to Consider:</strong> No tool is perfect. ${a.name} falls short on ${a.cons[0]?.toLowerCase()}, which might be a dealbreaker if that's critical for your workflow. Meanwhile, ${b.name} users often cite ${b.cons[0]?.toLowerCase()} as its main drawback.`;
+    cons = `No tool is perfect. ${a.name}'s main limitation is ${a.cons[0]?.toLowerCase()}, which might be a dealbreaker for some workflows. Meanwhile, ${b.name}'s biggest drawback is ${b.cons[0]?.toLowerCase()}.`;
   }
 
-  // 6. Final Verdict
+  // 6. Final Verdict — use features for grammatical embedding, NOT pros/cons
   let verdict = "";
   if (winner && loser) {
-    verdict = `<strong>Final Verdict:</strong> We recommend ${winner.name} as the stronger overall choice (${winner.rating}/5.0 vs ${loser.rating}/5.0). It pulls ahead because of ${winner.pros[0]?.toLowerCase() || "its superior feature set"}. However, if you specifically need ${loser.pros[0]?.toLowerCase() || "its unique approach"}, ${loser.name} remains a highly capable alternative that might fit your specific niche better.`;
+    const winnerFeat = winner.features[0]?.toLowerCase() || "its overall capability";
+    const loserFeat = loser.features[0]?.toLowerCase() || "its unique approach";
+    verdict = `We recommend ${winner.name} as the stronger overall choice (${winner.rating} vs ${loser.rating}). It pulls ahead with stronger ${winnerFeat} capabilities. However, if your workflow centers on ${loserFeat}, ${loser.name} remains a highly capable alternative.`;
   } else {
-    verdict = `<strong>Final Verdict:</strong> It's a tie. Both ${a.name} and ${b.name} share the same ${a.rating}/5.0 rating, meaning you can't go wrong with either. We suggest trying the free version of both and picking the one that feels more intuitive for your daily tasks.`;
+    verdict = `It's a tie. Both ${a.name} and ${b.name} share the same ${a.rating} rating. We suggest trying both and picking the one that fits your daily workflow better.`;
   }
 
-  return `${intro}<br/><br/>${features}<br/><br/>${audience}<br/><br/>${pricing}<br/><br/>${cons}<br/><br/>${verdict}`;
+  return `${intro}\n\n${features}\n\n${audience}\n\n${pricing}\n\n${cons}\n\n${verdict}`;
 }
 
 export async function generateStaticParams() {
@@ -237,22 +238,22 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
       <div className="p-8 bg-[#18181b] border border-[#27272a] rounded-xl">
         <h2 className="text-xl font-bold mb-4">The Verdict</h2>
         <div className="prose prose-invert max-w-none mb-6">
-          <p className="text-[#a1a1aa] leading-relaxed">{generateVerdict(toolA, toolB)}</p>
+          <p className="text-[#a1a1aa] leading-relaxed whitespace-pre-line">{generateVerdict(toolA, toolB)}</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="p-4 bg-[#09090b] rounded-lg">
             <div className="font-medium mb-2">Choose {toolA.name} if:</div>
             <ul className="text-sm text-[#71717a] space-y-1">
-              {toolA.pros.slice(0, 2).map((p, i) => (
-                <li key={i}>• You need {p.toLowerCase()}</li>
+              {toolA.features.slice(0, 2).map((f, i) => (
+                <li key={i}>• You prioritize {f.toLowerCase()}</li>
               ))}
             </ul>
           </div>
           <div className="p-4 bg-[#09090b] rounded-lg">
             <div className="font-medium mb-2">Choose {toolB.name} if:</div>
             <ul className="text-sm text-[#71717a] space-y-1">
-              {toolB.pros.slice(0, 2).map((p, i) => (
-                <li key={i}>• You need {p.toLowerCase()}</li>
+              {toolB.features.slice(0, 2).map((f, i) => (
+                <li key={i}>• You prioritize {f.toLowerCase()}</li>
               ))}
             </ul>
           </div>

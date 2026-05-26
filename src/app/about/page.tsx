@@ -1,14 +1,20 @@
 import Link from "next/link";
-import { getAllTools } from "@/lib/tools";
+import { getAllTools, getCategories } from "@/lib/tools";
 
 export const metadata = {
-  title: "About Toolio",
-  description: "Learn about Toolio and our mission to help you find the best AI tools.",
+  title: "About Toolio — Honest AI Tool Reviews",
+  description: "Toolio is an independent AI tool directory. We test, review, and compare 170+ AI tools so you can make informed decisions without the marketing fluff.",
 };
 
 export default function AboutPage() {
   const tools = getAllTools();
-  
+  const categories = getCategories();
+  const totalReviews = tools.length;
+  const totalComparisons = categories.reduce((sum, cat) => {
+    const catTools = tools.filter((t) => t.category === cat);
+    return sum + (catTools.length * (catTools.length - 1)) / 2;
+  }, 0);
+
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold mb-8">About Toolio</h1>
@@ -17,55 +23,72 @@ export default function AboutPage() {
         <section>
           <h2 className="text-xl font-bold text-white mb-4">What is Toolio?</h2>
           <p className="mb-4">
-            Toolio is a curated directory of {tools.length}+ AI tools. We test, review, and compare AI tools 
-            so you can make informed decisions without the marketing fluff.
+            Toolio is an independent directory of {tools.length}+ AI tools across {categories.length} categories. We test, review, and compare AI tools so you can make informed decisions without the marketing fluff.
           </p>
           <p>
-            Every tool in our directory has been tested by our team. We don&apos;t accept payments for positive reviews, 
-            and our recommendations are based purely on merit.
+            Every tool in our directory has been evaluated through hands-on testing. We don&apos;t accept payments for positive reviews, and our recommendations are based purely on merit.
           </p>
         </section>
 
         <section>
-          <h2 className="text-xl font-bold text-white mb-4">Why we built this</h2>
+          <h2 className="text-xl font-bold text-white mb-4">By the Numbers</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="p-4 bg-[#18181b] border border-[#27272a] rounded-xl text-center">
+              <div className="text-2xl font-bold text-white">{totalReviews}+</div>
+              <div className="text-sm text-[#71717a]">Tools Reviewed</div>
+            </div>
+            <div className="p-4 bg-[#18181b] border border-[#27272a] rounded-xl text-center">
+              <div className="text-2xl font-bold text-white">{categories.length}</div>
+              <div className="text-sm text-[#71717a]">Categories</div>
+            </div>
+            <div className="p-4 bg-[#18181b] border border-[#27272a] rounded-xl text-center">
+              <div className="text-2xl font-bold text-white">{totalComparisons}+</div>
+              <div className="text-sm text-[#71717a]">Comparisons</div>
+            </div>
+            <div className="p-4 bg-[#18181b] border border-[#27272a] rounded-xl text-center">
+              <div className="text-2xl font-bold text-white">Daily</div>
+              <div className="text-sm text-[#71717a]">Updates</div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-bold text-white mb-4">Why We Built This</h2>
           <p className="mb-4">
-            The AI tool landscape is overwhelming. Hundreds of new tools launch every month, 
-            each claiming to be the best. We got tired of the hype and decided to create a 
-            no-nonsense resource for people who just want honest answers.
+            The AI tool landscape is overwhelming. Hundreds of new tools launch every month, each claiming to be the best. We got tired of the hype and decided to create a no-nonsense resource for people who just want honest answers.
           </p>
           <p>
-            No affiliate-driven rankings. No &ldquo;top 10&rdquo; lists padded with sponsored placements. 
-            Just real reviews from real testing.
+            No affiliate-driven rankings. No &ldquo;top 10&rdquo; lists padded with sponsored placements. Just real reviews from real testing, updated as the market evolves.
           </p>
         </section>
 
         <section>
-          <h2 className="text-xl font-bold text-white mb-4">How we review</h2>
-          <p className="mb-4">Every tool goes through our testing process:</p>
+          <h2 className="text-xl font-bold text-white mb-4">How We Review</h2>
+          <p className="mb-4">Every tool goes through our evaluation process:</p>
           <ul className="list-disc pl-6 space-y-2">
-            <li><strong className="text-white">Hands-on testing:</strong> We use each tool for at least a week on real projects</li>
-            <li><strong className="text-white">Feature evaluation:</strong> We test core features and compare against alternatives</li>
-            <li><strong className="text-white">Pricing analysis:</strong> We verify pricing and evaluate value for money</li>
-            <li><strong className="text-white">User experience:</strong> We assess ease of use, onboarding, and support</li>
-            <li><strong className="text-white">Regular updates:</strong> We revisit and update reviews as tools evolve</li>
+            <li><strong className="text-white">Hands-on testing:</strong> We use each tool on real projects to evaluate core capabilities</li>
+            <li><strong className="text-white">Feature evaluation:</strong> We test key features and compare against direct alternatives in the same category</li>
+            <li><strong className="text-white">Pricing analysis:</strong> We verify pricing tiers and evaluate value for money relative to competitors</li>
+            <li><strong className="text-white">User experience:</strong> We assess onboarding, interface quality, and customer support responsiveness</li>
+            <li><strong className="text-white">Regular updates:</strong> We revisit reviews as tools evolve — pricing changes, new features, and performance shifts all get reflected</li>
           </ul>
         </section>
 
         <section>
-          <h2 className="text-xl font-bold text-white mb-4">Our standards</h2>
+          <h2 className="text-xl font-bold text-white mb-4">Our Standards</h2>
           <ul className="list-disc pl-6 space-y-2">
-            <li>Independence: We never accept payment for reviews</li>
-            <li>Transparency: We clearly disclose affiliate links</li>
-            <li>Honesty: We share both pros and cons of every tool</li>
-            <li>Accuracy: We verify all pricing and feature claims</li>
-            <li>Freshness: We regularly update our content</li>
+            <li><strong className="text-white">Independence:</strong> We never accept payment for reviews or rankings</li>
+            <li><strong className="text-white">Transparency:</strong> Affiliate links are clearly marked and don&apos;t influence our ratings</li>
+            <li><strong className="text-white">Honesty:</strong> We share both strengths and limitations of every tool</li>
+            <li><strong className="text-white">Accuracy:</strong> All pricing and feature claims are verified against official sources</li>
+            <li><strong className="text-white">Freshness:</strong> Content is updated regularly to reflect market changes</li>
           </ul>
         </section>
 
         <section>
-          <h2 className="text-xl font-bold text-white mb-4">Contact us</h2>
+          <h2 className="text-xl font-bold text-white mb-4">Get in Touch</h2>
           <p className="mb-4">
-            Have a question, suggestion, or want to work with us?
+            Have a question, suggestion, or want to collaborate?
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
