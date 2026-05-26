@@ -15,9 +15,8 @@ export const metadata: Metadata = {
   creator: "Toolio",
   publisher: "Toolio",
   metadataBase: new URL("https://toolio-ai.com"),
-  alternates: {
-    canonical: "https://toolio-ai.com",
-  },
+  // NOTE: No root canonical here. Each page must set its own canonical in generateMetadata.
+  // Setting canonical here causes ALL pages to inherit the homepage canonical (pitfall #65).
   openGraph: {
     type: "website",
     locale: "en_US",

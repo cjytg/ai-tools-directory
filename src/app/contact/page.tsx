@@ -1,6 +1,10 @@
+
 export const metadata = {
   title: "Contact Us - Toolio",
   description: "Get in touch with the Toolio team.",
+  alternates: {
+    canonical: "https://toolio-ai.com/contact",
+  },
 };
 
 export default function ContactPage() {

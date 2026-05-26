@@ -8,6 +8,9 @@ import type { BlogPost } from "@/lib/blog";
 export const metadata = {
   title: "Search AI Tools - Toolio",
   description: "Search across 100+ AI tools, reviews, and comparisons.",
+  alternates: {
+    canonical: "https://toolio-ai.com/search",
+  },
 };
 
 export default function SearchPage({

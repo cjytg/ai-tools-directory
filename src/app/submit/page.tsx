@@ -1,6 +1,10 @@
+
 export const metadata = {
   title: "Submit a Tool - Toolio",
   description: "Submit an AI tool for review and inclusion in our directory.",
+  alternates: {
+    canonical: "https://toolio-ai.com/submit",
+  },
 };
 
 export default function SubmitPage() {

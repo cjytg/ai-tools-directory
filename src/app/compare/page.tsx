@@ -6,6 +6,9 @@ import ToolLogo from "@/components/ToolLogo";
 export const metadata = {
   title: "Compare AI Tools - Toolio",
   description: "Compare AI tools side by side. See features, pricing, and ratings at a glance.",
+  alternates: {
+    canonical: "https://toolio-ai.com/compare",
+  },
 };
 
 export default function ComparePage({

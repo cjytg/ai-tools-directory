@@ -4,6 +4,9 @@ import { getAllTools, getCategories } from "@/lib/tools";
 export const metadata = {
   title: "About Toolio — Honest AI Tool Reviews",
   description: "Toolio is an independent AI tool directory. We test, review, and compare 170+ AI tools so you can make informed decisions without the marketing fluff.",
+  alternates: {
+    canonical: "https://toolio-ai.com/about",
+  },
 };
 
 export default function AboutPage() {

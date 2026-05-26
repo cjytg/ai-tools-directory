@@ -2,6 +2,13 @@ import { getAllTools } from "@/lib/tools";
 import Link from "next/link";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
+export const metadata = {
+  alternates: {
+    canonical: "https://toolio-ai.com/best",
+  },
+};
+
+
 const LANDING_PAGES = [
   { slug: "research", name: "Research", count: 25, desc: "Literature review, paper discovery, and data analysis" },
   { slug: "social-media", name: "Social Media", count: 18, desc: "Content creation, graphics, and video for social platforms" },

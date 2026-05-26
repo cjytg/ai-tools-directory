@@ -1,6 +1,10 @@
+
 export const metadata = {
   title: "Privacy Policy - Toolio",
   description: "Toolio's privacy policy. How we collect, use, and protect your data.",
+  alternates: {
+    canonical: "https://toolio-ai.com/privacy",
+  },
 };
 
 export default function PrivacyPage() {

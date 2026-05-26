@@ -1,6 +1,10 @@
+
 export const metadata = {
   title: "Advertise on Toolio",
   description: "Reach AI enthusiasts and professionals. Advertising opportunities on Toolio.",
+  alternates: {
+    canonical: "https://toolio-ai.com/advertise",
+  },
 };
 
 export default function AdvertisePage() {

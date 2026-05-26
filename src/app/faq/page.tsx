@@ -3,6 +3,9 @@ import Link from "next/link";
 export const metadata = {
   title: "Frequently Asked Questions - Toolio",
   description: "Common questions about AI tools, our reviews, and how to choose the right tool.",
+  alternates: {
+    canonical: "https://toolio-ai.com/faq",
+  },
 };
 
 const faqs = [

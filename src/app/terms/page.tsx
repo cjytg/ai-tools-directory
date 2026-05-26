@@ -1,6 +1,10 @@
+
 export const metadata = {
   title: "Terms of Service - Toolio",
   description: "Toolio's terms of service. Please read these terms before using our site.",
+  alternates: {
+    canonical: "https://toolio-ai.com/terms",
+  },
 };
 
 export default function TermsPage() {

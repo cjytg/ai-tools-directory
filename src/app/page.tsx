@@ -6,6 +6,13 @@ import Icon from "@/components/Icon";
 import ToolLogo from "@/components/ToolLogo";
 import AdUnit from "@/components/AdUnit";
 
+export const metadata = {
+  alternates: {
+    canonical: "https://toolio-ai.com",
+  },
+};
+
+
 export default function Home() {
   const tools = getAllTools();
   const categories = getCategories();

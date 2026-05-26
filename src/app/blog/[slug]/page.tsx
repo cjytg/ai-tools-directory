@@ -53,18 +53,54 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     post.content.toLowerCase().includes(tool.name.toLowerCase())
   );
 
-  // Simple markdown rendering
-  const contentHtml = post.content
+  // Proper block-level markdown rendering (no <p> wrapping of headings)
+  const lines = post.content
     .replace(/^--[\s\S]*?---/m, "")
-    .replace(/^### (.*$)/gm, '<h3 class="text-lg font-bold mt-8 mb-3 text-white">$1</h3>')
-    .replace(/^## (.*$)/gm, '<h2 class="text-xl font-bold mt-10 mb-4 text-white">$1</h2>')
-    .replace(/^# (.*$)/gm, '<h1 class="text-2xl font-bold mt-12 mb-5 text-white">$1</h1>')
-    .replace(/\*\*(.*?)\*\*/g, '<strong class="text-white">$1</strong>')
-    .replace(/\*(.*?)\*/g, '<em>$1</em>')
-    .replace(/^- (.*$)/gm, '<li class="ml-4 mb-2 flex items-start gap-2"><span class="text-[#3b82f6] mt-1">•</span><span>$1</span></li>')
-    .replace(/^\d+\. (.*$)/gm, '<li class="ml-4 mb-2">$1</li>')
-    .replace(/\n\n/g, '</p><p class="mb-4 text-[#a1a1aa]">')
-    .replace(/\n/g, "<br/>");
+    .split("\n");
+
+  const blocks: string[] = [];
+  let currentParagraph: string[] = [];
+
+  function flushParagraph() {
+    if (currentParagraph.length > 0) {
+      const text = currentParagraph.join(" ").trim();
+      if (text) {
+        let processed = text
+          .replace(/\*\*(.*?)\*\*/g, '<strong class="text-white">$1</strong>')
+          .replace(/\*(.*?)\*/g, "<em>$1</em>");
+        blocks.push(`<p class="mb-4 text-[#a1a1aa]">${processed}</p>`);
+      }
+      currentParagraph = [];
+    }
+  }
+
+  for (const line of lines) {
+    const trimmed = line.trim();
+
+    if (trimmed.startsWith("### ")) {
+      flushParagraph();
+      blocks.push(`<h3 class="text-lg font-bold mt-8 mb-3 text-white">${trimmed.slice(4)}</h3>`);
+    } else if (trimmed.startsWith("## ")) {
+      flushParagraph();
+      blocks.push(`<h2 class="text-xl font-bold mt-10 mb-4 text-white">${trimmed.slice(3)}</h2>`);
+    } else if (trimmed.startsWith("# ")) {
+      flushParagraph();
+      blocks.push(`<h1 class="text-2xl font-bold mt-12 mb-5 text-white">${trimmed.slice(2)}</h1>`);
+    } else if (trimmed.startsWith("- ")) {
+      flushParagraph();
+      blocks.push(`<li class="ml-4 mb-2 flex items-start gap-2"><span class="text-[#3b82f6] mt-1">•</span><span>${trimmed.slice(2)}</span></li>`);
+    } else if (/^\d+\. /.test(trimmed)) {
+      flushParagraph();
+      blocks.push(`<li class="ml-4 mb-2">${trimmed.replace(/^\d+\. /, "")}</li>`);
+    } else if (trimmed === "") {
+      flushParagraph();
+    } else {
+      currentParagraph.push(trimmed);
+    }
+  }
+  flushParagraph();
+
+  const contentHtml = blocks.join("\n");
 
   return (
     <>
@@ -109,7 +145,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
           <div
             className="prose prose-invert max-w-none"
-            dangerouslySetInnerHTML={{ __html: `<p class="mb-4 text-[#a1a1aa]">${contentHtml}</p>` }}
+            dangerouslySetInnerHTML={{ __html: contentHtml }}
           />
 
           {/* Affiliate disclosure */}
