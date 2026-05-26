@@ -6,6 +6,7 @@ export interface Tool {
   price: string;
   description: string;
   overview?: string;
+  indepth_analysis?: string;
   features: string[];
   pros: string[];
   cons: string[];

@@ -1,4 +1,4 @@
-import { getAllTools, getToolBySlug, getAlternatives, generateToolAnalysis } from "@/lib/tools";
+import { getAllTools, getToolBySlug, getAlternatives } from "@/lib/tools";
 import { getExistingPostSlugs } from "@/lib/blog";
 import { toolSchema, faqSchema } from "@/lib/schema";
 import { CATEGORIES } from "@/types";
@@ -172,14 +172,16 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
             )}
 
             {/* In-Depth Analysis — unique editorial content per tool */}
-            <section>
-              <h2 className="text-xl font-bold mb-4">In-Depth Analysis</h2>
-              <div className="prose prose-invert max-w-none">
-                <p className="text-[#a1a1aa] leading-relaxed text-[15px] whitespace-pre-line">
-                  {generateToolAnalysis(tool)}
-                </p>
-              </div>
-            </section>
+            {tool.indepth_analysis && (
+              <section>
+                <h2 className="text-xl font-bold mb-4">In-Depth Analysis</h2>
+                <div className="prose prose-invert max-w-none">
+                  <p className="text-[#a1a1aa] leading-relaxed text-[15px] whitespace-pre-line">
+                    {tool.indepth_analysis}
+                  </p>
+                </div>
+              </section>
+            )}
 
             {/* Features */}
             <section>
