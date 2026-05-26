@@ -1,6 +1,61 @@
 {
   "redirects": [
     {
+      "source": "/blog/google-gemini-review",
+      "destination": "/tools/google-gemini",
+      "permanent": true
+    },
+    {
+      "source": "/blog/v0-review",
+      "destination": "/tools/v0",
+      "permanent": true
+    },
+    {
+      "source": "/blog/convertkit-review",
+      "destination": "/tools/convertkit",
+      "permanent": true
+    },
+    {
+      "source": "/blog/activecampaign-review",
+      "destination": "/tools/activecampaign",
+      "permanent": true
+    },
+    {
+      "source": "/blog/smartling-review",
+      "destination": "/tools/smartling",
+      "permanent": true
+    },
+    {
+      "source": "/blog/dreamstudio-review",
+      "destination": "/tools/dreamstudio",
+      "permanent": true
+    },
+    {
+      "source": "/blog/semantic-scholar-review",
+      "destination": "/tools/semantic-scholar",
+      "permanent": true
+    },
+    {
+      "source": "/blog/duckduckgo-review",
+      "destination": "/tools/duckduckgo",
+      "permanent": true
+    },
+    {
+      "source": "/blog/reverso-review",
+      "destination": "/tools/reverso",
+      "permanent": true
+    },
+    {
+      "source": "/blog/consensus-review",
+      "destination": "/tools/consensus",
+      "permanent": true
+    },
+    {
+      "source": "/blog/grok-review",
+      "destination": "/tools/grok",
+      "permanent": true
+    },
+    {
       "source": "/blog/grammarly-go-review",
       "destination": "/blog/grammarly-review",
       "permanent": true
