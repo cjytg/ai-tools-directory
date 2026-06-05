@@ -11,6 +11,8 @@ export interface BlogPost {
   category: string;
   date: string;
   content: string;
+  author?: string;
+  lastUpdated?: string;
 }
 
 export function getAllPosts(): BlogPost[] {
@@ -30,6 +32,8 @@ export function getAllPosts(): BlogPost[] {
       category: data.category || "",
       date: data.date || "",
       content,
+      author: data.author || "Toolio Editorial Team",
+      lastUpdated: data.lastUpdated || data.date || "",
     };
   }).sort((a, b) => b.date.localeCompare(a.date));
 }
@@ -48,6 +52,8 @@ export function getPostBySlug(slug: string): BlogPost | undefined {
     category: data.category || "",
     date: data.date || "",
     content,
+    author: data.author || "Toolio Editorial Team",
+    lastUpdated: data.lastUpdated || data.date || "",
   };
 }
 

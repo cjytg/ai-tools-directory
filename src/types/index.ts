@@ -18,6 +18,7 @@ export interface Tool {
   use_cases: string[];
   target_users: string[];
   affiliate_url?: string;
+  lastUpdated?: string;
 }
 
 export interface BlogPost {

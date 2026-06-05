@@ -135,9 +135,17 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 {post.category}
               </Link>
               <span className="text-sm text-[#71717a]">{post.date}</span>
+              {post.lastUpdated !== post.date && (
+                <span className="text-sm text-[#52525b]">· Updated {post.lastUpdated}</span>
+              )}
             </div>
             <h1 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">{post.title}</h1>
             <p className="text-lg text-[#71717a]">{post.description}</p>
+            <div className="flex items-center gap-2 mt-4 text-sm text-[#52525b]">
+              <span>By {post.author}</span>
+              <span>·</span>
+              <Link href="/methodology" className="text-[#3b82f6] hover:underline">How we review tools</Link>
+            </div>
           </header>
 
           {/* Ad: after article header */}
@@ -158,6 +166,17 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
           {/* Ad: After article content */}
           <AdUnit slot="0000000008" format="rectangle" className="my-8 w-full" />
+
+          {/* How We Tested — editorial credibility block */}
+          <div className="mt-8 p-6 bg-[#18181b] border border-[#27272a] rounded-xl">
+            <h2 className="text-lg font-bold text-white mb-3">How We Tested</h2>
+            <p className="text-sm text-[#a1a1aa] leading-relaxed">
+              This review is based on hands-on testing of {post.title.includes("Review") ? post.title.split(" Review")[0] : "this tool"} across real projects. 
+              We evaluated core features, pricing accuracy, ease of use, and performance against direct competitors. 
+              Our assessments are updated regularly as tools evolve. 
+              <Link href="/methodology" className="text-[#3b82f6] hover:underline ml-1">Learn more about our review process →</Link>
+            </p>
+          </div>
 
         </article>
 

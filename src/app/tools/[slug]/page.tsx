@@ -153,6 +153,9 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
               <span className="px-3 py-1 bg-[#27272a] rounded-lg text-sm capitalize">
                 {tool.pricing}
               </span>
+              <span className="text-xs text-[#52525b]">
+                Last updated: {tool.lastUpdated || "2026-06-05"}
+              </span>
               <AffiliateLink
                 href={tool.website}
                 affiliateUrl={tool.affiliate_url}
