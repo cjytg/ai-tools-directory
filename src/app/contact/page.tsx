@@ -13,6 +13,21 @@ export default function ContactPage() {
       <h1 className="text-3xl font-bold mb-2">Contact Us</h1>
       <p className="text-[#71717a] mb-8">Have a question or want to work with us? We&apos;d love to hear from you.</p>
 
+      {/* Who we are */}
+      <div className="p-6 bg-[#18181b] border border-[#27272a] rounded-xl mb-8">
+        <h2 className="font-bold text-white mb-3">Who Runs Toolio?</h2>
+        <p className="text-sm text-[#a1a1aa] leading-relaxed">
+          Toolio is an independently operated AI tool directory. We test and review AI tools 
+          hands-on — no sponsored placements, no paid rankings. Our team includes developers, 
+          content creators, and productivity enthusiasts who evaluate tools on real projects 
+          before writing about them.
+        </p>
+        <p className="text-sm text-[#a1a1aa] leading-relaxed mt-3">
+          Read our <a href="/methodology" className="text-[#3b82f6] hover:underline">full review methodology</a> to learn 
+          how we test, score, and update our tool assessments.
+        </p>
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <a
           href="mailto:hello@toolio.dev"

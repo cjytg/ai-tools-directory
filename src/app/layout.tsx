@@ -148,6 +148,7 @@ export default function RootLayout({
                 <h3 className="font-bold mb-4 text-sm">Company</h3>
                 <ul className="space-y-2 text-sm text-[#71717a]">
                   <li><Link href="/about" className="hover:text-white transition">About</Link></li>
+                  <li><Link href="/methodology" className="hover:text-white transition">How We Review</Link></li>
                   <li><Link href="/contact" className="hover:text-white transition">Contact</Link></li>
                   <li><Link href="/advertise" className="hover:text-white transition">Advertise</Link></li>
                   <li><Link href="/submit" className="hover:text-white transition">Submit Tool</Link></li>
@@ -157,6 +158,7 @@ export default function RootLayout({
             <div className="border-t border-[#27272a] pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
               <p className="text-sm text-[#71717a]">© 2026 Toolio. All rights reserved.</p>
               <div className="flex items-center gap-4 text-sm text-[#71717a]">
+                <Link href="/methodology" className="hover:text-white transition">How We Review</Link>
                 <Link href="/privacy" className="hover:text-white transition">Privacy</Link>
                 <Link href="/terms" className="hover:text-white transition">Terms</Link>
                 <Link href="/faq" className="hover:text-white transition">FAQ</Link>
