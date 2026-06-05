@@ -28,6 +28,9 @@ export default function ToolsPageClient({ tools }: { tools: Tool[] }) {
   const [sortBy, setSortBy] = useState<SortBy>("rating");
 
   const categories = [...new Set(tools.map(t => t.category))];
+  const totalCategories = categories.length;
+  const freeCount = tools.filter(t => t.pricing === "free").length;
+  const freemiumCount = tools.filter(t => t.pricing === "freemium").length;
 
   const filteredTools = useMemo(() => {
     let result = [...tools];
@@ -69,7 +72,15 @@ export default function ToolsPageClient({ tools }: { tools: Tool[] }) {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold mb-2">All AI Tools</h1>
-      <p className="text-[#71717a] mb-8">{tools.length} tools available</p>
+      <p className="text-[#71717a] mb-4">
+        {tools.length} tools reviewed across {totalCategories} categories. 
+        {freeCount} completely free, {freemiumCount} with free tiers.
+      </p>
+      <p className="text-sm text-[#52525b] mb-8 leading-relaxed max-w-3xl">
+        Every tool in this directory has been tested hands-on. We evaluate core capabilities, 
+        ease of use, pricing value, and real-world performance — not just marketing claims. 
+        <Link href="/methodology" className="text-[#3b82f6] hover:underline ml-1">Learn how we review →</Link>
+      </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         <div className="relative">
@@ -170,6 +181,25 @@ export default function ToolsPageClient({ tools }: { tools: Tool[] }) {
           </button>
         </div>
       )}
+
+      {/* Bottom editorial content */}
+      <div className="mt-16 pt-8 border-t border-[#27272a]">
+        <h2 className="text-xl font-bold mb-4">How to Choose the Right AI Tool</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-[#a1a1aa]">
+          <div className="p-5 bg-[#18181b] border border-[#27272a] rounded-xl">
+            <h3 className="font-semibold text-white mb-2">Start with Your Use Case</h3>
+            <p>Don't pick a tool based on features alone. Identify the specific task you need help with — writing, coding, design, or research — then compare tools in that category. A tool that does everything well often does nothing exceptionally.</p>
+          </div>
+          <div className="p-5 bg-[#18181b] border border-[#27272a] rounded-xl">
+            <h3 className="font-semibold text-white mb-2">Test the Free Tier First</h3>
+            <p>Most AI tools offer free tiers or trials. Use them on real tasks before committing. A tool that feels great in a demo might not fit your actual workflow. Our ratings factor in free-tier limitations, so a 4.0 with a generous free plan might be better value than a 4.5 that requires payment.</p>
+          </div>
+          <div className="p-5 bg-[#18181b] border border-[#27272a] rounded-xl">
+            <h3 className="font-semibold text-white mb-2">Compare Before You Commit</h3>
+            <p>Tools in the same category often serve different needs. ChatGPT excels at versatility, Claude at precision, and Perplexity at research. Our <Link href="/compare" className="text-[#3b82f6] hover:underline">comparison pages</Link> break down the differences so you can choose based on your actual requirements.</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
