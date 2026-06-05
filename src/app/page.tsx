@@ -26,15 +26,13 @@ export default function Home() {
       {/* Hero */}
       <section className="relative py-20 px-4 overflow-hidden">
         {/* DotField background */}
-        <div className="absolute inset-0 opacity-60">
+        <div className="absolute inset-0 opacity-80">
           <DotField
-            dotRadius={1.2}
-            dotSpacing={18}
+            dotRadius={2}
+            dotSpacing={24}
             cursorRadius={400}
             bulgeStrength={50}
-            gradientFrom="rgba(59, 130, 246, 0.12)"
-            gradientTo="rgba(139, 92, 246, 0.08)"
-            glowColor="#3b82f6"
+            dotColor="rgba(148, 163, 184, 0.35)"
           />
         </div>
 
