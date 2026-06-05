@@ -1,4 +1,4 @@
-import { getAllTools, getCategories } from "@/lib/tools";
+import { getAllTools } from "@/lib/tools";
 import ToolsPageClient from "./page-client";
 
 export const metadata = {
@@ -11,6 +11,5 @@ export const metadata = {
 
 export default function ToolsPage() {
   const tools = getAllTools();
-  const categories = getCategories();
-  return <ToolsPageClient tools={tools} categories={categories} />;
+  return <ToolsPageClient tools={tools} />;
 }
