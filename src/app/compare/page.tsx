@@ -9,6 +9,11 @@ export const metadata = {
   alternates: {
     canonical: "https://toolio-ai.com/compare",
   },
+  // Temporarily noindex — comparison content needs editorial upgrade before AdSense review
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 export default function ComparePage({

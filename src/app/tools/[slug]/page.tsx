@@ -69,6 +69,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     .slice(0, 3)
     .join(", ");
 
+  // Low-rated tools: noindex until content is upgraded
+  const isLowRated = tool.rating < 4.0;
+
   return {
     title: `${tool.name} Review 2026: Features, Pricing, Pros & Cons`,
     description: `Honest ${tool.name} review: Rating ${tool.rating}/5. Price: ${tool.price}. Discover features, pros & cons. Compare with top alternatives like ${altNames || "similar AI tools"}.`,
@@ -85,6 +88,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     alternates: {
       canonical: `https://toolio-ai.com/tools/${tool.slug}`,
     },
+    ...(isLowRated && {
+      robots: {
+        index: false,
+        follow: true,
+      },
+    }),
   };
 }
 

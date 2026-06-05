@@ -9,7 +9,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const baseUrl = "https://toolio-ai.com";
 
-  const toolPages = tools.map((tool) => ({
+  // Exclude low-rated tools (rating < 4.0) from sitemap — noindexed
+  const qualifiedTools = tools.filter((t) => t.rating >= 4.0);
+
+  const toolPages = qualifiedTools.map((tool) => ({
     url: `${baseUrl}/tools/${tool.slug}`,
     lastModified: new Date(),
     changeFrequency: "weekly" as const,
@@ -30,19 +33,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  const comparePages = [];
-  for (let i = 0; i < tools.length; i++) {
-    for (let j = i + 1; j < tools.length; j++) {
-      if (tools[i].category === tools[j].category) {
-        comparePages.push({
-          url: `${baseUrl}/compare/${tools[i].slug}-vs-${tools[j].slug}`,
-          lastModified: new Date(),
-          changeFrequency: "monthly" as const,
-          priority: 0.6,
-        });
-      }
-    }
-  }
+  // Compare pages excluded from sitemap — temporarily noindexed pending content upgrade
+  // const comparePages = [];
+  // for (let i = 0; i < tools.length; i++) {
+  //   for (let j = i + 1; j < tools.length; j++) {
+  //     if (tools[i].category === tools[j].category) {
+  //       comparePages.push({
+  //         url: `${baseUrl}/compare/${tools[i].slug}-vs-${tools[j].slug}`,
+  //         lastModified: new Date(),
+  //         changeFrequency: "monthly" as const,
+  //         priority: 0.6,
+  //       });
+  //     }
+  //   }
+  // }
+  const comparePages: never[] = [];
 
   const bestPages = [
     "research", "social-media", "content-creation", "coding", "marketing",

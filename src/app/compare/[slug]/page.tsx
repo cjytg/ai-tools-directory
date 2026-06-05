@@ -99,6 +99,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     alternates: {
       canonical: `https://toolio-ai.com/compare/${slug}`,
     },
+    // Temporarily noindex — comparison content needs editorial upgrade before AdSense review
+    robots: {
+      index: false,
+      follow: true,
+    },
   };
 }
 
