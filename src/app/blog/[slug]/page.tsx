@@ -1,6 +1,7 @@
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import { getAllTools } from "@/lib/tools";
 import { articleSchema } from "@/lib/schema";
+import { NOINDEX_REVIEW_SLUGS } from "@/lib/noindex-slugs";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import AdUnit from "@/components/AdUnit";
@@ -33,6 +34,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     alternates: {
       canonical: `https://toolio-ai.com/blog/${post.slug}`,
     },
+    // Noindex template-generated reviews with low editorial value (AdSense fix)
+    ...(NOINDEX_REVIEW_SLUGS.has(post.slug) && {
+      robots: { index: false, follow: true },
+    }),
   };
 }
 

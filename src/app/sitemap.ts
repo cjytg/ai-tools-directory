@@ -1,5 +1,6 @@
 import { getAllTools, getCategories } from "@/lib/tools";
 import { getAllPosts } from "@/lib/blog";
+import { NOINDEX_REVIEW_SLUGS } from "@/lib/noindex-slugs";
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -26,12 +27,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  const blogPages = posts.map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(post.date),
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
-  }));
+  const blogPages = posts
+    .filter((post) => !NOINDEX_REVIEW_SLUGS.has(post.slug))
+    .map((post) => ({
+      url: `${baseUrl}/blog/${post.slug}`,
+      lastModified: new Date(post.date),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    }));
 
   // Compare pages excluded from sitemap — temporarily noindexed pending content upgrade
   // const comparePages = [];
@@ -49,16 +52,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // }
   const comparePages: never[] = [];
 
-  const bestPages = [
-    "research", "social-media", "content-creation", "coding", "marketing",
-    "email-marketing", "project-management", "productivity", "video-creation",
-    "design", "academic-writing", "customer-support", "seo",
-  ].map((slug) => ({
-    url: `${baseUrl}/best/${slug}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly" as const,
-    priority: 0.8,
-  }));
+  // Best sub-pages excluded from sitemap — noindexed (thin listicle content)
+  const bestPages: never[] = [];
 
   return [
     {

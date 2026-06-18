@@ -155,6 +155,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     alternates: {
       canonical: `https://toolio-ai.com/best/${slug}`,
     },
+    // Noindex — thin listicle pages with no editorial analysis (AdSense fix)
+    robots: { index: false, follow: true },
   };
 }
 
