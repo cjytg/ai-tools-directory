@@ -51,8 +51,8 @@ export default function Home() {
             for your workflow
           </h1>
           <p className="text-lg text-[#71717a] mb-8 max-w-2xl mx-auto">
-            {tools.length}+ AI tools reviewed and compared. Honest takes, real
-            pricing, no affiliate BS.
+            {tools.length}+ AI tools reviewed and compared. Independent
+            evaluations, real pricing, transparent affiliate disclosure.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link

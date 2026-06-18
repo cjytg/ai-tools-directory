@@ -61,7 +61,7 @@ export default function AboutPage() {
             The AI tool landscape is overwhelming. Hundreds of new tools launch every month, each claiming to be the best. We got tired of the hype and decided to create a no-nonsense resource for people who just want honest answers.
           </p>
           <p>
-            No affiliate-driven rankings. No &ldquo;top 10&rdquo; lists padded with sponsored placements. Just real reviews from real testing, updated as the market evolves.
+            Affiliate links help support our work at no extra cost to you, but they never influence our scores or rankings. No sponsored placements. No paid reviews. Just real evaluations from real testing, updated as the market evolves.
           </p>
         </section>
 
