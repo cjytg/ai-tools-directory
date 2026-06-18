@@ -14,6 +14,11 @@ interface Tool {
   description: string;
   url: string;
   applicationCategory: string;
+  author?: {
+    "@type": string;
+    name: string;
+  };
+  datePublished?: string;
   offers?: {
     "@type": string;
     price: string;
@@ -69,6 +74,11 @@ export function toolSchema(tool: {
     description: tool.description,
     url: tool.website,
     applicationCategory: "BusinessApplication",
+    author: {
+      "@type": "Organization",
+      name: "Toolio Editorial Team",
+    },
+    datePublished: "2026-01-01",
     offers: {
       "@type": "Offer",
       price: tool.price.includes("Free") ? "0" : tool.price.replace(/[^0-9.]/g, ""),
@@ -78,7 +88,7 @@ export function toolSchema(tool: {
       "@type": "AggregateRating",
       ratingValue: tool.rating,
       bestRating: 5,
-      ratingCount: 100,
+      ratingCount: 1,
     },
   };
 }

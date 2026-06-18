@@ -71,18 +71,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Trusted by */}
+      {/* Directory stats */}
       <section className="py-8 px-4 border-y border-[#27272a]">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-sm text-[#52525b] mb-4">
-            Trusted by developers and teams at
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-8 text-[#3f3f46]">
-            <span className="text-lg font-semibold">Google</span>
-            <span className="text-lg font-semibold">Microsoft</span>
-            <span className="text-lg font-semibold">Meta</span>
-            <span className="text-lg font-semibold">OpenAI</span>
-            <span className="text-lg font-semibold">Stripe</span>
+          <div className="flex flex-wrap items-center justify-center gap-8 text-[#a1a1aa]">
+            <div className="text-center">
+              <span className="block text-2xl font-bold text-white">170+</span>
+              <span className="text-sm">Tools Reviewed</span>
+            </div>
+            <div className="text-center">
+              <span className="block text-2xl font-bold text-white">11</span>
+              <span className="text-sm">Categories</span>
+            </div>
+            <div className="text-center">
+              <span className="block text-2xl font-bold text-white">200+</span>
+              <span className="text-sm">Articles</span>
+            </div>
+            <div className="text-center">
+              <span className="block text-2xl font-bold text-white">0</span>
+              <span className="text-sm">Sponsored Rankings</span>
+            </div>
           </div>
         </div>
       </section>

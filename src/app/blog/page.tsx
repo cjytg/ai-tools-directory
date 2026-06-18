@@ -1,4 +1,5 @@
 import { getAllPosts } from "@/lib/blog";
+import { NOINDEX_REVIEW_SLUGS } from "@/lib/noindex-slugs";
 import Link from "next/link";
 
 export const metadata = {
@@ -10,7 +11,7 @@ export const metadata = {
 };
 
 export default function BlogPage() {
-  const posts = getAllPosts();
+  const posts = getAllPosts().filter((p) => !NOINDEX_REVIEW_SLUGS.has(p.slug));
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
