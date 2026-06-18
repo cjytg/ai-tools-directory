@@ -7971,5 +7971,54 @@
     "overview": "Lokalise is a translation tool developed by Lokalise. Modern translation management system with AI-powered features for software and content localization. Key features include ai translation, qa checks, developer integrations, collaboration. Its main strengths include modern interface, strong developer tools. The main drawbacks are expensive, overkill for small projects. The pricing model is freemium, starting at $49-399/mo. It's particularly well-suited for development teams, localization managers, product teams. You may also want to compare it with Crowdin and Smartling. The tool continues to evolve with new AI capabilities. The tool continues to evolve with new AI capabilities. The tool continues to evolve with new AI capabilities.",
     "indepth_analysis": "Lokalise has positioned itself as the localization platform for modern software teams, providing a comprehensive set of tools for managing translations across web applications, mobile apps, games, and any product with multilingual content needs. The platform's strength lies in its developer-friendly approach — extensive API integrations, CI/CD pipeline support, automatic string detection, and real-time collaboration features that fit naturally into software development workflows. Its AI translation suggestions leverage machine learning to accelerate the translation process, while quality assurance tools catch common errors like missing variables, inconsistent terminology, and formatting issues before content goes live. Pricing ranges from $49 to $399 per month, reflecting its positioning as a premium localization platform for professional teams. Crowdin offers a similar feature set at lower price points starting at $29 per month, with the added benefit of community translation features that appeal to open-source projects. Smartling provides enterprise-scale translation management with deeper workflow automation, though Lokalise's developer tooling and interface polish give it an edge for engineering teams. The 4.3 rating reflects strong satisfaction among software development teams who benefit from the platform's seamless integration into their existing workflows and the quality of its translation management features. The trade-off is pricing: Lokalise's premium positioning means it's most justified for teams that actively manage multilingual software content and need the developer tooling it provides, while simpler projects may find more affordable alternatives sufficient. For software teams that need robust localization infrastructure integrated into their development pipeline, Lokalise delivers a polished, developer-first experience.",
     "lastUpdated": "2026-06-05"
+  },
+  {
+    "slug": "roblox-gui-maker",
+    "name": "Roblox GUI Maker",
+    "category": "coding",
+    "pricing": "free",
+    "price": "Free",
+    "description": "Free AI tool for planning Roblox Studio ScreenGui layouts, HUDs, menus, and Lua starter code.",
+    "features": [
+      "ScreenGui layout planning",
+      "Roblox-style UI component hierarchy",
+      "Lua starter code ideas",
+      "JSON blueprint export",
+      "Mobile-first HUD and menu notes"
+    ],
+    "pros": [
+      "Focused on Roblox Studio workflows",
+      "Useful for quick UI prototypes",
+      "Free to use"
+    ],
+    "cons": [
+      "Still requires manual implementation in Roblox Studio",
+      "Best for early planning rather than final production polish",
+      "Focused mainly on Roblox UI scenarios"
+    ],
+    "alternatives": [
+      "cursor",
+      "github-copilot",
+      "windsurf"
+    ],
+    "website": "https://robloxguimaker.dev/",
+    "company": "Roblox GUI Maker",
+    "founded": 2026,
+    "rating": 4.1,
+    "use_cases": [
+      "Roblox UI prototyping",
+      "Game HUD planning",
+      "Menu and inventory layouts",
+      "Lua UI starter code"
+    ],
+    "target_users": [
+      "Roblox developers",
+      "Game creators",
+      "Lua beginners",
+      "Indie teams"
+    ],
+    "overview": "Roblox GUI Maker is a focused AI tool for Roblox Studio creators who need a faster way to plan interface layouts before building them by hand. Instead of starting from a blank ScreenGui, users describe a menu, HUD, shop, inventory panel, admin screen, onboarding popup, or mobile-first game UI and receive a structured layout plan with component hierarchy, design notes, JSON blueprint ideas, and Lua starter-code direction. The tool is especially useful during early Roblox experience prototyping, when creators need to compare interface patterns quickly and turn a rough game idea into something that can be implemented inside Studio.",
+    "indepth_analysis": "Roblox GUI Maker fills a specific gap that general AI coding assistants usually handle only loosely: planning Roblox game interfaces in the language of ScreenGui, frames, buttons, labels, HUD structure, and Lua implementation steps. Cursor, GitHub Copilot, and WindSurf can help write code once a developer knows what to build, but they are not specialized around Roblox UI structure or game-specific interface flows. Roblox GUI Maker is most useful before that coding stage, when a creator needs to sketch the hierarchy of a shop menu, inventory screen, health bar, settings panel, or mobile HUD and understand how the pieces should fit together.\n\nThe main value is speed and focus. Solo Roblox developers and small teams can use it to move from a text description to a practical UI plan without opening a design tool or assembling every frame manually first. Its JSON blueprint and Lua starter-code notes make the output easier to translate into Roblox Studio than a generic design mockup. The trade-off is that it does not replace implementation: developers still need to create, style, test, and polish the interface inside Roblox Studio. For creators learning Lua or prototyping a new Roblox experience, that planning support can still save meaningful time and reduce the friction of getting a usable game UI started.",
+    "lastUpdated": "2026-06-18"
   }
 ]
