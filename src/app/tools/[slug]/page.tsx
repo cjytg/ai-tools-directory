@@ -14,6 +14,21 @@ export async function generateStaticParams() {
   return tools.map((tool) => ({ slug: tool.slug }));
 }
 
+// Core tools that should be indexed — all others get noindex
+const INDEXED_TOOLS = new Set([
+  'chatgpt', 'claude', 'gemini', 'perplexity-ai', 'deepseek',
+  'github-copilot', 'cursor', 'codeium', 'windsurf', 'sourcegraph-cody',
+  'midjourney', 'dall-e-3', 'stable-diffusion', 'adobe-firefly', 'leonardo-ai',
+  'grammarly', 'jasper', 'copy-ai', 'writesonic', 'rytr',
+  'runway', 'synthesia', 'heygen', 'descript',
+  'elevenlabs', 'murf', 'play-ht',
+  'canva-ai', 'figma', 'looka', 'remove-bg', 'framer',
+  'notion-ai', 'otter-ai', 'reclaim-ai',
+  'hubspot-ai', 'semrush', 'ahrefs', 'mailchimp',
+  'perplexity', 'kagi', 'elicit', 'notebooklm',
+  'deepl', 'google-translate', 'lokalise',
+]);
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const tool = getToolBySlug(slug);
@@ -28,8 +43,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     .slice(0, 3)
     .join(", ");
 
-  // Low-rated tools: noindex until content is upgraded
-  const isLowRated = tool.rating < 4.0;
+  // Only index core tools — noindex everything else
+  const shouldIndex = INDEXED_TOOLS.has(slug);
 
   return {
     title: `${tool.name} Review 2026: Features, Pricing, Pros & Cons`,
@@ -47,7 +62,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     alternates: {
       canonical: `https://toolio-ai.com/tools/${tool.slug}`,
     },
-    ...(isLowRated && {
+    ...(!shouldIndex && {
       robots: {
         index: false,
         follow: true,

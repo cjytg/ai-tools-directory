@@ -86,6 +86,25 @@ export async function generateStaticParams() {
   return params;
 }
 
+// Only index high-value comparison pages — noindex the rest
+const INDEXED_COMPARES = new Set([
+  'chatgpt-vs-claude',
+  'chatgpt-vs-gemini',
+  'cursor-vs-github-copilot',
+  'midjourney-vs-dall-e-3',
+  'midjourney-vs-stable-diffusion',
+  'elevenlabs-vs-murf',
+  'runway-vs-synthesia',
+  'deepl-vs-google-translate',
+  'jasper-vs-copy-ai',
+  'semrush-vs-ahrefs',
+  'figma-vs-canva-ai',
+  'perplexity-vs-chatgpt',
+  'descript-vs-runway',
+  'copy-ai-vs-jasper',
+  'github-copilot-vs-cursor',
+]);
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const parts = slug.split("-vs-");
@@ -93,17 +112,21 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const toolA = getToolBySlug(parts[0]);
   const toolB = getToolBySlug(parts[1]);
   if (!toolA || !toolB) return { title: "Comparison Not Found" };
+  
+  const shouldIndex = INDEXED_COMPARES.has(slug);
+  
   return {
-    title: `${toolA.name} vs ${toolB.name} - Which is Better?`,
-    description: `Compare ${toolA.name} and ${toolB.name}: features, pricing, pros and cons. Find out which AI tool is right for you.`,
+    title: `${toolA.name} vs ${toolB.name} - Which is Better in 2026?`,
+    description: `Detailed ${toolA.name} vs ${toolB.name} comparison: features, pricing, pros & cons. Honest verdict based on real testing.`,
     alternates: {
       canonical: `https://toolio-ai.com/compare/${slug}`,
     },
-    // Temporarily noindex — comparison content needs editorial upgrade before AdSense review
-    robots: {
-      index: false,
-      follow: true,
-    },
+    ...(!shouldIndex && {
+      robots: {
+        index: false,
+        follow: true,
+      },
+    }),
   };
 }
 

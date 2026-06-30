@@ -1,12 +1,27 @@
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import { getAllTools } from "@/lib/tools";
 import { articleSchema } from "@/lib/schema";
-import { NOINDEX_REVIEW_SLUGS } from "@/lib/noindex-slugs";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import AdUnit from "@/components/AdUnit";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import AffiliateLink from "@/components/AffiliateLink";
+
+// Only index core tool reviews — noindex best-of lists, vs comparisons, and non-core reviews
+const INDEXED_BLOG_SLUGS = new Set([
+  // Core tool reviews only
+  "chatgpt-review", "claude-review", "gemini-review", "perplexity-ai-review", "deepseek-review",
+  "github-copilot-review", "cursor-review", "codeium-review", "windsurf-review", "sourcegraph-cody-review",
+  "midjourney-review", "dall-e-3-review", "stable-diffusion-review", "adobe-firefly-review", "leonardo-ai-review",
+  "grammarly-review", "jasper-review", "copy-ai-review", "writesonic-review", "rytr-review",
+  "runway-review", "synthesia-review", "heygen-review", "descript-review",
+  "elevenlabs-review", "murf-review", "play-ht-review",
+  "canva-ai-review", "figma-review", "looka-review", "remove-bg-review", "framer-review",
+  "notion-ai-review", "otter-ai-review", "reclaim-ai-review",
+  "hubspot-ai-review", "semrush-review", "ahrefs-review", "mailchimp-review",
+  "perplexity-review", "kagi-review", "elicit-review", "notebooklm-review",
+  "deepl-review", "google-translate-review", "lokalise-review",
+]);
 
 export async function generateStaticParams() {
   const posts = getAllPosts();
@@ -17,6 +32,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) return { title: "Post Not Found" };
+  
+  const shouldIndex = INDEXED_BLOG_SLUGS.has(slug);
+  
   return {
     title: post.title,
     description: post.description,
@@ -34,8 +52,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     alternates: {
       canonical: `https://toolio-ai.com/blog/${post.slug}`,
     },
-    // Noindex template-generated reviews with low editorial value (AdSense fix)
-    ...(NOINDEX_REVIEW_SLUGS.has(post.slug) && {
+    ...(!shouldIndex && {
       robots: { index: false, follow: true },
     }),
   };
